@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Drivin - Driving School Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>123 Street, New York, USA</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+012 345 6789</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Topbar End -->
+
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-12 px-5 py-2 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="contact-us.html" class="text-light">Contact Us</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="archive.html" class="text-light">Archive</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="newsletter/nsu-catalog.html" class="text-light">Catalog</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="journals.html" class="text-light">Journals</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="newsletter.html" class="text-light">Newsletters</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="http://library.northsouth.edu" class="text-light">Library</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="academic/academic-calendar/" class="text-light">Academic Calendar</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="http://institutions.northsouth.edu/oea/home-2/" class="text-light">International Students</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="text-light">Publications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional: Add the CSS to add the vertical line -->
+    <style>
+      .list-inline-item {
+        position: relative;
+      }
+
+      .list-inline-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -10px; /* Position the bar slightly outside */
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #ccc; /* Light gray vertical bar */
+      }
+
+      .list-inline-item:not(:last-child) {
+        margin-right: 1rem;
+      }
+    </style>
+
+    <!-- Navbar bar with Logo and Menu button -->
+
+    <div style="background: #f3f4f9" class="sticky-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="logo.png" alt="Drivin Logo" style="width: 5rem" />
+        </a>
+
+        <!-- Center Heading -->
+        <!-- <h1 class="m-0 text-center flex-grow-1" style="font-size: 1.5rem">North South University</h1> -->
+        <h1 class="display-6 fw-light text-uppercase logo-name">North South University</h1>
+
+        <!-- Menu Button on the right -->
+        <button class="btn btn-primary d-flex align-items-center gap-2 navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuCanvas" aria-controls="megaMenuCanvas">
+          <span class="navbar-toggler-icon"></span>
+          Menu
+        </button>
+      </div>
+    </div>
+
+    <!-- Offcanvas Nested Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="megaMenuCanvas" aria-labelledby="megaMenuLabel" style="width: 400px">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="megaMenuLabel">NORTH SOUTH UNIVERSITY</h5>
+        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Main Navigation -->
+        <ul class="nav flex-column">
+          <!-- About Section -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#aboutMenu" aria-expanded="false" aria-controls="aboutMenu">
+              About
+              <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+            </a>
+            <!-- Nested Menu (Dropdown) -->
+            <ul class="nav flex-column flex-nowrap ms-3 collapse" id="aboutMenu">
+              <li class="nav-item"><a href="#" class="nav-link">History</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Vision & Mission</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Administration</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Governing Bodies</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Section -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#academicsMenu" aria-expanded="false" aria-controls="academicsMenu">
+              Academics
+              <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+            </a>
+            <!-- Nested Menu (Dropdown) -->
+            <ul class="nav flex-column flex-nowrap ms-3 collapse" id="academicsMenu">
+              <li class="nav-item"><a href="#" class="nav-link">School of Business (SBE)</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">School of Engineering (SEPS)</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">School of Humanities (SHLS)</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">School of Health (SPPH)</a></li>
+            </ul>
+          </li>
+
+          <!-- Admissions Section -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#admissionsMenu" aria-expanded="false" aria-controls="admissionsMenu">
+              Admissions
+              <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+            </a>
+            <!-- Nested Menu (Dropdown) -->
+            <ul class="nav flex-column flex-nowrap ms-3 collapse" id="admissionsMenu">
+              <li class="nav-item"><a href="#" class="nav-link">Undergraduate</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Graduate</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">International Students</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Scholarships</a></li>
+            </ul>
+          </li>
+
+          <!-- Student Life Section -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#studentLifeMenu" aria-expanded="false" aria-controls="studentLifeMenu">
+              Student Life
+              <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+            </a>
+            <!-- Nested Menu (Dropdown) -->
+            <ul class="nav flex-column flex-nowrap ms-3 collapse" id="studentLifeMenu">
+              <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Clubs & Societies</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Career Services</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Campus Facilities</a></li>
+            </ul>
+          </li>
+
+          <!-- Research Section -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#researchMenu" aria-expanded="false" aria-controls="researchMenu">
+              Research
+              <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+            </a>
+            <!-- Nested Menu (Dropdown) -->
+            <ul class="nav flex-column flex-nowrap ms-3 collapse" id="researchMenu">
+              <li class="nav-item"><a href="#" class="nav-link">Centers & Labs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Research Grants</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Publications</a></li>
+            </ul>
+          </li>
+
+          <!-- Contact Section -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#contactMenu" aria-expanded="false" aria-controls="contactMenu">
+              Contact
+              <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+            </a>
+            <!-- Nested Menu (Dropdown) -->
+            <ul class="nav flex-column flex-nowrap ms-3 collapse" id="contactMenu">
+              <li class="nav-item"><a href="#" class="nav-link">Contact Info</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Campus Map</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Optional: CSS for arrow icon rotation on toggle -->
+    <style>
+      /* Rotate the arrow when the menu is expanded */
+      .nav-link[aria-expanded="true"] .arrow-icon {
+        transform: rotate(180deg);
+      }
+      .arrow-icon {
+        transition: transform 0.3s ease;
+      }
+
+      #megaMenuCanvas ul ul .nav-link::before {
+        content: "- "; /* the dash */
+        margin-right: 5px; /* optional spacing */
+        color: inherit; /* keep same text color */
+      }
+
+      #megaMenuCanvas .nav > .nav-item {
+        border-bottom: 1px solid var(--secondary-2); /* light gray line */
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      /* Remove border-bottom from last item */
+      #megaMenuCanvas .nav > .nav-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    </style>
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+      <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video class="w-100" autoplay muted loop playsinline>
+              <source src="NSU-Convo.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-7">
+                    <h1 class="display-2 text-light mb-5 animated slideInDown">Learn To Drive With Confidence</h1>
+                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
+                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="carousel-item">
+            <img class="w-100" src="img/carousel-1.jpg" alt="Image" />
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-7">
+                    <h1 class="display-2 text-light mb-5 animated slideInDown">Learn To Drive With Confidence</h1>
+                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
+                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="w-100" src="img/carousel-2.jpg" alt="Image" />
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-7">
+                    <h1 class="display-2 text-light mb-5 animated slideInDown">Safe Driving Is Our Top Priority</h1>
+                    <a href="" class="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
+                    <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">Our Courses</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+      </div>
+    </div>
+    <!-- Carousel End -->
+    <style>
+      #header-carousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item video {
+        height: 100vh; /* Full screen height */
+      }
+
+      .carousel-item video {
+        object-fit: cover;
+      }
+    </style>
+
+    <!-- News and Events Start -->
+    <div class="container-fluid py-6 bg--light">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
+          <h1 class="display-6 mb-4 line-through">News & Events</h1>
+        </div>
+
+        <div class="row mb-5">
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-4 wow fadeInUp mb-3" data-wow-delay="0.1s">
+            <div class="card border-0 shadow-sm h-100 rounded-7">
+              <img src="img/news-image-1.jpg" class="card-img-top" alt="News Image" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3">Exciting Event at NSU</h5>
+                <a href="#" class="card-btn btn btn-outline-primary mt-auto d-flex align-items-center justify-content-between">
+                  Read More
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-4 wow fadeInUp mb-3" data-wow-delay="0.3s">
+            <div class="card border-0 shadow-sm h-100 rounded-7">
+              <img src="img/news-image-2.jpg" class="card-img-top" alt="News Image" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3">New Research Center Launch</h5>
+                <a href="#" class="card-btn btn btn-outline-primary mt-auto d-flex align-items-center justify-content-between">
+                  Read More
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-4 wow fadeInUp mb-3" data-wow-delay="0.5s">
+            <div class="card border-0 shadow-sm h-100 rounded-7">
+              <img src="img/news-image-3.jpg" class="card-img-top" alt="News Image" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-3">Upcoming Convocation 2025</h5>
+                <a href="#" class="card-btn btn btn-outline-primary mt-auto d-flex align-items-center justify-content-between">
+                  Read More
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="text-center text-md-end wow fadeInUp" data-wow-delay="0.3s">
+              <a href="all-news.html" class="btn btn-primary py-3 d-flex align-items-center justify-content-center gap-2"> See All <i class="fas fa-arrow-right"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- News and Events End -->
+
+    <!-- Notice Start -->
+    <div class="container-fluid py-6">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
+          <h1 class="display-6 mb-4 line-through">Notices</h1>
+        </div>
+        <div class="row mb-5">
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="bg--light card border-0 shadow-sm h-100 d-flex flex-row align-items-center p-4">
+              <div class="icon me-3">
+                <i class="fas fa-bell fa-2x text-primary"></i>
+                <!-- Icon -->
+              </div>
+              <div class="notice-content">
+                <h6 class="card-title mb-2">Important Notice</h6>
+                <p class="card-date text-muted mb-3">April 28, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="bg--light card border-0 shadow-sm h-100 d-flex flex-row align-items-center p-4">
+              <div class="icon me-3">
+                <i class="fas fa-bell fa-2x text-primary"></i>
+                <!-- Icon -->
+              </div>
+              <div class="notice-content">
+                <h6 class="card-title mb-2">Deadline for Submissions</h6>
+                <p class="card-date text-muted mb-3">April 30, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="bg--light card border-0 shadow-sm h-100 d-flex flex-row align-items-center p-4">
+              <div class="icon me-3">
+                <i class="fas fa-bell fa-2x text-primary"></i>
+                <!-- Icon -->
+              </div>
+              <div class="notice-content">
+                <h6 class="card-title mb-2">New Semester Starts</h6>
+                <p class="card-date text-muted mb-3">May 1, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="bg--light card border-0 shadow-sm h-100 d-flex flex-row align-items-center p-4">
+              <div class="icon me-3">
+                <i class="fas fa-bell fa-2x text-primary"></i>
+                <!-- Icon -->
+              </div>
+              <div class="notice-content">
+                <h6 class="card-title mb-2">Library Closed for Maintenance</h6>
+                <p class="card-date text-muted mb-3">May 5, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.9s">
+            <div class="bg--light card border-0 shadow-sm h-100 d-flex flex-row align-items-center p-4">
+              <div class="icon me-3">
+                <i class="fas fa-bell fa-2x text-primary"></i>
+                <!-- Icon -->
+              </div>
+              <div class="notice-content">
+                <h6 class="card-title mb-2">Annual Sports Day</h6>
+                <p class="card-date text-muted mb-3">May 10, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single Card -->
+          <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="1.1s">
+            <div class="bg--light card border-0 shadow-sm h-100 d-flex flex-row align-items-center p-4">
+              <div class="icon me-3">
+                <i class="fas fa-bell fa-2x text-primary"></i>
+                <!-- Icon -->
+              </div>
+              <div class="notice-content">
+                <h6 class="card-title mb-2">Guest Lecture on AI</h6>
+                <p class="card-date text-muted mb-3">May 15, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="text-center text-md-end wow fadeInUp" data-wow-delay="1.3s">
+              <a href="all-news.html" class="btn btn-primary py-3 d-flex align-items-center justify-content-center gap-2"> See All <i class="fas fa-arrow-right"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Notice End -->
+
+    <!-- Study and Research Start -->
+    <div class="container-fluid py-6 study-research">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
+          <h1 class="display-6 mb-4 line-through">Study & Research</h1>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm border-0 p-4 h-100">
+              <div class="mb-3">
+                <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+              </div>
+              <h5 class="mb-4 fw-semibold">Graduate Study</h5>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center mb-2 px-4 py-2 rounded"> Graduate Study <i class="fas fa-chevron-right"></i> </a>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center mb-2 px-4 py-2 rounded"> Admission Info <i class="fas fa-chevron-right"></i> </a>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center px-4 py-2 rounded"> Apply Online <i class="fas fa-chevron-right"></i> </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm border-0 p-4 h-100">
+              <div class="mb-3">
+                <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+              </div>
+              <h5 class="mb-4 fw-semibold">Undergraduate Study</h5>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center mb-2 px-4 py-2 rounded"> Undergraduate Study <i class="fas fa-chevron-right"></i> </a>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center mb-2 px-4 py-2 rounded"> Admission Info <i class="fas fa-chevron-right"></i> </a>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center px-4 py-2 rounded"> Apply Online <i class="fas fa-chevron-right"></i> </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm border-0 p-4 h-100">
+              <div class="mb-3">
+                <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+              </div>
+              <h5 class="mb-4 fw-semibold">International Students</h5>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center mb-2 px-4 py-2 rounded"> Explore Programs <i class="fas fa-chevron-right"></i> </a>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center mb-2 px-4 py-2 rounded"> Scholarships <i class="fas fa-chevron-right"></i> </a>
+              <a href="#" class="btn btn-light d-flex justify-content-between align-items-center px-4 py-2 rounded"> Apply Now <i class="fas fa-chevron-right"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Courses End -->
+
+    <div class="container-fluid py-6 bg--light">
+      <div class="container">
+        <div class="row gx-0">
+          <div class="col-lg-3 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn">
+            <div class="bg-white shadow d-flex align-items-center h-100 p-4" style="min-height: 150px">
+              <div class="d-flex">
+                <div class="flex-shrink-0 btn-lg-square bg-primary">
+                  <i class="fas fa-calendar-alt text-white"></i>
+                </div>
+                <div class="ps-4">
+                  <h5>Scheduled Events</h5>
+                  <!-- <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn">
+            <div class="bg-white shadow d-flex align-items-center h-100 p-4" style="min-height: 150px">
+              <div class="d-flex">
+                <div class="flex-shrink-0 btn-lg-square bg-primary">
+                  <i class="fas fa-award text-white"></i>
+                </div>
+                <div class="ps-4">
+                  <h5>Degree Varification</h5>
+                  <!-- <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn">
+            <div class="bg-white shadow d-flex align-items-center h-100 p-4" style="min-height: 150px">
+              <div class="d-flex">
+                <div class="flex-shrink-0 btn-lg-square bg-primary">
+                  <i class="fas fa-laptop text-white"></i>
+                </div>
+                <div class="ps-4">
+                  <h5>Admissions Online</h5>
+                  <!-- <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn">
+            <div class="bg-white shadow d-flex align-items-center h-100 p-4" style="min-height: 150px">
+              <div class="d-flex">
+                <div class="flex-shrink-0 btn-lg-square bg-primary">
+                  <i class="fas fa-briefcase text-white"></i>
+                </div>
+                <div class="ps-4">
+                  <a href="http://">
+                    <h5>Career Opportunity</h5>
+                  </a>
+                  <!-- <span>Clita erat ipsum lorem sit sed stet duo justo erat amet</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-4">Get In Touch</h4>
+            <h2 class="text-primary mb-4"><i class="fa fa-car text-white me-2"></i>Drivin</h2>
+            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+            <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Our Services</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Popular Links</h4>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Our Services</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Newsletter</h4>
+            <form action="">
+              <div class="input-group">
+                <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address" />
+                <button class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+            <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-square btn-outline-light me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a href="#">Your Site Name</a>, All Right Reserved.</div>
+          <div class="col-md-6 text-center text-md-end">
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By <a href="https://htmlcodex.com">HTML Codex</a> <br />Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- <style>
+      /* Ensure nested dropdowns open correctly */
+      .dropdown-menu .dropdown-submenu {
+        position: relative;
+      }
+
+      .dropdown-menu .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%; /* Position to the right */
+        margin-top: -1px; /* Align borders */
+        margin-left: 0.1rem; /* Add slight spacing */
+      }
+
+      /* Optional: Style Offcanvas Links like Nav Links */
+      .offcanvas-body .nav-link {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: #212529; /* Default text color */
+      }
+      .offcanvas-body .nav-link:hover {
+        color: #0d6efd; /* Bootstrap primary blue */
+      }
+    </style> -->
+
+    <!-- <style>
+      .offcanvas-body {
+        padding: 2rem;
+      }
+
+      .mega-menu h6 {
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+
+      .mega-menu a {
+        display: block;
+        padding: 0.25rem 0;
+        color: #212529;
+        text-decoration: none;
+      }
+
+      .mega-menu a:hover {
+        color: #0d6efd;
+      }
+
+      @media (min-width: 992px) {
+        .offcanvas-start {
+          width: 600px;
+        }
+      }
+    </style> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
