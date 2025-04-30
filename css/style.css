@@ -333,11 +333,14 @@
 }
 
 .copyright {
-  background: var(--primary);
+  background: var(--secondary);
+  /* border-top: 1px solid var(--light); */
 }
 
 .copyright a {
   color: var(--primary);
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #ffffff8c;
 }
 
 .copyright a:hover {
@@ -349,7 +352,7 @@
 }
 
 .bg-dark {
-  background-color: #183f78 !important;
+  background-color: var(--secondary) !important;
 }
 
 .btn-primary {
@@ -441,6 +444,21 @@
 .btn-check:focus + .btn-outline-primary,
 .btn-outline-primary:focus {
   box-shadow: 0 0 0 0.25rem rgb(6 23 66 / 26%);
+}
+
+.partner {
+  border-right: 1px solid var(--secondary-2);
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: #ababaf;
+}
+
+.footer-title {
+  border-bottom: 1px solid #f3f4f940;
+  padding-bottom: 1rem;
 }
 
 @media (max-width: 575px) {
