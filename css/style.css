@@ -9,8 +9,8 @@
 }
 
 .py-6 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .my-6 {
@@ -333,18 +333,14 @@
 }
 
 .copyright {
-  background: var(--secondary);
+  background: var(--primary);
   /* border-top: 1px solid var(--light); */
 }
 
 .copyright a {
-  color: var(--primary);
-  font-weight: bold;
-  text-shadow: 1px 1px 5px #ffffff8c;
-}
-
-.copyright a:hover {
   color: var(--light);
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #ffffff4d;
 }
 
 .offcanvas-end {
@@ -395,7 +391,9 @@
 }
 
 .card-img-top {
-  padding: 1rem;
+  /* padding: 1rem;
+   */
+  border-radius: 7px 7px 0 0;
 }
 
 .card-btn {
@@ -410,10 +408,13 @@
 }
 
 .study-research {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(../img/nsu2.jpg) center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .line-through {
@@ -475,14 +476,18 @@
   line-height: 30px;
 }
 
+.notice {
+  background: url(/img/bg-notice.png) no-repeat center center / cover;
+}
+
 @media (max-width: 575px) {
   .logo-name {
     display: none;
   }
 
   .py-6 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .py-3 {
@@ -502,15 +507,15 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
   .py-6 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
 /* For large devices (lg and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .py-6 {
+  /* .py-6 {
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
+  } */
 }
