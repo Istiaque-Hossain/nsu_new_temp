@@ -477,7 +477,7 @@
 }
 
 .notice {
-  background: url(/img/bg-notice.png) no-repeat center center / cover;
+  background: url(../img/bg-notice.png) no-repeat center center / cover;
 }
 
 @media (max-width: 575px) {
