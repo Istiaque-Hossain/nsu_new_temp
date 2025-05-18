@@ -307,7 +307,7 @@
 /*** Footer ***/
 .footer .btn.btn-link {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 2px !important;
   padding: 0;
   text-align: left;
   color: var(--light);
@@ -463,12 +463,12 @@
 }
 
 .social-btn {
-  width: 38px;
-  height: 38px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 11px;
 }
 
 .ftr-title {
@@ -478,6 +478,22 @@
 
 .notice {
   background: url(../img/bg-notice.png) no-repeat center center / cover;
+}
+
+p.card-date.text-muted.mb-3 {
+  color: #a27035 !important;
+}
+
+.text-secondary2 {
+  color: #a27035 !important;
+}
+
+.bg-gradient {
+  background: linear-gradient(0deg, #183e77, #0b2743) !important;
+}
+
+.logo-name {
+  color: whitesmoke;
 }
 
 @media (max-width: 575px) {
