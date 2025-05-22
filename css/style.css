@@ -179,6 +179,10 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .slogan-box {
+    display: none;
+  }
 }
 
 .page-header {
@@ -417,6 +421,53 @@
   align-items: center;
 }
 
+.events {
+  min-height: 90vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255 255 255 / 60%)), url(../img/events2.webp) center center no-repeat;
+  /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(../img/events2.webp) center center no-repeat; */
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.scheduled-event-card {
+  background: transparent;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.scheduled-event-date-circle {
+  background: #a27035 !important;
+  color: black;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scheduled-event-event-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.scheduled-event-location,
+.scheduled-event-time {
+  font-size: 0.9rem;
+  color: black;
+  text-shadow: 1px 1px 5px #4f4f4fba;
+}
+
 .line-through {
   display: flex;
   text-align: center;
@@ -463,12 +514,12 @@
 }
 
 .social-btn {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .ftr-title {
@@ -494,6 +545,52 @@ p.card-date.text-muted.mb-3 {
 
 .logo-name {
   color: whitesmoke;
+}
+
+.slider .slick-slide {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.slogan-box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 70px; /* 1 line tall */
+  line-height: 70px; /* vertically centre text */
+  overflow: hidden;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: #fff;
+}
+
+.slogan-box p {
+  position: absolute; /* stack both lines */
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  animation: fade-animation 8s infinite;
+  font-size: 1.5rem;
+}
+
+/* second line starts 50 % later */
+.slogan-box p:nth-child(2) {
+  animation-delay: 4s;
+}
+
+@keyframes fade-animation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  40% {
+    opacity: 1;
+  } /* Show first text */
+  50%,
+  90% {
+    opacity: 0;
+  } /* Fade out */
 }
 
 @media (max-width: 575px) {
