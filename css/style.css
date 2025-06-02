@@ -424,7 +424,7 @@
 
 .events {
   min-height: 90vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgb(255 255 255 / 0.2)), url(../img/events2.webp) center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../img/events2.webp) center center no-repeat;
   /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(../img/events2.webp) center center no-repeat; */
   background-attachment: fixed;
   background-size: cover;
@@ -448,11 +448,13 @@
 }
 
 .scheduled-event-date-circle {
-  background: #a27035 !important;
-  color: black;
+  background: #ffffff !important;
+  color: #6d0808;
+  /* background: #a27035 !important;
+  color: black; */
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -493,6 +495,28 @@
 }
 
 .line-through::after {
+  margin-left: 20px;
+}
+
+.line-through-white {
+  display: flex;
+  text-align: center;
+  color: white;
+}
+
+.line-through-white::before,
+.line-through-white::after {
+  content: "";
+  flex: 1;
+  align-self: center;
+  border-bottom: 1px solid white;
+}
+
+.line-through-white::before {
+  margin-right: 20px;
+}
+
+.line-through-white::after {
   margin-left: 20px;
 }
 
