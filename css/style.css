@@ -3,6 +3,7 @@
   --primary: #061742;
   --secondary: #183f78;
   --secondary-2: #183e7880;
+  --contrast: #a27035;
   --light: #f3f4f9;
   --dark: #061742;
   --border: #06174252;
@@ -601,7 +602,7 @@ p.card-date.text-muted.mb-3 {
   margin: 0;
   opacity: 0;
   animation: fade-animation 8s infinite;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 /* second line starts 50 % later */
@@ -626,6 +627,24 @@ p.card-date.text-muted.mb-3 {
 
 .list-inline-item:not(:last-child) {
   margin-right: 1rem;
+}
+
+.radius-35 {
+  border-radius: 35% !important;
+}
+.rounded-25 {
+  border-radius: 0.25rem !important;
+}
+
+.slick-slider img {
+  width: 35%;
+}
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../fonts/ds/ds.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @keyframes fade-animation {
