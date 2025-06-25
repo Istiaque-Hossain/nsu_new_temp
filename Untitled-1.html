@@ -1,0 +1,170 @@
+<div class="bg-gradient sticky-top">
+  <div class="container d-flex align-items-center justify-content-between">
+    <!-- Logo on the left -->
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <img src="logo-4.png" alt="Logo" style="width: 6rem" />
+    </a>
+
+    <div class="slogan-box">
+      <p>Center of Excellence in Higher Education</p>
+      <p>The 1<sup>st</sup> Private University in Bangladesh</p>
+    </div>
+
+    <!-- Menu Button on the right -->
+    <button class="btn btn-primary d-flex align-items-center gap-2 navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuCanvas" aria-controls="megaMenuCanvas">
+      <span class="navbar-toggler-icon"></span>
+      Menu
+    </button>
+  </div>
+</div>
+
+<!-- Offcanvas Nested Menu -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="megaMenuCanvas" aria-labelledby="megaMenuLabel" style="width: 400px">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="megaMenuLabel">NORTH SOUTH UNIVERSITY</h5>
+    <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Main Navigation -->
+    <ul class="nav flex-column">
+      <li class="nav-item position-relative">
+        <a href="#" class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#academicsMegaMenu" aria-expanded="false" aria-controls="academicsMegaMenu">
+          Academics
+          <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+        </a>
+        <div class="mega-menu collapse" id="academicsMegaMenu">
+          <div class="row g-3">
+            <div class="col-6">
+              <a href="#" class="nav-link">School of Business (SBE)</a>
+              <a href="#" class="nav-link">School of Business (SBE)</a>
+              <a href="#" class="nav-link">School of Engineering (SEPS)</a>
+            </div>
+            <div class="col-6">
+              <a href="#" class="nav-link">School of Humanities (SHLS)</a>
+              <a href="#" class="nav-link">School of Health (SPPH)</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item position-relative">
+        <a href="#" class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#academicsMegaMenu2" aria-expanded="false" aria-controls="academicsMegaMenu2">
+          Academics 2
+          <i class="fa fa-chevron-down ms-2 arrow-icon" aria-hidden="true"></i>
+        </a>
+        <div class="mega-menu collapse" id="academicsMegaMenu2">
+          <div class="row g-3">
+            <div class="col-6">
+              <a href="#" class="nav-link">School of Business (SBE)</a>
+              <a href="#" class="nav-link">School of Engineering (SEPS)</a>
+            </div>
+            <div class="col-6">
+              <a href="#" class="nav-link">School of Humanities (SHLS)</a>
+              <a href="#" class="nav-link">School of Health (SPPH)</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Optional: CSS for arrow icon rotation on toggle -->
+<style>
+  /* Rotate the arrow when the menu is expanded */
+  .nav-link[aria-expanded="true"] .arrow-icon {
+    transform: rotate(180deg);
+  }
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+
+  #megaMenuCanvas ul ul .nav-link::before {
+    content: "- "; /* the dash */
+    margin-right: 5px; /* optional spacing */
+    color: inherit; /* keep same text color */
+  }
+
+  #megaMenuCanvas .nav > .nav-item {
+    border-bottom: 1px solid var(--secondary-2); /* light gray line */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Remove border-bottom from last item */
+  #megaMenuCanvas .nav > .nav-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+</style>
+
+<style>
+  /* .mega-menu {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+        transition: all 3s ease;
+      } */
+
+  .mega-menu {
+    background-color: #f8f9fa26;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    /* transition: max-height 0.3s ease, opacity 0.3s ease; */
+    transition: all 0.3s ease;
+  }
+
+  .mega-menu.show {
+    background-color: #f8f9fa26;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+
+    overflow: hidden;
+    max-height: 1000px;
+    opacity: 1;
+    /* transition: max-height 0.5s ease, opacity 0.3s ease; */
+    transition: all 0.3s ease;
+  }
+
+  .mega-menu a.nav-link {
+    display: block;
+    padding: 0.25rem 0;
+    color: #ffffff;
+  }
+
+  .nav-link[aria-expanded="true"] .arrow-icon {
+    transform: rotate(180deg);
+  }
+
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", function () {
+        const targetId = this.getAttribute("data-bs-target");
+        const allMenus = document.querySelectorAll(".mega-menu");
+
+        allMenus.forEach((menu) => {
+          if ("#" + menu.id !== targetId) {
+            const bsCollapse = bootstrap.Collapse.getInstance(menu);
+            if (bsCollapse) bsCollapse.hide();
+          }
+        });
+      });
+    });
+  });
+</script>

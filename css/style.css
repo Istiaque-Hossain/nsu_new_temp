@@ -377,6 +377,7 @@
 
 .nav-link {
   color: var(--light);
+  font-weight: 600;
 }
 .offcanvas-title {
   color: var(--light);
@@ -384,8 +385,16 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--secondary);
-  font-weight: 600;
+  background-color: var(--secondary);
+  /* color: var(--secondary) !important; */
+  /* font-weight: 600; */
+}
+
+.submenu {
+  margin-top: 0.5rem;
+  color: white;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ffffff52;
 }
 
 .offcanvas-header {
