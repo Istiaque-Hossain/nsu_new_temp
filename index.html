@@ -99,21 +99,37 @@
         padding-bottom: 0;
       }
 
-      .mega-menu a.nav-link {
+      /* .mega-menu a.nav-link {
         display: block;
         padding: 0.25rem;
-        /* padding: 0.25rem 0; */
+        padding: 0.25rem 0;
         color: #ffffff;
         font-weight: 400 !important;
-      }
+      } */
 
       .mega-menu {
         padding: 0rem 1rem !important;
       }
 
-      .mega-menu .nav-link::before {
+      /* .mega-menu .nav-link::before {
         content: "- ";
         margin-right: 5px;
+        color: inherit;
+      } */
+
+      .mega-menu a.nav-link {
+        display: block;
+        position: relative;
+        padding-left: 1.5em; /* Make space for the dash */
+        text-indent: -1em; /* Pull first line back to show dash */
+        color: #ffffff;
+        font-weight: 400 !important;
+        white-space: normal; /* Ensure wrapping */
+        line-height: 1.4;
+      }
+
+      .mega-menu .nav-link::before {
+        content: "- ";
         color: inherit;
       }
     </style>
@@ -143,7 +159,7 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="nav flex-column" id="menuAccordion">
+        <ul class="nav flex-column flex-nowrap" id="menuAccordion">
           <!-- First Item -->
           <li class="nav-item">
             <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicsMegaMenu" aria-expanded="false" aria-controls="academicsMegaMenu">
@@ -153,26 +169,28 @@
             <div class="collapse mega-menu" id="academicsMegaMenu" data-bs-parent="#menuAccordion">
               <div class="row">
                 <div class="col-md-3">
-                  <h6 class="submenu">SBE</h6>
-                  <a href="#" class="nav-link">School of Business (SBE)</a>
-                  <a href="#" class="nav-link">School of Engineering (SEPS)</a>
+                  <h6 class="submenu">ABOUT NSU</h6>
+                  <a href="#" class="nav-link">Brief History</a>
+                  <a href="#" class="nav-link">Vision, Mission & Strategy</a>
+                  <a href="#" class="nav-link">International Advisory Board</a>
+                  <a href="#" class="nav-link">Accreditation</a>
+                  <a href="#" class="nav-link">International Recognition</a>
+                  <a href="#" class="nav-link">Facts About NSU</a>
                 </div>
                 <div class="col-md-3">
-                  <h6 class="submenu">ECE</h6>
-                  <a href="#" class="nav-link">School of Humanities (SHLS)</a>
-                  <a href="#" class="nav-link">School of Humanities (SHLS)</a>
-                  <a href="#" class="nav-link">School of Health (SPPH)</a>
+                  <h6 class="submenu">NSU Trustees</h6>
+                  <a href="#" class="nav-link">Board of Trustees</a>
                 </div>
                 <div class="col-md-3">
-                  <h6 class="submenu">SBE</h6>
-                  <a href="#" class="nav-link">School of Business (SBE)</a>
-                  <a href="#" class="nav-link">School of Engineering (SEPS)</a>
+                  <h6 class="submenu">Executive Leaders</h6>
+                  <a href="#" class="nav-link">VC, Pro-VC & Treasurer </a>
+                  <a href="#" class="nav-link">Deans, Chairs & Directors</a>
+                  <a href="#" class="nav-link">Administration</a>
                 </div>
                 <div class="col-md-3">
-                  <h6 class="submenu">ECE</h6>
-                  <a href="#" class="nav-link">School of Humanities (SHLS)</a>
-                  <a href="#" class="nav-link">School of Humanities (SHLS)</a>
-                  <a href="#" class="nav-link">School of Health (SPPH)</a>
+                  <h6 class="submenu">Authorities</h6>
+                  <a href="#" class="nav-link">Syndicate</a>
+                  <a href="#" class="nav-link">Academic Council</a>
                 </div>
               </div>
             </div>
@@ -187,10 +205,12 @@
             <div class="collapse mega-menu" id="academicsMegaMenu2" data-bs-parent="#menuAccordion">
               <div class="row">
                 <div class="col-6">
+                  <h6 class="submenu">OTHERS</h6>
                   <a href="#" class="nav-link">School of Business (SBE)</a>
                   <a href="#" class="nav-link">School of Engineering (SEPS)</a>
                 </div>
                 <div class="col-6">
+                  <h6 class="submenu">MORE</h6>
                   <a href="#" class="nav-link">School of Humanities (SHLS)</a>
                   <a href="#" class="nav-link">School of Health (SPPH)</a>
                 </div>
