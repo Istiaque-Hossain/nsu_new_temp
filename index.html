@@ -37,6 +37,7 @@
     </div>
     <!-- Spinner End -->
 
+    <!-- Top Nav -->
     <div class="container-fluid bg-dark text-light p-0">
       <div class="row gx-0 d-none d-lg-flex">
         <div class="col-lg-12 px-5 py-2 text-center">
@@ -73,66 +74,6 @@
       </div>
     </div>
 
-    <style>
-      .nav-link[aria-expanded="true"] .arrow-icon {
-        transform: rotate(180deg);
-      }
-      .arrow-icon {
-        transition: transform 0.3s ease;
-      }
-
-      #megaMenuCanvas ul ul .nav-link::before {
-        content: "- ";
-        margin-right: 5px;
-        color: inherit;
-      }
-
-      #megaMenuCanvas .nav > .nav-item {
-        border-bottom: 1px solid #dddddd44;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-      }
-
-      #megaMenuCanvas .nav > .nav-item:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-
-      /* .mega-menu a.nav-link {
-        display: block;
-        padding: 0.25rem;
-        padding: 0.25rem 0;
-        color: #ffffff;
-        font-weight: 400 !important;
-      } */
-
-      .mega-menu {
-        padding: 0rem 1rem !important;
-      }
-
-      /* .mega-menu .nav-link::before {
-        content: "- ";
-        margin-right: 5px;
-        color: inherit;
-      } */
-
-      .mega-menu a.nav-link {
-        display: block;
-        position: relative;
-        padding-left: 1.5em; /* Make space for the dash */
-        text-indent: -1em; /* Pull first line back to show dash */
-        color: #ffffff;
-        font-weight: 400 !important;
-        white-space: normal; /* Ensure wrapping */
-        line-height: 1.4;
-      }
-
-      .mega-menu .nav-link::before {
-        content: "- ";
-        color: inherit;
-      }
-    </style>
     <!-- Navbar bar with Logo and Menu button -->
     <div class="bg-gradient sticky-top">
       <div class="container d-flex align-items-center justify-content-between py-2">
@@ -152,7 +93,7 @@
       </div>
     </div>
 
-    <!-- Offcanvas -->
+    <!-- Offcanvas Nav-->
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="megaMenuCanvas" aria-labelledby="megaMenuLabel" style="width: 400px">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="megaMenuLabel">NORTH SOUTH UNIVERSITY</h5>
@@ -214,6 +155,11 @@
                   <a href="#" class="nav-link">School of Humanities (SHLS)</a>
                   <a href="#" class="nav-link">School of Health (SPPH)</a>
                 </div>
+                <div class="col-6">
+                  <h6 class="submenu">MORE</h6>
+                  <a href="#" class="nav-link">School of Humanities (SHLS)</a>
+                  <a href="#" class="nav-link">School of Health (SPPH)</a>
+                </div>
               </div>
             </div>
           </li>
@@ -221,7 +167,7 @@
       </div>
     </div>
 
-    <!-- Carousel Start -->
+    <!-- Carousel  -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
       <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -246,21 +192,7 @@
       </div>
     </div>
 
-    <!-- Carousel End -->
-    <style>
-      #header-carousel,
-      .carousel-inner,
-      .carousel-item,
-      .carousel-item video {
-        height: 100vh; /* Full screen height */
-      }
-
-      .carousel-item video {
-        object-fit: cover;
-      }
-    </style>
-
-    <!-- News and Events Start -->
+    <!-- News and Events  -->
     <div class="container-fluid py-6 bg--light">
       <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
@@ -321,28 +253,10 @@
         </div>
       </div>
     </div>
-    <!-- News and Events End -->
 
+    <!-- Message  -->
     <div class="container-fluid py-6 bg-gradient">
       <div class="container">
-        <!-- <div class="row">
-          <div class="col-md-5">
-            <div class="mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
-              <h1 class="display-6">
-                MESSAGE FROM <br />
-                VICE-CHANCELLOR
-              </h1>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <p class="mb-4">
-              North South University (NSU), established in 1992, is Bangladesh's first private university and a leader in academic excellence and research. With a global outlook, diverse faculty, and strong student support services, NSU fosters
-              innovation and personal growth. Our graduates thrive in various fields, contributing to society and inspiring future students.
-            </p>
-            <a href="all-news.html" class="btn btn-primary py-2 px-4" style="border-radius: 2rem"> More <i class="fas fa-arrow-right"></i> </a>
-          </div>
-        </div> -->
-
         <div id="profileCarousel" class="carousel slide shadow" data-bs-ride="carousel">
           <div class="carousel-inner h-auto">
             <!-- Slide 1 -->
@@ -369,92 +283,13 @@
                 </div>
               </div>
             </div>
-
-            <!-- Slide 2 -->
-            <!-- <div class="carousel-item h-auto">
-              <div class="row profile-slide align-items-center">
-                <div class="col-md-4 profile-img">
-                  <img src="https://via.placeholder.com/300x400?text=Person+2" alt="Profile" />
-                </div>
-                <div class="col-md-8 profile-content">
-                  <h2>Dr. Jane Smith</h2>
-                  <h5>Vice Chancellor</h5>
-                  <p>
-                    Dr. Jane Smith brings over 25 years of experience in higher education leadership. Previously a professor at Stanford University and consultant for UNESCO, she has led several initiatives for educational reform and student
-                    empowerment globally.
-                  </p>
-                  <a href="#" class="btn btn-learn">Learn more →</a>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Add more slides as needed -->
           </div>
-
-          <!-- Controls -->
-          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button> -->
         </div>
 
-        <style>
-          .profile-slide {
-            background-color: #f8f9fc;
-            border-radius: 15px;
-            padding: 30px;
-            position: relative;
-            min-height: 400px;
-          }
-          .carousel-indicators {
-            bottom: 10px;
-          }
-          .carousel-control-prev,
-          .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background: white;
-            color: #11143d;
-            border-radius: 50%;
-            position: absolute;
-            bottom: 4px;
-            top: auto;
-            opacity: 1;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-          }
-          .carousel-control-prev {
-            right: 60px;
-          }
-          /* .carousel-control-next {
-            right: 10px;
-          } */
-          .profile-img img {
-            border-radius: 10px;
-            width: 100%;
-            max-width: 300px;
-          }
-          .profile-content h2 {
-            font-weight: bold;
-            color: #11143d;
-          }
-          .profile-content h5 {
-            color: #11143d;
-          }
-          .btn-learn {
-            border: 1px solid #11143d;
-            color: #11143d;
-          }
-          .btn-learn:hover {
-            background-color: #11143d;
-            color: white;
-          }
-        </style>
-        <script>
+        <!-- <script>
           const profileCarousel = document.querySelector("#profileCarousel");
           const carousel = new bootstrap.Carousel(profileCarousel, { interval: 5000, ride: "carousel", wrap: true });
-        </script>
+        </script> -->
       </div>
     </div>
 
@@ -642,57 +477,6 @@
         </div>
 
         <div class="row g-4">
-          <!-- <div class="col-md-9">
-            <div class="card text-center shadow-sm border-0 p-4 h-100">
-              <h5 class="w-75 mx-auto mb-4 fw-semibold text-secondary2">NSU’s position in Bangladesh according to the following international ranking platforms</h5>
-              <div href="#" class="btn btn-light d-flex justify-content-between align-items-center mb-2 px-4 py-2 rounded">
-                <ul class="list-unstyled">
-                  <li class="mb-3 d-flex flex-column flex-md-row">
-                    <div class="me-3 text-primary fw-bold">1.1</div>
-                    <div class="text-md-start">
-                      Times Higher Education <strong><span class="text-primary"> (THE) </span></strong> World University Rankings: <strong><span class="text-primary">2025, 2024, 2023 (Jointly #1 </span></strong> among all
-                      <strong><span class="text-primary"> private and public </span></strong>
-                      universities)
-                    </div>
-                  </li>
-
-                  <li class="mb-3 d-flex flex-column flex-md-row">
-                    <div class="me-3 text-primary fw-bold">1.2</div>
-                    <div class="text-md-start">
-                      <strong><span class="text-primary"> THE </span></strong> Asia University Rankings:<strong><span class="text-primary"> 2024, 2023 (#1 </span></strong>Private University)
-                    </div>
-                  </li>
-
-                  <li class="mb-3 d-flex flex-column flex-md-row">
-                    <div class="me-3 text-primary fw-bold">1.3</div>
-                    <div class="text-md-start">
-                      <strong><span class="text-primary"> THE </span></strong> Young University Rankings:<strong><span class="text-primary"> 2024, 2023 (#1 </span></strong>among all
-                      <strong><span class="text-primary"> private and public </span></strong> universities)
-                    </div>
-                  </li>
-
-                  <li class="mb-3 d-flex flex-column flex-md-row">
-                    <div class="me-3 fw-bold">2.1</div>
-                    <div class="text-md-start">
-                      <strong><span class="text-primary"> QS World</span></strong> University Rankings:
-                      <strong>
-                        <span class="text-primary">2025, 2024 (#1 </span>
-                      </strong>
-                      Private University) <br />
-                      <strong><span class="text-primary"> 2023, 2022 (Jointly #1 </span></strong>Private University)
-                    </div>
-                  </li>
-
-                  <li class="mb-3 d-flex flex-column flex-md-row">
-                    <div class="me-3 fw-bold">2.2</div>
-                    <div class="text-md-start">
-                      <strong><span class="text-primary"> QS Asia</span></strong> University Rankings:<strong><span class="text-primary"> 2025, 2024, 2023, 2022, 2021, 2020 (#1 </span></strong>Private University)
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
           <div class="col-md-9">
             <div class="card text-center shadow-sm border-0 p-4 h-100">
               <h5 class="w-75 mx-auto mb-4 fw-semibold text-secondary2">NSU’s position in Bangladesh according to the following international ranking platforms</h5>
@@ -700,19 +484,6 @@
               <div class="scroll-container overflow-hidden position-relative">
                 <div class="scroll-inner">
                   <ul class="scroll-list list-unstyled m-0 p-0">
-                    <!-- <li class="mb-3 d-flex flex-column flex-md-row">
-                    <div class="me-3 text-primary fw-bold">1.1</div>
-                    <div>
-                      Times Higher Education <strong class="text-primary">(THE)</strong> World University Rankings: <strong class="text-primary">2025, 2024, 2023 (Jointly #1</strong> among all
-                      <strong class="text-primary">private and public</strong> universities)
-                    </div>
-                  </li>
-
-                  <li class="mb-3 d-flex flex-column flex-md-row">
-                    <div class="me-3 text-primary fw-bold">1.2</div>
-                    <div><strong class="text-primary">THE</strong> Asia University Rankings: <strong class="text-primary">2024, 2023 (#1</strong> Private University)</div>
-                  </li> -->
-
                     <li class="mb-3 d-flex flex-column flex-md-row">
                       <div class="me-3 text-secondary2 fw-bold"><i class="fas fa-solid fa-arrow-right"></i></div>
                       <div class="text-md-start">
@@ -761,34 +532,7 @@
             </div>
           </div>
 
-          <style>
-            .scroll-container {
-              height: 100px;
-              overflow: hidden;
-              position: relative;
-            }
-
-            @media (max-width: 575px) {
-              .scroll-container {
-                height: 300px;
-              }
-            }
-
-            .scroll-inner {
-              display: flex;
-              flex-direction: column;
-              animation: scroll-up 15s linear infinite;
-            }
-
-            @keyframes scroll-up {
-              0% {
-                transform: translateY(0);
-              }
-              100% {
-                transform: translateY(-50%);
-              }
-            }
-          </style>
+          <style></style>
 
           <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -884,7 +628,6 @@
         </div>
       </div>
     </div>
-    <!-- Courses End -->
 
     <!-- Notice Start -->
     <div class="container-fluid py-6 notice">
@@ -1029,7 +772,6 @@
         </div>
       </div>
     </div>
-    <!-- Notice End -->
 
     <!-- Scheduled Events Start -->
     <div class="container-fluid py-6 events">
@@ -1097,44 +839,6 @@
         </div>
       </div>
     </div>
-    <!-- Scheduled Events End -->
-
-    <!-- Slick CSS/JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <style>
-      .slider .slick-slide {
-        display: flex !important;
-        justify-content: center;
-      }
-
-      .slider {
-        /* height: 400px; Adjust as needed */
-        overflow: hidden;
-      }
-    </style>
-
-    <script>
-      $(".slider").slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: false,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        vertical: true, // <-- Enable vertical sliding
-        responsive: [
-          {
-            breakpoint: 426,
-            settings: {
-              slidesToShow: 2,
-            },
-          },
-        ],
-      });
-    </script>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
@@ -1169,13 +873,17 @@
         </div>
       </div>
     </div>
-    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <!-- Slick CSS/JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>

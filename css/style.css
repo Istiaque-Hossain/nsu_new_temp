@@ -649,6 +649,168 @@ p.card-date.text-muted.mb-3 {
   width: 35%;
 }
 
+/* nav css  */
+.nav-link[aria-expanded="true"] .arrow-icon {
+  transform: rotate(180deg);
+}
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+#megaMenuCanvas ul ul .nav-link::before {
+  content: "- ";
+  margin-right: 5px;
+  color: inherit;
+}
+
+#megaMenuCanvas .nav > .nav-item {
+  border-bottom: 1px solid #dddddd44;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#megaMenuCanvas .nav > .nav-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* .mega-menu a.nav-link {
+  display: block;
+  padding: 0.25rem;
+  padding: 0.25rem 0;
+  color: #ffffff;
+  font-weight: 400 !important;
+} */
+
+.mega-menu {
+  padding: 0rem 1rem !important;
+}
+
+/* .mega-menu .nav-link::before {
+  content: "- ";
+  margin-right: 5px;
+  color: inherit;
+} */
+
+.mega-menu a.nav-link {
+  display: block;
+  position: relative;
+  padding-left: 1.5em; /* Make space for the dash */
+  text-indent: -1em; /* Pull first line back to show dash */
+  color: #ffffff;
+  font-weight: 400 !important;
+  white-space: normal; /* Ensure wrapping */
+  line-height: 1.4;
+}
+
+.mega-menu .nav-link::before {
+  content: "- ";
+  color: inherit;
+}
+
+/* Carousel css  */
+#header-carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item video {
+  height: 100vh; /* Full screen height */
+}
+
+.carousel-item video {
+  object-fit: cover;
+}
+
+/* Message Css  */
+.profile-slide {
+  background-color: #f8f9fc;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  min-height: 400px;
+}
+.carousel-indicators {
+  bottom: 10px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: #11143d;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  top: auto;
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-control-prev {
+  right: 60px;
+}
+/* .carousel-control-next {
+  right: 10px;
+} */
+.profile-img img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+.profile-content h2 {
+  font-weight: bold;
+  color: #11143d;
+}
+.profile-content h5 {
+  color: #11143d;
+}
+.btn-learn {
+  border: 1px solid #11143d;
+  color: #11143d;
+}
+.btn-learn:hover {
+  background-color: #11143d;
+  color: white;
+}
+
+/* Achievements Css  */
+.scroll-container {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 575px) {
+  .scroll-container {
+    height: 300px;
+  }
+}
+
+.scroll-inner {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 15s linear infinite;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Others  */
+.slider .slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slider {
+  /* height: 400px; Adjust as needed */
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "Dancing Script";
   src: url("../fonts/ds/ds.ttf") format("truetype");

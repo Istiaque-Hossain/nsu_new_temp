@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CountUp.js Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #1e1e2f;
+        color: white;
+      }
+      .counter-value {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column justify-content-center align-items-center vh-100">
+    <div class="text-center">
+      <div id="counter" class="counter-value text-success">0</div>
+      <button class="btn btn-primary mt-4" onclick="startCounter()">Start Count</button>
+    </div>
+
+    <!-- CountUp.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+
+    <script>
+      function startCounter() {
+        const el = document.getElementById("counter");
+        const counter = new CountUp.CountUp(el, 1000, {
+          duration: 2, // Duration in seconds
+          separator: ",", // Use comma separator
+        });
+
+        if (!counter.error) {
+          counter.start();
+        } else {
+          console.error(counter.error);
+        }
+      }
+    </script>
+  </body>
+</html>
