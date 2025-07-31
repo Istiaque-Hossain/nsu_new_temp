@@ -75,97 +75,433 @@
     </div>
 
     <!-- Navbar bar with Logo and Menu button -->
-    <div class="bg-gradient sticky-top">
-      <div class="container d-flex align-items-center justify-content-between py-2">
+
+    <nav class="navbar navbar-expand-xl navbar-dark bg-primary sticky-top">
+      <div class="container position-relative">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
           <img src="logo-4.png" alt="Logo" style="width: 6rem" />
         </a>
-
-        <div class="slogan-box text-white text-center">
-          <p class="mb-0">Center of Excellence in Higher Education</p>
-          <p class="mb-0">The 1<sup>st</sup> Private University in Bangladesh</p>
-        </div>
-
-        <button class="btn btn-primary d-flex align-items-center gap-2 navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuCanvas" aria-controls="megaMenuCanvas">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
-          Menu
+        </button> -->
+
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-    </div>
 
-    <!-- Offcanvas Nav-->
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="megaMenuCanvas" aria-labelledby="megaMenuLabel" style="width: 400px">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="megaMenuLabel">NORTH SOUTH UNIVERSITY</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="nav flex-column flex-nowrap" id="menuAccordion">
-          <!-- First Item -->
-          <li class="nav-item">
-            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicsMegaMenu" aria-expanded="false" aria-controls="academicsMegaMenu">
-              Academics
-              <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
-            </a>
-            <div class="collapse mega-menu" id="academicsMegaMenu" data-bs-parent="#menuAccordion">
-              <div class="row">
-                <div class="col-md-3">
-                  <h6 class="submenu">ABOUT NSU</h6>
-                  <a href="#" class="nav-link">Brief History</a>
-                  <a href="#" class="nav-link">Vision, Mission & Strategy</a>
-                  <a href="#" class="nav-link">International Advisory Board</a>
-                  <a href="#" class="nav-link">Accreditation</a>
-                  <a href="#" class="nav-link">International Recognition</a>
-                  <a href="#" class="nav-link">Facts About NSU</a>
-                </div>
-                <div class="col-md-3">
-                  <h6 class="submenu">NSU Trustees</h6>
-                  <a href="#" class="nav-link">Board of Trustees</a>
-                </div>
-                <div class="col-md-3">
-                  <h6 class="submenu">Executive Leaders</h6>
-                  <a href="#" class="nav-link">VC, Pro-VC & Treasurer </a>
-                  <a href="#" class="nav-link">Deans, Chairs & Directors</a>
-                  <a href="#" class="nav-link">Administration</a>
-                </div>
-                <div class="col-md-3">
-                  <h6 class="submenu">Authorities</h6>
-                  <a href="#" class="nav-link">Syndicate</a>
-                  <a href="#" class="nav-link">Academic Council</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="menuAccordion">
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#aboutMegaMenu" aria-expanded="false" aria-controls="aboutMegaMenu">
+                About
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="aboutMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h6 class="submenu">ABOUT NSU</h6>
+                    <a href="[[~47~]]" class="nav-link">Brief History</a>
+                    <a href="[[~167~]]" class="nav-link">Vision, Mission & Strategy</a>
+                    <a href="[[~49~]]" class="nav-link">International Advisory Board</a>
+                    <a href="[[~168~]]" class="nav-link">Accreditation</a>
+                    <a href="[[~169~]]" class="nav-link">International Recognition</a>
+                    <a href="[[~388~]]" class="nav-link">Facts About NSU</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">NSU Trustees</h6>
+                    <a href="[[~109~]]" class="nav-link">Board of Trustees</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Executive Leaders</h6>
+                    <a href="[[~4145~]]#one" class="nav-link" target="_blank">VC, Pro-VC & Treasurer</a>
+                    <a href="[[~4145~]]#six" class="nav-link" target="_blank">Deans, Chairs & Directors</a>
+                    <a href="[[~4145~]]#two" class="nav-link" target="_blank">Administration</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Authorities</h6>
+                    <a href="/newassets/images/Registrs Office/syndicatememberlist-8april2025.pdf" class="nav-link" target="_blank">Syndicate</a>
+                    <a href="/newassets/images/Registrs Office/academiccouncilmember-26122024.pdf" class="nav-link" target="_blank">Academic Council</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <!-- Second Item -->
-          <li class="nav-item">
-            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicsMegaMenu2" aria-expanded="false" aria-controls="academicsMegaMenu2">
-              Academics 2
-              <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
-            </a>
-            <div class="collapse mega-menu" id="academicsMegaMenu2" data-bs-parent="#menuAccordion">
-              <div class="row">
-                <div class="col-6">
-                  <h6 class="submenu">OTHERS</h6>
-                  <a href="#" class="nav-link">School of Business (SBE)</a>
-                  <a href="#" class="nav-link">School of Engineering (SEPS)</a>
-                </div>
-                <div class="col-6">
-                  <h6 class="submenu">MORE</h6>
-                  <a href="#" class="nav-link">School of Humanities (SHLS)</a>
-                  <a href="#" class="nav-link">School of Health (SPPH)</a>
-                </div>
-                <div class="col-6">
-                  <h6 class="submenu">MORE</h6>
-                  <a href="#" class="nav-link">School of Humanities (SHLS)</a>
-                  <a href="#" class="nav-link">School of Health (SPPH)</a>
+            <!-- Academic Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicMegaMenu" aria-expanded="false" aria-controls="academicMegaMenu">
+                Academic
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="academicMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~56~]]">School of Business & Economics</a></h6>
+                    <a href="[[~57~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~2890~]]" class="nav-link">Economics</a>
+                    <a href="[[~58~]]" class="nav-link">Management</a>
+                    <a href="[[~69~]]" class="nav-link">Marketing & International Business</a>
+                    <a href="[[~3581~]]" class="nav-link">MBA & EMBA Programs</a>
+                    <a href="[[~9696~]]" class="nav-link">BBA Program</a>
+
+                    <h6 class="submenu"><a href="[[~62~]]">School of Engineering & Physical Sciences</a></h6>
+                    <a href="[[~64~]]" class="nav-link">Architecture</a>
+                    <a href="[[~8351~]]" class="nav-link">Civil and Environmental Engineering</a>
+                    <a href="http://ece.northsouth.edu/" class="nav-link">Electrical & Computer Engineering</a>
+                    <a href="[[~9063~]]" class="nav-link">Mathematics & Physics</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~65~]]">School of Humanities & Social Sciences</a></h6>
+                    <a href="[[~9149~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~67~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~191~]]" class="nav-link">Law</a>
+                    <a href="[[~1540~]]" class="nav-link">History & Philosophy</a>
+
+                    <h6 class="submenu"><a href="[[~59~]]">School of Health & Life Sciences</a></h6>
+                    <a href="[[~61~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~2643~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~70~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~60~]]" class="nav-link">Public Health</a>
+
+                    <h6 class="submenu">Miscellaneous</h6>
+                    <a href="[[~124~]]" class="nav-link">Grading Policy</a>
+                    <a href="[[~1366~]]" class="nav-link">Student Records</a>
+                    <a href="/newassets/images/5-80.17-09-2023 Academic Information and Policies.pdf" class="nav-link">Academic Information and Policies</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu">Institutes & Centers</h6>
+                    <a href="[[~1806~]]" class="nav-link">Institute of Modern Languages</a>
+                    <a href="[[~189~]]" class="nav-link">Confucius Institute</a>
+                    <a href="[[~3171~]]" class="nav-link">NSU Global Health Institute (NGHI)</a>
+                    <a href="[[~4212~]]" class="nav-link">NSU Genome Research Institute (NGRI)</a>
+                    <a href="https://cpc.northsouth.edu/" class="nav-link">Career & Placement Center (CPC)</a>
+                    <a href="https://www.northsouth.edu/sipg/" class="nav-link">South Asian Institute of Policy and Governance (SIPG)</a>
+
+                    <a href="http://www.northsouth.edu/research-innovation/cbr" class="nav-link">NSU Center for Business Research (NSU CBR)</a>
+                    <a href="http://www.northsouth.edu/academic/seps/cee/cirs.html" class="nav-link">Center for Infrastructure Research and Services (CIRS)</a>
+                    <a href="https://www.cscssnsu.org/" class="nav-link">China–South Asia Center for Sociocultural Studies (CSCSS)</a>
+                    <a href="http://www.northsouth.edu/resources/scc.html" class="nav-link">Student Counseling Center (SCC)</a>
+                    <a href="http://www.northsouth.edu/sipg/cms.html" class="nav-link">Center for Migration Studies (CMS)</a>
+                    <a href="https://www.cpsnsu.org/" class="nav-link">Center for Peace Studies (CPS)</a>
+                    <a href="https://www.northsouth.edu/sdg/" class="nav-link">Social Impact and Sustainability Center</a>
+                    <a href="https://www.northsouth.edu/academic/ic/cdr.html" class="nav-link">Center for Climate Change and Disaster Resilience (CDR)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/sbc.html" class="nav-link">NSU Social Business Center (SBC)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/ace.html" class="nav-link">Agribusiness Centre of Excellence (ACE)</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+
+            <!-- Faculty Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#facultyMegaMenu" aria-expanded="false" aria-controls="facultyMegaMenu">
+                Faculty
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="facultyMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Business & Economics</h6>
+                    <a href="[[~1785~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~181~]]" class="nav-link">Economics</a>
+                    <a href="[[~1784~]]" class="nav-link">Management</a>
+                    <a href="[[~1787~]]" class="nav-link">Marketing & International Business</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Engineering & Physical Sciences</h6>
+                    <a href="[[~177~]]" class="nav-link">Architecture</a>
+                    <a href="[[~179~]]" class="nav-link">Civil and Environmental Engineering</a>
+                    <a href="http://ece.northsouth.edu/people/type/faculty/" class="nav-link">Electrical & Computer Engineering</a>
+                    <a href="[[~1960~]]" class="nav-link">Mathematics & Physics</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Humanities & Social Sciences</h6>
+                    <a href="[[~180~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~182~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~2266~]]" class="nav-link">Law</a>
+                    <a href="[[~2665~]]" class="nav-link">History & Philosophy</a>
+                  </div>
+
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Health & Life Sciences</h6>
+                    <a href="[[~173~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~178~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~175~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~174~]]" class="nav-link">Public Health</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Offices Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#officesMegaMenu" aria-expanded="false" aria-controls="officesMegaMenu">
+                Offices
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="officesMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu">All Offices</h6>
+                    <a href="[[~8836~]]" class="nav-link">Registrar's Office</a>
+                    <a href="[[~3148~]]" class="nav-link">Proctor's Office</a>
+                    <a href="[[~9421~]]" class="nav-link">Controller's Office</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Other Offices</h6>
+                    <a href="http://institutions.northsouth.edu/oea/" class="nav-link" title="Office of External Affairs">Office of External Affairs</a>
+                    <a href="[[~3179~]]" class="nav-link">Office of Graduate Studies</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Student & Startup</h6>
+                    <a href="[[~8041~]]" class="nav-link">Office of Student Affairs</a>
+                    <a href="[[~1175~]]" class="nav-link">Financial Aid Office</a>
+                    <a href="https://nsustartupsnext.com/" class="nav-link" title="NSU Startups Next (NSUSN)">NSU Startups Next (NSUSN)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Admission Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#admissionMegaMenu" aria-expanded="false" aria-controls="admissionMegaMenu">
+                Admission
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="admissionMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Admission Information</h6>
+                    <a href="http://admissions.northsouth.edu/" class="nav-link" title="Admissions Home Page">Admissions Home Page</a>
+                    <a href="http://admissions.northsouth.edu/undergraduate_requirement" class="nav-link" title="Undergraduate Admission Requirements">Undergraduate Admission Requirements</a>
+                    <a href="http://admissions.northsouth.edu/graduate_requirement" class="nav-link" title="Graduate Admission Requirements">Graduate Admission Requirements</a>
+                    <a href="http://admissions.northsouth.edu/int_student" class="nav-link" title="Admission of International Applicants">Admission of International Applicants</a>
+                    <a href="https://admissions.northsouth.edu/nondegree" class="nav-link" title="Non-degree Students">Non-degree Students</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Financial & FAQs</h6>
+                    <a href="[[~1175~]]" class="nav-link" title="Financial Assistance">Financial Aid</a>
+                    <a href="[[~158~]]" class="nav-link" title="Tuition and Other Fees">Tuition and Other Fees</a>
+                    <a href="http://admissions.northsouth.edu/tuition" class="nav-link" title="Tuition Fee Calculator">Tuition Fee Calculator</a>
+                    <a href="http://admissions.northsouth.edu/faq" class="nav-link" title="Frequently Ask Questions">Frequently Ask Questions</a>
+                  </div>
+
+                  <!-- Column 3 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Transfer & Sample</h6>
+                    <a href="http://admissions.northsouth.edu/transfer" class="nav-link" title="Transfer of Students">Transfer of Students</a>
+                    <a href="http://admissions.northsouth.edu/transfer" class="nav-link" title="Credit Transfer">Credit Transfer</a>
+                    <a href="https://admissions.northsouth.edu/download/sample_question" class="nav-link" target="_blank" title="Sample Question (UG Admission Test)">Sample Question (UG Admission Test)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- NSU Online Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#nsuOnlineMegaMenu" aria-expanded="false" aria-controls="nsuOnlineMegaMenu">
+                NSU Online
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="nsuOnlineMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu">NSU Online Systems</h6>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Faculty Portal">Faculty Portal (RDS)</a>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Employee Portal">Employee Portal (RDS)</a>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Student Portal">Student Portal (RDS)</a>
+                    <a href="https://rds3.northsouth.edu/index.php/welcome/parent_login" class="nav-link" target="_blank" title="Parent Portal">Parent Portal (RDS)</a>
+                    <a href="http://apply.northsouth.edu:8080/admissionWeb/login.view" class="nav-link" target="_blank" title="Online Admission">Online Admission</a>
+                    <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank" title="Online Degree Verification">Online Degree Verification</a>
+                    <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank" title="Online Job Portal">Online Job Portal</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Faculty: Guidelines (Step by Step)</h6>
+                    <a href="https://drive.google.com/open?id=1WUx6Rp-pV0U8OeivNLCXRTUVTTIYueaT" class="nav-link" target="_blank" title="Google ClassRoom">Faculty: Create Google ClassRoom</a>
+                    <a href="/newassets/images/IT/ArchiveCreateNewClassWithMeetLink.pdf" class="nav-link" target="_blank" title="Online Class Setup">Faculty: Online Class (Archive, Create new one & Meet Link)</a>
+                    <a href="/newassets/images/IT/Faculty-ClassAssignmentManual.pdf" class="nav-link" target="_blank" title="Create Assignment">Faculty: Create an Assignment for Student</a>
+                    <h6 class="submenu mt-4">Learning Management System (LMS)</h6>
+                    <a href="http://www.northsouth.edu/canvas/" class="nav-link" target="_blank" title="Canvas LMS">Canvas</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Student: Guidelines (Step by Step)</h6>
+                    <a href="/newassets/images/IT/PasswordRecoveryProcess.pdf" class="nav-link" target="_blank" title="Password Recovery">Students: Password Recovery Process for RDS</a>
+                    <a href="https://drive.google.com/file/d/0B8X_hvl8uyoIRF9Ud1RRdjNWNjg/view" class="nav-link" target="_blank" title="Course Registration">Students: Online Course Registration</a>
+                    <a href="/newassets/images/IT/OnlineClassRoom-Students.pdf" class="nav-link" target="_blank" title="Online ClassRoom">Students: Online ClassRoom</a>
+                    <a href="/newassets/images/IT/GooleAssignmentStudentPerspective.pdf" class="nav-link" target="_blank" title="Submit Assignment">Students: How to submit an assignment</a>
+                    <a href="http://www.northsouth.edu/assets/cv/RDS-NID-Update.pdf" class="nav-link" target="_blank" title="NID Input">Students: How to Input NID Through RDS</a>
+                    <a href="http://www.northsouth.edu/assets/cv/Degree_Analysis_Guideline%20(2).pdf" class="nav-link" target="_blank" title="Degree Analysis">Students: Online Degree Analysis</a>
+                    <a href="/newassets/images/IT/EnrollmentProcessOnline.pdf" class="nav-link" target="_blank" title="Enrollment Process">Applicants: Online Enrollment Process</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://alumni.northsouth.edu/landingPage" class="nav-link text-white">Alumni</a>
+            </li>
+            <li class="nav-item">
+              <a href="[[~8062~]]" class="nav-link text-white">Research</a>
+            </li>
+
+            <!-- Useful Links Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#usefulLinksMegaMenu" aria-expanded="false" aria-controls="usefulLinksMegaMenu">
+                Useful Links
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="usefulLinksMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h6 class="submenu">NSU Inquiry</h6>
+                    <a href="[[~249~]]" class="nav-link" title="Inquiry & Feedback">Inquiry & Feedback</a>
+                    <a href="[[~7716~]]" class="nav-link" title="Administrative Directory">Administrative Directory</a>
+                    <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank" title="Jobs at NSU">Jobs at NSU</a>
+                    <a href="[[~477~]]" class="nav-link" title="Tender Notice">Tender Notice</a>
+                    <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank" title="Degree Verification">Degree Verification</a>
+                    <a href="https://rds3.northsouth.edu/index.php/etender/auth" class="nav-link" target="_blank" title="E-Tender">E-Tender</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">NSU Services</h6>
+                    <a href="[[~3258~]]" class="nav-link" title="Service Requests">Services Request Forms</a>
+                    <a href="[[~85~]]" class="nav-link" title="NSU Facilities">NSU Facilities</a>
+                    <a href="[[~4199~]]" class="nav-link" title="Student Clubs">NSU Student Clubs</a>
+                    <a href="/newassets/images/IT/pabx-directory-update-30-june-2025.pdf" class="nav-link" target="_blank" title="PABX Directory">PABX Directory</a>
+                    <a href="http://www.northsouth.edu/archive.html" class="nav-link" target="_blank" title="NSU Archive">NSU Archive</a>
+                    <a href="[[~1188~]]" class="nav-link" title="Bank List">Bank List for Tuition Fees</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Offices</h6>
+                    <a href="http://institutions.northsouth.edu/oea/" class="nav-link" target="_blank" title="Office of the External Affairs">Office of the External Affairs</a>
+                    <a href="[[~3179~]]" class="nav-link" title="Graduate Studies">Office of the Graduate Studies</a>
+                    <a href="[[~3148~]]" class="nav-link" title="Proctor's Office">Proctor's Office</a>
+                    <a href="[[~1175~]]" class="nav-link" title="Financial Aid Office">Financial Aid Office</a>
+                    <a href="[[~8041~]]" class="nav-link" title="Student Affairs">Office of the Student Affairs</a>
+                    <a href="https://nsustartupsnext.com/" class="nav-link" target="_blank" title="NSU Startups Next (NSUSN)">NSU Startups Next (NSUSN)</a>
+                    <a href="[[~8836~]]" class="nav-link" title="Registrar's Office">Registrar's Office</a>
+                    <a href="[[~9421~]]" class="nav-link" title="Controller of Examinations">Office of the Controller of Examinations</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Policy, Procedures & Complaints</h6>
+                    <a href="[[~8700~]]" class="nav-link" title="Complaint Committee">Complaint Committee</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
+
+    <style>
+      /* Make mega menus scrollable if too tall */
+      .mega-menu {
+        /* max-height: calc(100vh - 70px); */
+        /* 70px = approximate height of sticky header */
+        max-height: 75vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      /* Optional: style scrollbar */
+      .mega-menu::-webkit-scrollbar {
+        width: 6px;
+      }
+      .mega-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+
+      .mega-menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        box-shadow: 0 10px 20px rgb(255 255 255 / 30%);
+        z-index: 1000;
+        /* padding: 20px; */
+        margin-top: 1rem;
+      }
+      .mega-menu > .row {
+        padding: 20px;
+      }
+      /* .navbar-nav {
+        position: relative;
+      } */
+
+      .submenu {
+        color: white;
+        font-weight: 400;
+        margin-top: 15px;
+        font-size: 1rem;
+      }
+
+      .submenu a {
+        color: white;
+      }
+
+      .mega-menu .nav-link {
+        color: #333;
+        padding: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .mega-menu .nav-link:hover {
+        color: #002147;
+        font-weight: 500;
+      }
+
+      .mega-menu hr {
+        margin: 15px 0;
+        opacity: 0.2;
+      }
+
+      li.dropdown.nav-item {
+        position: static;
+      }
+
+      .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-x' viewBox='0 0 16 16'%3e%3cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      @media (max-width: 1199px) {
+        .mega-menu {
+          position: static;
+          box-shadow: none;
+          padding: 0px;
+          margin: 0px;
+          max-height: 55vh;
+        }
+
+        .mega-menu > .row {
+          padding: 10px;
+          padding-top: 0;
+        }
+
+        .navbar .navbar-nav {
+          border-top: 1px solid #eeeeee3d;
+          padding: 0.5rem 0;
+          margin-top: 0.5rem;
+        }
+      }
+    </style>
 
     <!-- Carousel  -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">

@@ -89,17 +89,17 @@
 }
 
 .navbar .navbar-nav .nav-link {
-  margin-right: 30px;
-  padding: 25px 0;
-  color: var(--dark);
+  /* margin-right: 30px; */
+  padding: 10px 10px;
+  /* color: var(--dark); */
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   outline: none;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-  color: var(--primary);
+  color: white;
 }
 
 .navbar .dropdown-toggle::after {
@@ -114,11 +114,13 @@
 @media (max-width: 991.98px) {
   .navbar .navbar-nav .nav-link {
     margin-right: 0;
-    padding: 10px 0;
+    padding: 10px 10px;
   }
 
   .navbar .navbar-nav {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee3d;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
   }
 }
 
@@ -683,9 +685,9 @@ p.card-date.text-muted.mb-3 {
   font-weight: 400 !important;
 } */
 
-.mega-menu {
+/* .mega-menu {
   padding: 0rem 1rem !important;
-}
+} */
 
 /* .mega-menu .nav-link::before {
   content: "- ";
@@ -697,7 +699,7 @@ p.card-date.text-muted.mb-3 {
   display: block;
   position: relative;
   padding-left: 1.5em; /* Make space for the dash */
-  text-indent: -1em; /* Pull first line back to show dash */
+  text-indent: -0.7em; /* Pull first line back to show dash */
   color: #ffffff;
   font-weight: 400 !important;
   white-space: normal; /* Ensure wrapping */

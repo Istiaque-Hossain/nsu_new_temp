@@ -62,4 +62,13 @@
       },
     ],
   });
+
+  $(document).click(function (event) {
+    const target = $(event.target);
+    const isInsideNavbar = target.closest(".navbar").length > 0;
+
+    if (!isInsideNavbar) {
+      $(".navbar .collapse.show").collapse("hide");
+    }
+  });
 })(jQuery);
