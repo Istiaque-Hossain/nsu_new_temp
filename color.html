@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Assuming color variables are in style.css -->
+    <style>
+      /* =======================================
+   Website Color Palette - CSS Variables
+   ======================================= */
+      /* =======================================================
+   🎨 Standard CSS/SCSS Color Variables for Web Projects
+   ======================================================= */
+
+      /* ====================================================
+   Standard CSS Color Variables with #111734 as Primary
+   ==================================================== */
+      :root {
+        /* Primary colors */
+        --primary: #111734; /* Deep navy - main brand color */
+        --primary-light: #2a2e5f; /* Lighter shade for hover, backgrounds */
+        --primary-dark: #0a0e28; /* Darker shade for active states */
+
+        /* Secondary colors */
+        --secondary: #4a90e2; /* Soft blue complementary */
+        --secondary-light: #7ab4f7;
+        --secondary-dark: #2e62b8;
+
+        /* Accent colors */
+        --accent: #f39c12; /* Warm gold/orange for highlights */
+        --accent-light: #f7bc56;
+        --accent-dark: #c87e0a;
+
+        /* Background colors */
+        --bg-light: #f5f7fa; /* Very light gray */
+        --bg-medium: #d6dde8; /* Soft blue-gray */
+        --bg-dark: #0e1125; /* Dark navy background */
+
+        /* Text colors */
+        --text-main: #1e213a; /* Very dark blue-gray */
+        --text-secondary: #6b7280; /* Medium gray for secondary text */
+        --text-inverse: #ffffff; /* White for dark backgrounds */
+
+        /* Status colors */
+        --success: #10b981; /* Green */
+        --warning: #f59e0b; /* Amber */
+        --error: #ef4444; /* Red */
+        --info: #3b82f6; /* Blue */
+
+        /* Borders */
+        --border-light: #d1d5db;
+        --border-dark: #2e3a59;
+      }
+
+      :root {
+        /* Core Brand Colors */
+        --primary: #111734; /* Main Brand Color */
+        --primary-light: #2a2e5f; /* For hovers or subtle backgrounds */
+        --primary-dark: #0a0e28; /* For active states */
+
+        /* Secondary & Accent */
+        --secondary: #4a90e2; /* Complementary blue */
+        --accent: #f39c12; /* Accent gold */
+        --accent-light: #f7bc56; /* Light accent */
+        --accent-dark: #c87e0a; /* Dark accent */
+
+        /* Backgrounds */
+        --bg: #ffffff; /* Light background */
+        --bg-dark: #0e1125; /* Dark mode or footer background */
+
+        /* Text */
+        --text: #111827; /* Primary text */
+        --text-light: #6b7280; /* Secondary or muted text */
+        --text-inverse: #ffffff; /* For dark backgrounds */
+
+        /* Feedback Colors */
+        --success: #10b981; /* Green for success */
+        --warning: #f59e0b; /* Amber for warning */
+        --error: #ef4444; /* Red for error */
+      }
+
+      /* Optional SCSS-style variables (if using SCSS)
+$primary: #1A73E8;
+$primary-light: #4D90FE;
+$primary-dark: #174EA6;
+
+$secondary: #185ABC;
+$secondary-light: #4B77BE;
+$secondary-dark: #123D7C;
+
+$accent: #FF6F61;
+$accent-light: #FFA69E;
+$accent-dark: #D94B3E;
+
+$bg-light: #F9FAFB;
+$bg-medium: #E5E7EB;
+$bg-dark: #1F2937;
+
+$text-main: #111827;
+$text-secondary: #6B7280;
+$text-inverse: #FFFFFF;
+
+$success: #10B981;
+$warning: #F59E0B;
+$error: #EF4444;
+$info: #3B82F6;
+
+$border-light: #E5E7EB;
+$border-dark: #374151;
+*/
+
+      body {
+        background-color: var(--bg-light);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: var(--text-primary);
+      }
+
+      header {
+        background-color: var(--primary);
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: white;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+      }
+
+      .btn-accent {
+        background-color: var(--accent);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .section {
+        padding: 3rem 2rem;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .alert-boxes {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .alert-success,
+      .alert-danger {
+        padding: 1rem;
+        border-radius: 4px;
+        color: white;
+        min-width: 200px;
+      }
+
+      .alert-success {
+        background-color: var(--success);
+      }
+      .alert-danger {
+        background-color: var(--danger);
+      }
+
+      footer {
+        background-color: var(--bg-dark);
+        color: var(--text-secondary);
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <p>Modern, Responsive & Colorful</p>
+    </header>
+
+    <section class="hero">
+      <h1>Welcome to the Future of Web</h1>
+      <p>Build stunning websites with a modern color palette.</p>
+      <button class="btn-accent">Get Started</button>
+    </section>
+
+    <section class="section">
+      <h2>Why Choose Us?</h2>
+      <p>Elegant design, performance optimized, and built with love.</p>
+
+      <div class="alert-boxes">
+        <div class="alert-success">Success Alert Box</div>
+        <div class="alert-danger">Error Alert Box</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

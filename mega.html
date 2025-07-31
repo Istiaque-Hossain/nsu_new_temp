@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSU Mega Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .mega-menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 20px;
+      }
+
+      .navbar-nav {
+        position: relative;
+      }
+
+      .submenu {
+        color: #002147;
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+
+      .submenu a {
+        color: #002147;
+        text-decoration: none;
+      }
+
+      .mega-menu .nav-link {
+        color: #333;
+        padding: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .mega-menu .nav-link:hover {
+        color: #002147;
+        font-weight: 500;
+      }
+
+      .mega-menu hr {
+        margin: 15px 0;
+        opacity: 0.2;
+      }
+
+      @media (max-width: 991.98px) {
+        .mega-menu {
+          position: static;
+          box-shadow: none;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">NSU</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="menuAccordion">
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#aboutMegaMenu" aria-expanded="false" aria-controls="aboutMegaMenu">
+                About
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="aboutMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h6 class="submenu">ABOUT NSU</h6>
+                    <a href="[[~47~]]" class="nav-link">Brief History</a>
+                    <a href="[[~167~]]" class="nav-link">Vision, Mission & Strategy</a>
+                    <a href="[[~49~]]" class="nav-link">International Advisory Board</a>
+                    <a href="[[~168~]]" class="nav-link">Accreditation</a>
+                    <a href="[[~169~]]" class="nav-link">International Recognition</a>
+                    <a href="[[~388~]]" class="nav-link">Facts About NSU</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">NSU Trustees</h6>
+                    <a href="[[~109~]]" class="nav-link">Board of Trustees</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Executive Leaders</h6>
+                    <a href="[[~4145~]]#one" class="nav-link" target="_blank">VC, Pro-VC & Treasurer</a>
+                    <a href="[[~4145~]]#six" class="nav-link" target="_blank">Deans, Chairs & Directors</a>
+                    <a href="[[~4145~]]#two" class="nav-link" target="_blank">Administration</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Authorities</h6>
+                    <a href="/newassets/images/Registrs Office/syndicatememberlist-8april2025.pdf" class="nav-link" target="_blank">Syndicate</a>
+                    <a href="/newassets/images/Registrs Office/academiccouncilmember-26122024.pdf" class="nav-link" target="_blank">Academic Council</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Academic Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicMegaMenu" aria-expanded="false" aria-controls="academicMegaMenu">
+                Academic
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="academicMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~56~]]">School of Business & Economics</a></h6>
+                    <a href="[[~57~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~2890~]]" class="nav-link">Economics</a>
+                    <a href="[[~58~]]" class="nav-link">Management</a>
+                    <a href="[[~69~]]" class="nav-link">Marketing & International Business</a>
+                    <a href="[[~3581~]]" class="nav-link">MBA & EMBA Programs</a>
+                    <a href="[[~9696~]]" class="nav-link">BBA Program</a>
+                    <hr />
+                    <h6 class="submenu"><a href="[[~62~]]">School of Engineering & Physical Sciences</a></h6>
+                    <a href="[[~64~]]" class="nav-link">Architecture</a>
+                    <a href="[[~8351~]]" class="nav-link">Civil and Environmental Engineering</a>
+                    <a href="http://ece.northsouth.edu/" class="nav-link">Electrical & Computer Engineering</a>
+                    <a href="[[~9063~]]" class="nav-link">Mathematics & Physics</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~65~]]">School of Humanities & Social Sciences</a></h6>
+                    <a href="[[~9149~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~67~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~191~]]" class="nav-link">Law</a>
+                    <a href="[[~1540~]]" class="nav-link">History & Philosophy</a>
+                    <hr />
+                    <h6 class="submenu"><a href="[[~59~]]">School of Health & Life Sciences</a></h6>
+                    <a href="[[~61~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~2643~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~70~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~60~]]" class="nav-link">Public Health</a>
+                    <hr />
+                    <h6 class="submenu">Miscellaneous</h6>
+                    <a href="[[~124~]]" class="nav-link">Grading Policy</a>
+                    <a href="[[~1366~]]" class="nav-link">Student Records</a>
+                    <a href="/newassets/images/5-80.17-09-2023 Academic Information and Policies.pdf" class="nav-link">Academic Information and Policies</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu">Institutes & Centers</h6>
+                    <a href="[[~1806~]]" class="nav-link">Institute of Modern Languages</a>
+                    <a href="[[~189~]]" class="nav-link">Confucius Institute</a>
+                    <a href="[[~3171~]]" class="nav-link">NSU Global Health Institute (NGHI)</a>
+                    <a href="[[~4212~]]" class="nav-link">NSU Genome Research Institute (NGRI)</a>
+                    <a href="https://cpc.northsouth.edu/" class="nav-link">Career & Placement Center (CPC)</a>
+                    <a href="https://www.northsouth.edu/sipg/" class="nav-link">South Asian Institute of Policy and Governance (SIPG)</a>
+                    <hr />
+                    <a href="http://www.northsouth.edu/research-innovation/cbr" class="nav-link">NSU Center for Business Research (NSU CBR)</a>
+                    <a href="http://www.northsouth.edu/academic/seps/cee/cirs.html" class="nav-link">Center for Infrastructure Research and Services (CIRS)</a>
+                    <a href="https://www.cscssnsu.org/" class="nav-link">China–South Asia Center for Sociocultural Studies (CSCSS)</a>
+                    <a href="http://www.northsouth.edu/resources/scc.html" class="nav-link">Student Counseling Center (SCC)</a>
+                    <a href="http://www.northsouth.edu/sipg/cms.html" class="nav-link">Center for Migration Studies (CMS)</a>
+                    <a href="https://www.cpsnsu.org/" class="nav-link">Center for Peace Studies (CPS)</a>
+                    <a href="https://www.northsouth.edu/sdg/" class="nav-link">Social Impact and Sustainability Center</a>
+                    <a href="https://www.northsouth.edu/academic/ic/cdr.html" class="nav-link">Center for Climate Change and Disaster Resilience (CDR)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/sbc.html" class="nav-link">NSU Social Business Center (SBC)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/ace.html" class="nav-link">Agribusiness Centre of Excellence (ACE)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Add other menu items here -->
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Admission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Campus Life</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Initialize dropdowns
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownElementList = [].slice.call(document.querySelectorAll(".dropdown-toggle"));
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+          return new bootstrap.Dropdown(dropdownToggleEl);
+        });
+
+        // Update arrow icon on collapse
+        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(function (element) {
+          element.addEventListener("click", function () {
+            const icon = this.querySelector(".arrow-icon");
+            if (this.getAttribute("aria-expanded") === "true") {
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+            } else {
+              icon.classList.remove("fa-chevron-up");
+              icon.classList.add("fa-chevron-down");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
