@@ -360,7 +360,7 @@
               </a>
               <div class="collapse mega-menu" id="usefulLinksMegaMenu" data-bs-parent="#menuAccordion">
                 <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-md-4">
                     <h6 class="submenu">NSU Inquiry</h6>
                     <a href="[[~249~]]" class="nav-link" title="Inquiry & Feedback">Inquiry & Feedback</a>
                     <a href="[[~7716~]]" class="nav-link" title="Administrative Directory">Administrative Directory</a>
@@ -369,7 +369,7 @@
                     <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank" title="Degree Verification">Degree Verification</a>
                     <a href="https://rds3.northsouth.edu/index.php/etender/auth" class="nav-link" target="_blank" title="E-Tender">E-Tender</a>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-md-4">
                     <h6 class="submenu">NSU Services</h6>
                     <a href="[[~3258~]]" class="nav-link" title="Service Requests">Services Request Forms</a>
                     <a href="[[~85~]]" class="nav-link" title="NSU Facilities">NSU Facilities</a>
@@ -378,7 +378,7 @@
                     <a href="http://www.northsouth.edu/archive.html" class="nav-link" target="_blank" title="NSU Archive">NSU Archive</a>
                     <a href="[[~1188~]]" class="nav-link" title="Bank List">Bank List for Tuition Fees</a>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-md-4">
                     <h6 class="submenu">Offices</h6>
                     <a href="http://institutions.northsouth.edu/oea/" class="nav-link" target="_blank" title="Office of the External Affairs">Office of the External Affairs</a>
                     <a href="[[~3179~]]" class="nav-link" title="Graduate Studies">Office of the Graduate Studies</a>
@@ -389,9 +389,21 @@
                     <a href="[[~8836~]]" class="nav-link" title="Registrar's Office">Registrar's Office</a>
                     <a href="[[~9421~]]" class="nav-link" title="Controller of Examinations">Office of the Controller of Examinations</a>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-md-4">
                     <h6 class="submenu">Policy, Procedures & Complaints</h6>
                     <a href="[[~8700~]]" class="nav-link" title="Complaint Committee">Complaint Committee</a>
+                  </div>
+                  <div class="col-md-3 col-md-4 d-block d-lg-none">
+                    <h6 class="submenu">General Links</h6>
+                    <a href="contact-us.html" class="nav-link" title="Contact Us">Contact Us</a>
+                    <a href="archive.html" class="nav-link" title="Archive">Archive</a>
+                    <a href="newsletter/nsu-catalog.html" class="nav-link" title="Catalog">Catalog</a>
+                    <a href="journals.html" class="nav-link" title="Journals">Journals</a>
+                    <a href="newsletter.html" class="nav-link" title="Newsletters">Newsletters</a>
+                    <a href="http://library.northsouth.edu" class="nav-link" target="_blank" title="Library">Library</a>
+                    <a href="academic/academic-calendar/" class="nav-link" title="Academic Calendar">Academic Calendar</a>
+                    <a href="http://institutions.northsouth.edu/oea/home-2/" class="nav-link" target="_blank" title="International Students">International Students</a>
+                    <a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="nav-link" target="_blank" title="Publications">Publications</a>
                   </div>
                 </div>
               </div>
@@ -481,6 +493,12 @@
         box-shadow: none;
       }
 
+      body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+      }
+
       @media (max-width: 1199px) {
         .mega-menu {
           position: static;
@@ -500,9 +518,32 @@
           padding: 0.5rem 0;
           margin-top: 0.5rem;
         }
+
+        /* ___________________________________________________________ */
+        .navbar-collapse {
+          max-height: 80vh;
+          overflow-y: auto;
+        }
+
+        .mega-menu {
+          max-height: 60vh; /* slightly smaller to allow space for nav */
+          overflow-y: auto;
+        }
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapseEl = document.getElementById("navbarNav"); // change to your collapse ID
 
+        collapseEl.addEventListener("show.bs.collapse", function () {
+          document.body.classList.add("menu-open");
+        });
+
+        collapseEl.addEventListener("hidden.bs.collapse", function () {
+          document.body.classList.remove("menu-open");
+        });
+      });
+    </script>
     <!-- Carousel  -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
       <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -1175,6 +1216,75 @@
         </div>
       </div>
     </div>
+
+    <div class="container-fluid py-6 banner-news">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-lg-8">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+              <div class="carousel-inner h-auto">
+                <div class="carousel-item h-auto active">
+                  <img src="img/nsu_banner/azim-uddin-ahmed.png" class="d-block img-fluid mx-auto" alt="..." />
+                </div>
+                <!-- <div class="carousel-item h-auto">
+                  <img src="img/nsu_banner/condolence-msg.jpg" class="d-block img-fluid mx-auto" alt="..." />
+                </div> -->
+                <div class="carousel-item h-auto">
+                  <img src="img/nsu_banner/rsz-graduate-admission-fall-2025.jpg" class="d-block img-fluid mx-auto" alt="..." />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      #carouselExampleFade {
+        position: relative;
+      }
+
+      #carouselExampleFade .carousel-control-prev,
+      #carouselExampleFade .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: var(--primary); /* Optional */
+        border-radius: 15%;
+      }
+
+      #carouselExampleFade .carousel-control-prev {
+        left: -80px; /* Adjust distance from carousel */
+      }
+
+      #carouselExampleFade .carousel-control-next {
+        right: -80px;
+      }
+
+      .banner-news {
+        background: url(img/banner_news.png) no-repeat center center / cover;
+      }
+      @media (max-width: 768px) {
+        #carouselExampleFade .carousel-control-prev {
+          left: 0;
+        }
+        #carouselExampleFade .carousel-control-next {
+          right: 0;
+        }
+      }
+    </style>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
