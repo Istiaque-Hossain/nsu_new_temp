@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BBA Programme | North South University</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="img/favicon.ico" rel="icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Top Nav -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-12 px-5 py-2 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="contact-us.html" class="text-light">Contact Us</a></li>
+            <li class="list-inline-item"><a href="archive.html" class="text-light">Archive</a></li>
+            <li class="list-inline-item"><a href="newsletter/nsu-catalog.html" class="text-light">Catalog</a></li>
+            <li class="list-inline-item"><a href="journals.html" class="text-light">Journals</a></li>
+            <li class="list-inline-item"><a href="newsletter.html" class="text-light">Newsletters</a></li>
+            <li class="list-inline-item"><a href="http://library.northsouth.edu" class="text-light">Library</a></li>
+            <li class="list-inline-item"><a href="academic/academic-calendar/" class="text-light">Academic Calendar</a></li>
+            <li class="list-inline-item"><a href="http://institutions.northsouth.edu/oea/home-2/" class="text-light">International Students</a></li>
+            <li class="list-inline-item"><a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="text-light">Publications</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar (copy from index.html) -->
+    <nav class="navbar navbar-expand-xl navbar-dark bg-primary sticky-top">
+      <div class="container position-relative">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="logo-4.png" alt="Logo" style="width: 6rem" />
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Copy the full navbar code from index.html here -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content with Tabs -->
+    <div class="container py-6">
+      <h1 class="display-5 mb-4 text-primary">BBA Programme</h1>
+      <ul class="nav nav-tabs mb-4" id="bbaTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="director-tab" data-bs-toggle="tab" data-bs-target="#director" type="button" role="tab" aria-controls="director" aria-selected="true">A Warm Welcome from the Director</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="false">Overview</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="false">Programme Details</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="entry-tab" data-bs-toggle="tab" data-bs-target="#entry" type="button" role="tab" aria-controls="entry" aria-selected="false">Entry Requirements</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="fees-tab" data-bs-toggle="tab" data-bs-target="#fees" type="button" role="tab" aria-controls="fees" aria-selected="false">Fees & Financial Aid</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="helpdesk-tab" data-bs-toggle="tab" data-bs-target="#helpdesk" type="button" role="tab" aria-controls="helpdesk" aria-selected="false">BBA Help Desk</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="graduate-tab" data-bs-toggle="tab" data-bs-target="#graduate" type="button" role="tab" aria-controls="graduate" aria-selected="false">After You Graduate</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="bbaTabContent">
+        <!-- Director Tab -->
+        <div class="tab-pane fade show active" id="director" role="tabpanel" aria-labelledby="director-tab">
+          <div class="row align-items-center mb-5">
+            <div class="col-md-2 text-center mb-3 mb-md-0">
+              <img src="img/bba-director.jpg" class="img-fluid rounded-circle" alt="Director Photo" style="max-width: 120px" />
+              <div class="small text-muted mt-2">Photo</div>
+            </div>
+            <div class="col-md-10">
+              <h3 class="mb-2">A Warm Welcome from the Director</h3>
+              <p>
+                <strong
+                  >Dr Muhammad Faisol Chowdhury<br />
+                  Associate Professor & Director, BBA Programme</strong
+                >
+              </p>
+              <p>
+                Dear Prospective Students,<br />
+                You are about to make an exciting and important decision about what and where to study, and we are here to support you in making an informed and confident choice.
+              </p>
+              <p>
+                I am delighted to introduce the Bachelor of Business Administration (BBA) Programme at North South University (NSU)—an exceptional platform for enhancing your knowledge and sharpening the skills required to thrive in today’s global
+                business landscape. The BBA is one of the most versatile undergraduate degrees, broadening your horizons and unlocking international opportunities.
+              </p>
+              <p>
+                Our internationally recognised BBA programme is not only the top-ranked but also the largest in the country, accredited by leading industry bodies in recognition of our excellence in business education. We offer a modern,
+                industry-focused Outcome-Based Education (OBE) curriculum within an inclusive and supportive environment, where students are encouraged to question, exchange ideas, express opinions, think critically, and embrace diverse perspectives.
+                Our distinguished faculty members, with global academic and professional experience, instil ethical values and prepare students for the realities of life and career.
+              </p>
+              <p>
+                We are committed to helping our students maximise their career potential. In addition to interactive classroom learning, we offer a wide range of enriching experiences beyond the classroom, including student exchange programmes
+                abroad, collaborative research, industry visits, training sessions, workshops, business competitions, networking and career events, club and volunteering engagements, and many skill development programmes. These extensive
+                co-curricular and extra-curricular opportunities help our students build essential skills that distinguish them in the job market. We are proud of our strong alumni network, with our graduates excelling across public and private
+                sector organisations worldwide. Our graduates leave with more than a degree—they gain the credentials and confidence for lifetime employability.
+              </p>
+              <p>
+                I warmly invite you to embark on a transformative and globally attuned learning journey through our BBA, fostering both personal and professional growth. We encourage you to visit our vibrant campus and explore our website to learn
+                more.<br />
+                Wishing you every success in your journey ahead.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Overview Tab -->
+        <div class="tab-pane fade" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+          <div class="row mb-4">
+            <div class="col-md-6 mb-3">
+              <img src="img/bba-students.jpg" class="img-fluid rounded" alt="BBA Students" />
+              <div class="small text-muted text-center mt-2">Students’ photo</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <img src="img/bba-lab.jpg" class="img-fluid rounded" alt="Lab/Innovation" />
+              <div class="small text-muted text-center mt-2">Lab/innovation photo</div>
+            </div>
+          </div>
+          <p>
+            With almost 8,000 students, 200 faculty members, and XXX administrative personnel, the Bachelor of Business Administration at the School of Business and Economics is the largest academic degree programme in Bangladesh, offering students
+            an unparalleled learning experience.
+          </p>
+          <p>
+            We maintain the highest number of industry collaborations and international accreditations, reflecting our commitment to industry-focused education. Our BBA is benchmarked against global and the Government of Bangladesh standards.<br />
+            <strong>We proudly hold the 1st position among all universities in Bangladesh in both Times Higher Education and QS World University Rankings.</strong>
+          </p>
+          <h4 class="mt-4">Our Accreditation and Recognitions</h4>
+          <ul>
+            <li>ACBSP (Accreditation Council for Business Schools and Programs) — Accredited since 2014</li>
+            <li>CABS (Chartered Association of Business Schools) — Accredited since XXX</li>
+            <li>SAQS (South Asian Quality Systems) — Member since 2018</li>
+            <li>AACSB (Association to Advance Collegiate Schools of Business) — Member since XXX</li>
+            <li>Approved by the UGC (University Grants Commission) of Bangladesh</li>
+          </ul>
+        </div>
+        <!-- Programme Details Tab -->
+        <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+          <h3 class="mb-3">Programme Details</h3>
+          <p>
+            Please download the BBA Course Handbook from:<br />
+            <a href="https://drive.google.com/file/d/1ZnnyLk0k6cFRIMjJutuL01Vx-dqMtkzG/view" target="_blank">BBA Course Handbook (PDF)</a>
+          </p>
+          <p>The Course Handbook contains comprehensive details of all courses and serves as an excellent source of essential information regarding the curriculum.</p>
+          <div class="row mb-4">
+            <div class="col-md-6 mb-3">
+              <img src="img/bba-course-map.jpg" class="img-fluid rounded" alt="Course Map" />
+              <div class="small text-muted text-center mt-2">Course Map photo</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <img src="img/bba-path.jpg" class="img-fluid rounded" alt="Path" />
+              <div class="small text-muted text-center mt-2">Path photo</div>
+            </div>
+          </div>
+          <h4 class="mt-4">Programme Learning Objectives</h4>
+          <ul>
+            <li>Communicate ideas and present arguments effectively in both business and social contexts</li>
+            <li>Think critically and analytically</li>
+            <li>Uphold ethical standards and promote sustainability in business practices</li>
+            <li>
+              Apply theoretical knowledge and technological skills to decision-making across key business areas, including accounting, finance, human resources, marketing, management, supply chain, management information systems, and business
+              analytics
+            </li>
+          </ul>
+          <h4 class="mt-4">BBA Credit Requirements</h4>
+          <p>
+            You are required to complete <strong>130 credits</strong> to earn your BBA degree. The programme follows an open credit system, allowing students to enrol in a minimum of two courses (6 credits) and a maximum of five courses (15 credits)
+            per academic term. You may complete your degree with 127 or 124 credits, depending on whether ENG102 and/or BUS112 were waived at the time of your admission. If neither of these courses was waived, the graduation requirement remains 130
+            credits.
+          </p>
+          <h4 class="mt-4">Dual Concentration/Major</h4>
+          <p>You may complete your BBA with double concentrations/majors by taking an additional three courses / 9 extra credits.</p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th>Course Segments</th>
+                  <th>Number of Courses</th>
+                  <th>Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>School Core Courses</td>
+                  <td>7</td>
+                  <td>21</td>
+                </tr>
+                <tr>
+                  <td>BBA Core Courses</td>
+                  <td>12</td>
+                  <td>36</td>
+                </tr>
+                <tr>
+                  <td>General Education (GED) Courses</td>
+                  <td>12</td>
+                  <td>36</td>
+                </tr>
+                <tr>
+                  <td>Concentration/Major Courses</td>
+                  <td>6</td>
+                  <td>18</td>
+                </tr>
+                <tr>
+                  <td>Free Elective Courses</td>
+                  <td>3</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Internship</td>
+                  <td>1</td>
+                  <td>4</td>
+                </tr>
+                <tr class="table-info">
+                  <td><strong>Total (if ENG102/BUS112 waived)</strong></td>
+                  <td>41</td>
+                  <td>124</td>
+                </tr>
+                <tr class="table-info">
+                  <td><strong>Total (if not waived)</strong></td>
+                  <td>43</td>
+                  <td>127 or 130</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th>Course Segments</th>
+                  <th>Number of Courses</th>
+                  <th>Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>School Core Courses</td>
+                  <td>7</td>
+                  <td>21</td>
+                </tr>
+                <tr>
+                  <td>BBA Core Courses</td>
+                  <td>12</td>
+                  <td>36</td>
+                </tr>
+                <tr>
+                  <td>General Education (GED) Courses</td>
+                  <td>12</td>
+                  <td>36</td>
+                </tr>
+                <tr>
+                  <td>Concentration/Major 1 Courses</td>
+                  <td>6</td>
+                  <td>18</td>
+                </tr>
+                <tr>
+                  <td>Concentration/Major 2 Courses</td>
+                  <td>6</td>
+                  <td>18</td>
+                </tr>
+                <tr>
+                  <td>Internship</td>
+                  <td>1</td>
+                  <td>4</td>
+                </tr>
+                <tr class="table-info">
+                  <td><strong>Total (if ENG102/BUS112 waived)</strong></td>
+                  <td>44</td>
+                  <td>133</td>
+                </tr>
+                <tr class="table-info">
+                  <td><strong>Total (if not waived)</strong></td>
+                  <td>46</td>
+                  <td>136 or 139</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h4 class="mt-4">Concentration/Major Areas</h4>
+          <p>Students may choose one or two concentration/major areas from the following nine options:</p>
+          <ul>
+            <li>Accounting (ACT)</li>
+            <li>Economics (ECO)</li>
+            <li>Finance (FIN)</li>
+            <li>Human Resource Management (HRM)</li>
+            <li>International Business (INB)</li>
+            <li>Management (MGT)</li>
+            <li>Management Information Systems (MIS)</li>
+            <li>Marketing (MKT)</li>
+            <li>Supply Chain Management (SCM)</li>
+          </ul>
+          <h4 class="mt-4">BBA Graduation CGPA Requirements</h4>
+          <ul>
+            <li>A minimum CGPA of 2.0 on a 4.0 scale</li>
+            <li>A minimum GPA of 2.0 in both the School Core and BBA Core areas</li>
+            <li>A minimum GPA of 2.5 in the concentration/major area</li>
+          </ul>
+          <p>If your CGPA falls below 2.0 in any term, you will be placed on academic probation. Students who remain on probation for three consecutive terms will be subjected to academic dismissal.</p>
+          <h4 class="mt-4">Course Waiver Policy</h4>
+          <p>Please check the ‘Entry Requirements’ section to know about the ENG102 and BUS112 waiver policy.</p>
+        </div>
+        <!-- Entry Requirements Tab -->
+        <div class="tab-pane fade" id="entry" role="tabpanel" aria-labelledby="entry-tab">
+          <h3 class="mb-3">Entry Requirements</h3>
+          <h5>Bangladeshi Applicants</h5>
+          <ul>
+            <li>SSC and HSC: A combined GPA of 8.0 (on a 5.0 scale) with a minimum GPA of 3.5 in each examination.</li>
+            <li>
+              GCE O-Levels and A-Levels: A minimum of five O-Level subjects with an average grade point of 2.5, and two A-Level subjects with an average grade point of 2.0. Only one grade of ‘E’ is acceptable across the combined O- and A-Level
+              results. (Grading scale: A = 5, B = 4, C = 3, D = 2, E = 1)
+            </li>
+            <li>International Baccalaureate Diploma Programme (IB-DP): Completion of six subjects with a minimum average grade point of 4.0 out of 7.0, equivalent to a total of 24 points.</li>
+            <li>US High School Diploma: A minimum score of 60%.</li>
+          </ul>
+          <p>Applicants whose academic credentials differ from the categories listed above must obtain an equivalence certificate from the appropriate Education Board. Foundation and/or GED programmes are not recognised for BBA admission at NSU.</p>
+          <p>Prospective students with alternative academic qualifications are advised to contact the Admissions Office to determine their eligibility.</p>
+          <h5>International Applicants</h5>
+          <ul>
+            <li>Must have completed 12 years of schooling with a minimum average mark of 60%.</li>
+            <li>
+              Must meet one of the following English language proficiency criteria:
+              <ul>
+                <li>The medium of instruction in previous studies was English.</li>
+                <li>
+                  Or one of the following minimum scores in recognised tests:
+                  <ul>
+                    <li>SAT: 1100 (on a 1600 scale)</li>
+                    <li>IELTS: Overall band score of 6.0</li>
+                    <li>TOEFL: PBT 514 / CBT 180 / iBT 72</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>All academic documents of international applicants must be verified by the Ministry of Education or the relevant Embassy.</p>
+          <h5>Course Waiver Policy</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th>Test</th>
+                  <th>Minimum Required Score</th>
+                  <th>Courses Eligible for Waiver</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SAT (1600 scale)</td>
+                  <td>1150</td>
+                  <td>ENG102 and BUS112</td>
+                </tr>
+                <tr>
+                  <td>IELTS</td>
+                  <td>7.0</td>
+                  <td>ENG102</td>
+                </tr>
+                <tr>
+                  <td>TOEFL (PBT 563 / CBT 223 / iBT 85)</td>
+                  <td>See left</td>
+                  <td>ENG102</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h6>Course Waiver Application Procedure</h6>
+          <ol>
+            <li>
+              Send an email to the Director, Office of Admission at: <a href="mailto:admissions@northsouth.edu">admissions@northsouth.edu</a> including:
+              <ul>
+                <li>The NSU Test Pass Number or a copy of the NSU Admit Card</li>
+                <li>A scanned copy of the official SAT / IELTS / TOEFL certificate</li>
+              </ul>
+            </li>
+            <li>Verify documents through the respective online verification portals (user ID and password may be required).</li>
+            <li>Requests must be made at the time of document verification. Original certificates must be submitted at that stage. Requests after document verification will not be considered.</li>
+          </ol>
+          <p>
+            <strong>Admissions Office:</strong><br />
+            Find out more on the <a href="https://admissions.northsouth.edu/undergraduate_requirement" target="_blank">Admissions Webpage</a>.<br />
+            Or visit the Admissions Office located on the 3rd floor of the Admin Building.<br />
+            Tel: (+8802) 5566 8200, Ext. 4001, 6299<br />
+            Mobile: (+88) 017 3290 3003<br />
+            Email: <a href="mailto:admissions@northsouth.edu">admissions@northsouth.edu</a>
+          </p>
+        </div>
+        <!-- Fees & Financial Aid Tab -->
+        <div class="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
+          <h3 class="mb-3">Fees & Financial Aid</h3>
+          <p>
+            The cost of tuition ranges from <strong>BDT 9,25,000/- to BDT 10,25,000/-</strong> depending on your course waiver status at the time of admission. All fees are subject to change. Please consult the Admissions Office for the most
+            up-to-date fee structure. An approximate fee breakdown is provided below.
+          </p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th>Fees Category</th>
+                  <th>Amount in BDT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Admission Fee (one time)</td>
+                  <td>25,000</td>
+                </tr>
+                <tr>
+                  <td>Caution Money (one time)</td>
+                  <td>10,000</td>
+                </tr>
+                <tr>
+                  <td>RFID Card (one time)</td>
+                  <td>1,000</td>
+                </tr>
+                <tr>
+                  <td>Tuition Fee (per credit)</td>
+                  <td>6,500</td>
+                </tr>
+                <tr>
+                  <td>Student Activity Fee (per term)</td>
+                  <td>3,000</td>
+                </tr>
+                <tr>
+                  <td>Computer Lab Fee (per term)</td>
+                  <td>2,500</td>
+                </tr>
+                <tr>
+                  <td>Library Fee (per term)</td>
+                  <td>1,500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>NSU offers a range of scholarships and financial aid to deserving students. Please visit the <a href="https://www.northsouth.edu/resources/fao.html" target="_blank">Financial Aid Office webpage</a> for further details.</p>
+        </div>
+        <!-- BBA Help Desk Tab -->
+        <div class="tab-pane fade" id="helpdesk" role="tabpanel" aria-labelledby="helpdesk-tab">
+          <h3 class="mb-3">BBA Help Desk</h3>
+          <p>The BBA Help Desk is located on the 6th floor of the NAC building, within the School of Business and Economics. Our dedicated officers are available to provide you with a wide range of academic and administrative services.</p>
+          <h5>Academic Support:</h5>
+          <ul>
+            <li>Term/trimester drop procedures</li>
+            <li>Credit transfer processing</li>
+            <li>Department change procedures</li>
+            <li>Course inclusion and exclusion in RDS</li>
+            <li>Degree analysis and verification through RDS</li>
+            <li>Information and guidance regarding academic probation</li>
+            <li>Coordination of regular and probation advising</li>
+            <li>Consultation on course curriculum and course mapping</li>
+          </ul>
+          <h5>Administrative Support:</h5>
+          <ul>
+            <li>Coordination of the BBA curriculum</li>
+            <li>Facilitation of freshman advising each term</li>
+            <li>Issuance of testimonials and reference letters</li>
+            <li>Programme documentation and record-keeping</li>
+            <li>Appointments with students’ parents/guardians and necessary follow-ups</li>
+            <li>Resolution of other course- and curriculum-related matters</li>
+          </ul>
+        </div>
+        <!-- After You Graduate Tab -->
+        <div class="tab-pane fade" id="graduate" role="tabpanel" aria-labelledby="graduate-tab">
+          <h3 class="mb-3">After You Graduate</h3>
+          <p>
+            BBA is one of the most versatile degrees in the world. The NSU BBA is ideally suited for those seeking to pursue a professional career in business. It is equally invaluable for aspiring entrepreneurs who wish to develop a strong
+            foundation in business principles and practices.
+          </p>
+          <p>Our BBA is widely recognised by international universities and accepted as a valid entry qualification for Master’s, MBA, and other postgraduate programmes abroad.</p>
+          <p>Feel free to consult the Director of the BBA Programme for guidance on career planning and professional development.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start (copy from index.html) -->
+    <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-light mb-2 ftr-title">North South University</h5>
+            <a href="#" class="d-inline-block mb-3">
+              <img src="slogan.png" alt="Footer Logo" class="img-fluid w-75" />
+            </a>
+            <p class="text-light mb-1"><i class="fa fa-map-marker-alt me-2"></i>Bashundhara, Dhaka-1229, Bangladesh</p>
+            <p class="text-light mb-1"><i class="fa fa-phone-alt me-2"></i>+880-2-55668200</p>
+            <p class="text-light mb-1"><i class="fa fa-fax me-2"></i>+880-2-55668202</p>
+            <p class="text-light"><i class="fa fa-envelope me-2"></i>registrar@northsouth.edu</p>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-start justify-content-md-end pt-2 mb-4">
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-start text-md-end">Developed & Maintained By IT Office, NSU</div>
+            <div class="text-start text-md-end">&copy; 1993-2025 NSU, All Right Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Slick CSS/JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
