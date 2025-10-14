@@ -2,11 +2,16 @@
 :root {
   --primary: #061742;
   --secondary: #183f78;
+  --secondary-light: #2a5caa;
   --secondary-2: #183e7880;
   --contrast: #a27035;
   --light: #f3f4f9;
   --dark: #061742;
   --border: #06174252;
+
+  /* Text Colors */
+  --text-secondary: #183f78;
+  --text-secondary-light: #2a5caa;
 }
 
 .py-6 {
@@ -190,7 +195,7 @@
 }
 
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/carousel-1.jpg) center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5)), url(../nsu.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -586,6 +591,14 @@ p.card-date.text-muted.mb-3 {
   background: linear-gradient(0deg, #183e77, #0b2743) !important;
 }
 
+.bg--secondary {
+  background-color: var(--secondary) !important;
+}
+
+.text--secondary {
+  color: var(--text-secondary) !important;
+}
+
 .logo-name {
   color: whitesmoke;
 }
@@ -648,7 +661,7 @@ p.card-date.text-muted.mb-3 {
 }
 
 .slick-slider img {
-  width: 35%;
+  /* width: 35%; */
 }
 
 /* nav css  */
