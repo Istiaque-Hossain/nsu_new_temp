@@ -69,10 +69,87 @@
             <li class="list-inline-item">
               <a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="text-light">Publications</a>
             </li>
+
+            <li class="list-inline-item">
+              <div class="nav-item d-none d-xl-block ms-3 position-relative">
+                <form action="[[~7675]]" method="get" class="search-box">
+                  <input type="text" name="search" class="search-input" placeholder="Search..." autocomplete="off" />
+                  <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
     </div>
+
+    <style>
+      /* Modern Search Bar */
+      .search-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-input {
+        width: 110px;
+        height: 38px;
+        border: none;
+        outline: none;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        color: #fff;
+        padding: 0 40px 0 15px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .search-input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .search-input:focus {
+        width: 220px;
+        background: rgba(255, 255, 255, 0.25);
+        cursor: text;
+      }
+
+      .search-btn {
+        position: absolute;
+        right: 5px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+
+      .search-btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Mobile view - full width */
+      @media (max-width: 1199px) {
+        .search-box {
+          width: 100%;
+          margin-top: 10px;
+        }
+        .search-input:focus {
+          width: 100%;
+        }
+
+        .search-input {
+          width: 100%;
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    </style>
 
     <!-- Navbar bar with Logo and Menu button -->
 
@@ -91,6 +168,17 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto" id="menuAccordion">
+            <li class="nav-item">
+              <div class="nav-item d-block d-lg-none position-relative">
+                <form action="[[~7675]]" method="get" class="search-box">
+                  <input type="text" name="search" class="search-input" placeholder="Search..." autocomplete="off" />
+                  <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+              </div>
+            </li>
+
             <!-- About Dropdown -->
             <li class="nav-item dropdown position-static">
               <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#aboutMegaMenu" aria-expanded="false" aria-controls="aboutMegaMenu">
@@ -408,6 +496,18 @@
                 </div>
               </div>
             </li>
+
+            <!-- Modern Search Bar -->
+            <!-- <li>
+              <div class="nav-item d-none d-xl-block ms-3 position-relative">
+                <form action="[[~7675]]" method="get" class="search-box">
+                  <input type="text" name="search" class="search-input" placeholder="Search..." />
+                  <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+              </div>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -544,7 +644,6 @@
         });
       });
     </script>
-
     <!-- Carousel  -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
       <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">

@@ -1,0 +1,1690 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Public Health | North South University</title>
+    <link rel="icon" href="img/favicon.ico" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" />
+
+    <!-- Local CSS -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/pbh_style.css" rel="stylesheet" />
+
+    <!-- Internal Styles -->
+    <style>
+      /* Navigation mega menu styles */
+      .mega-menu {
+        max-height: 75vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .mega-menu::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .mega-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+
+      .mega-menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        box-shadow: 0 10px 20px rgb(255 255 255 / 30%);
+        z-index: 1000;
+        margin-top: 1rem;
+      }
+
+      .mega-menu > .row {
+        padding: 20px;
+      }
+
+      .submenu {
+        color: white;
+        font-weight: 400;
+        margin-top: 15px;
+        font-size: 1rem;
+      }
+
+      .submenu a {
+        color: white;
+      }
+
+      .mega-menu .nav-link {
+        color: #333;
+        padding: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .mega-menu .nav-link:hover {
+        color: #002147;
+        font-weight: 500;
+      }
+
+      .mega-menu hr {
+        margin: 15px 0;
+        opacity: 0.2;
+      }
+
+      li.dropdown.nav-item {
+        position: static;
+      }
+
+      .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-x' viewBox='0 0 16 16'%3e%3cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+      }
+
+      @media (max-width: 1199px) {
+        .mega-menu {
+          position: static;
+          box-shadow: none;
+          padding: 0;
+          margin: 0;
+          max-height: 55vh;
+        }
+
+        .mega-menu > .row {
+          padding: 10px;
+          padding-top: 0;
+        }
+
+        .navbar .navbar-nav {
+          border-top: 1px solid #eeeeee3d;
+          padding: 0.5rem 0;
+          margin-top: 0.5rem;
+        }
+
+        .navbar-collapse {
+          max-height: 80vh;
+          overflow-y: auto;
+        }
+
+        .mega-menu {
+          max-height: 60vh;
+          overflow-y: auto;
+        }
+      }
+
+      /* Secondary navigation styles */
+      .bba-secondary-nav {
+        background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+        border-bottom: 3px solid #2a5caa;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .bba-secondary-nav .nav-link {
+        color: #2a5caa !important;
+        font-weight: 500;
+        padding: 0.75rem 1.25rem;
+        border-radius: 4px;
+        margin: 0 2px;
+        transition: all 0.3s;
+      }
+
+      .bba-secondary-nav .nav-link:hover,
+      .bba-secondary-nav .nav-link.active {
+        background-color: rgba(42, 92, 170, 0.1);
+        color: #1a4788 !important;
+      }
+
+      .bba-secondary-nav .dropdown-menu {
+        border: 1px solid rgba(42, 92, 170, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Page header styles */
+      /* Description section styles */
+      .bba-desc-section img {
+        transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .bba-desc-section img:hover {
+        transform: scale(1.08);
+        z-index: 2;
+      }
+
+      .bba-desc-section-logo img {
+        transition:
+          transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+          box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+          background-color 0.4s;
+        /* border-radius: 0.75rem; */
+      }
+
+      .bba-desc-section-logo img:hover {
+        transform: scale(1.08);
+        box-shadow:
+          0 8px 24px 0 rgba(42, 92, 170, 0.12),
+          0 1.5px 6px 0 rgba(6, 23, 66, 0.08);
+        background-color: #f3f6f8 !important;
+        outline: 2px solid #2a5caa22;
+      }
+
+      /* Logo slider styles */
+      .logo-slider img {
+        max-height: 180px;
+        margin: auto;
+      }
+
+      ul.fw-bold.list-unstyled.small {
+        line-height: 1.5rem;
+      }
+
+      /* Profile and letter styles */
+      .profile-header {
+        border: 1px solid #e3e3e3;
+        background: #fff;
+        border-radius: 10px;
+      }
+
+      .director-img {
+        border-radius: 1rem;
+        border: 3px solid #2a5caa33;
+        box-shadow: 0 6px 18px rgba(42, 92, 170, 0.1);
+        background: #f8f9fc;
+      }
+
+      .letter-content {
+        padding: 2rem;
+        background: #fafdff;
+        border: 1px solid #e3e3e3;
+        border-left: 5px solid #2a5caa;
+        border-radius: 12px;
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 1.08rem;
+        line-height: 1.8;
+        color: #333;
+        box-shadow: 0 4px 12px rgba(42, 92, 170, 0.05);
+      }
+
+      .letter-content p {
+        margin-bottom: 1.25rem;
+      }
+
+      .letter-content strong {
+        color: #2a5caa;
+      }
+
+      .letter-content .signature {
+        font-style: italic;
+        font-weight: 500;
+        margin-top: 2rem;
+        text-align: right;
+        color: #444;
+      }
+
+      /* Table styles */
+      .shadow--sm {
+        box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
+        border-radius: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 1.5rem 0;
+        background: #fff;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 16px rgba(42, 92, 170, 0.07);
+      }
+
+      table thead tr {
+        background-color: #e7f1ff;
+      }
+
+      table th,
+      table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e3e3e3;
+        font-family: "Work Sans", sans-serif;
+        font-size: 1rem;
+      }
+
+      table th {
+        color: var(--secondary-light);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid #2a5caa22;
+      }
+
+      table tr:last-child td {
+        border-bottom: none;
+      }
+
+      table tbody tr:nth-child(even) {
+        background-color: #f8f9fc;
+      }
+
+      table tbody tr td strong {
+        color: #2a5caa;
+      }
+
+      table tbody tr td {
+        vertical-align: middle;
+      }
+
+      #overview table tbody tr:last-child td,
+      #overview table tbody tr:nth-last-child(2) td {
+        background: #e7f1ff;
+        font-weight: 600;
+      }
+
+      /* Tab styles */
+      .nav-pills .nav-link {
+        margin: 2px;
+        background: none;
+        border: 1px solid #0617421c;
+        color: var(--primary);
+      }
+
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        background-color: var(--secondary) !important;
+      }
+
+      .slick-prev,
+      .slick-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        background: rgba(42, 92, 170, 0.85);
+        border: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        color: #fff;
+      }
+
+      .slick-prev {
+        left: 15px;
+      }
+
+      .slick-next {
+        right: 15px;
+      }
+
+      .slick-prev:hover,
+      .slick-next:hover {
+        background: #2a5caa;
+      }
+
+      .slick-dots li button:before {
+        font-size: 10px;
+        color: #2a5caa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Top Nav -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-12 px-5 py-2 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="contact-us.html" class="text-light">Contact Us</a></li>
+            <li class="list-inline-item"><a href="archive.html" class="text-light">Archive</a></li>
+            <li class="list-inline-item"><a href="newsletter/nsu-catalog.html" class="text-light">Catalog</a></li>
+            <li class="list-inline-item"><a href="journals.html" class="text-light">Journals</a></li>
+            <li class="list-inline-item"><a href="newsletter.html" class="text-light">Newsletters</a></li>
+            <li class="list-inline-item"><a href="http://library.northsouth.edu" class="text-light">Library</a></li>
+            <li class="list-inline-item"><a href="academic/academic-calendar/" class="text-light">Academic Calendar</a></li>
+            <li class="list-inline-item"><a href="http://institutions.northsouth.edu/oea/home-2/" class="text-light">International Students</a></li>
+            <li class="list-inline-item"><a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="text-light">Publications</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar (copy from index.html) -->
+    <nav class="navbar navbar-expand-xl navbar-dark bg-primary sticky-top">
+      <div class="container position-relative">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="logo-4.png" alt="Logo" style="width: 6rem" />
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="menuAccordion">
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#aboutMegaMenu" aria-expanded="false" aria-controls="aboutMegaMenu">
+                About
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="aboutMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h6 class="submenu">ABOUT NSU</h6>
+                    <a href="[[~47~]]" class="nav-link">Brief History</a>
+                    <a href="[[~167~]]" class="nav-link">Vision, Mission & Strategy</a>
+                    <a href="[[~49~]]" class="nav-link">International Advisory Board</a>
+                    <a href="[[~168~]]" class="nav-link">Accreditation</a>
+                    <a href="[[~169~]]" class="nav-link">International Recognition</a>
+                    <a href="[[~388~]]" class="nav-link">Facts About NSU</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">NSU Trustees</h6>
+                    <a href="[[~109~]]" class="nav-link">Board of Trustees</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Executive Leaders</h6>
+                    <a href="[[~4145~]]#one" class="nav-link" target="_blank">VC, Pro-VC & Treasurer</a>
+                    <a href="[[~4145~]]#six" class="nav-link" target="_blank">Deans, Chairs & Directors</a>
+                    <a href="[[~4145~]]#two" class="nav-link" target="_blank">Administration</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Authorities</h6>
+                    <a href="/newassets/images/Registrs Office/syndicatememberlist-8april2025.pdf" class="nav-link" target="_blank">Syndicate</a>
+                    <a href="/newassets/images/Registrs Office/academiccouncilmember-26122024.pdf" class="nav-link" target="_blank">Academic Council</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Academic Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicMegaMenu" aria-expanded="false" aria-controls="academicMegaMenu">
+                Academic
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="academicMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~56~]]">School of Business & Economics</a></h6>
+                    <a href="[[~57~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~2890~]]" class="nav-link">Economics</a>
+                    <a href="[[~58~]]" class="nav-link">Management</a>
+                    <a href="[[~69~]]" class="nav-link">Marketing & International Business</a>
+                    <a href="[[~3581~]]" class="nav-link">MBA & EMBA Programs</a>
+                    <a href="[[~9696~]]" class="nav-link">BBA Program</a>
+
+                    <h6 class="submenu"><a href="[[~62~]]">School of Engineering & Physical Sciences</a></h6>
+                    <a href="[[~64~]]" class="nav-link">Architecture</a>
+                    <a href="[[~8351~]]" class="nav-link">Civil and Environmental Engineering</a>
+                    <a href="http://ece.northsouth.edu/" class="nav-link">Electrical & Computer Engineering</a>
+                    <a href="[[~9063~]]" class="nav-link">Mathematics & Physics</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~65~]]">School of Humanities & Social Sciences</a></h6>
+                    <a href="[[~9149~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~67~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~191~]]" class="nav-link">Law</a>
+                    <a href="[[~1540~]]" class="nav-link">History & Philosophy</a>
+
+                    <h6 class="submenu"><a href="[[~59~]]">School of Health & Life Sciences</a></h6>
+                    <a href="[[~61~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~2643~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~70~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~60~]]" class="nav-link">Public Health</a>
+
+                    <h6 class="submenu">Miscellaneous</h6>
+                    <a href="[[~124~]]" class="nav-link">Grading Policy</a>
+                    <a href="[[~1366~]]" class="nav-link">Student Records</a>
+                    <a href="/newassets/images/5-80.17-09-2023 Academic Information and Policies.pdf" class="nav-link">Academic Information and Policies</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu">Institutes & Centers</h6>
+                    <a href="[[~1806~]]" class="nav-link">Institute of Modern Languages</a>
+                    <a href="[[~189~]]" class="nav-link">Confucius Institute</a>
+                    <a href="[[~3171~]]" class="nav-link">NSU Global Health Institute (NGHI)</a>
+                    <a href="[[~4212~]]" class="nav-link">NSU Genome Research Institute (NGRI)</a>
+                    <a href="https://cpc.northsouth.edu/" class="nav-link">Career & Placement Center (CPC)</a>
+                    <a href="https://www.northsouth.edu/sipg/" class="nav-link">South Asian Institute of Policy and Governance (SIPG)</a>
+
+                    <a href="http://www.northsouth.edu/research-innovation/cbr" class="nav-link">NSU Center for Business Research (NSU CBR)</a>
+                    <a href="http://www.northsouth.edu/academic/seps/cee/cirs.html" class="nav-link">Center for Infrastructure Research and Services (CIRS)</a>
+                    <a href="https://www.cscssnsu.org/" class="nav-link">China–South Asia Center for Sociocultural Studies (CSCSS)</a>
+                    <a href="http://www.northsouth.edu/resources/scc.html" class="nav-link">Student Counseling Center (SCC)</a>
+                    <a href="http://www.northsouth.edu/sipg/cms.html" class="nav-link">Center for Migration Studies (CMS)</a>
+                    <a href="https://www.cpsnsu.org/" class="nav-link">Center for Peace Studies (CPS)</a>
+                    <a href="https://www.northsouth.edu/sdg/" class="nav-link">Social Impact and Sustainability Center</a>
+                    <a href="https://www.northsouth.edu/academic/ic/cdr.html" class="nav-link">Center for Climate Change and Disaster Resilience (CDR)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/sbc.html" class="nav-link">NSU Social Business Center (SBC)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/ace.html" class="nav-link">Agribusiness Centre of Excellence (ACE)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Faculty Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#facultyMegaMenu" aria-expanded="false" aria-controls="facultyMegaMenu">
+                Faculty
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="facultyMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Business & Economics</h6>
+                    <a href="[[~1785~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~181~]]" class="nav-link">Economics</a>
+                    <a href="[[~1784~]]" class="nav-link">Management</a>
+                    <a href="[[~1787~]]" class="nav-link">Marketing & International Business</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Engineering & Physical Sciences</h6>
+                    <a href="[[~177~]]" class="nav-link">Architecture</a>
+                    <a href="[[~179~]]" class="nav-link">Civil and Environmental Engineering</a>
+                    <a href="http://ece.northsouth.edu/people/type/faculty/" class="nav-link">Electrical & Computer Engineering</a>
+                    <a href="[[~1960~]]" class="nav-link">Mathematics & Physics</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Humanities & Social Sciences</h6>
+                    <a href="[[~180~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~182~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~2266~]]" class="nav-link">Law</a>
+                    <a href="[[~2665~]]" class="nav-link">History & Philosophy</a>
+                  </div>
+
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Health & Life Sciences</h6>
+                    <a href="[[~173~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~178~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~175~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~174~]]" class="nav-link">Public Health</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Offices Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#officesMegaMenu" aria-expanded="false" aria-controls="officesMegaMenu">
+                Offices
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="officesMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu">All Offices</h6>
+                    <a href="[[~8836~]]" class="nav-link">Registrar's Office</a>
+                    <a href="[[~3148~]]" class="nav-link">Proctor's Office</a>
+                    <a href="[[~9421~]]" class="nav-link">Controller's Office</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Other Offices</h6>
+                    <a href="http://institutions.northsouth.edu/oea/" class="nav-link" title="Office of External Affairs">Office of External Affairs</a>
+                    <a href="[[~3179~]]" class="nav-link">Office of Graduate Studies</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Student & Startup</h6>
+                    <a href="[[~8041~]]" class="nav-link">Office of Student Affairs</a>
+                    <a href="[[~1175~]]" class="nav-link">Financial Aid Office</a>
+                    <a href="https://nsustartupsnext.com/" class="nav-link" title="NSU Startups Next (NSUSN)">NSU Startups Next (NSUSN)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Admission Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#admissionMegaMenu" aria-expanded="false" aria-controls="admissionMegaMenu">
+                Admission
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="admissionMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Admission Information</h6>
+                    <a href="http://admissions.northsouth.edu/" class="nav-link" title="Admissions Home Page">Admissions Home Page</a>
+                    <a href="http://admissions.northsouth.edu/undergraduate_requirement" class="nav-link" title="Undergraduate Admission Requirements">Undergraduate Admission Requirements</a>
+                    <a href="http://admissions.northsouth.edu/graduate_requirement" class="nav-link" title="Graduate Admission Requirements">Graduate Admission Requirements</a>
+                    <a href="http://admissions.northsouth.edu/int_student" class="nav-link" title="Admission of International Applicants">Admission of International Applicants</a>
+                    <a href="https://admissions.northsouth.edu/nondegree" class="nav-link" title="Non-degree Students">Non-degree Students</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Financial & FAQs</h6>
+                    <a href="[[~1175~]]" class="nav-link" title="Financial Assistance">Financial Aid</a>
+                    <a href="[[~158~]]" class="nav-link" title="Tuition and Other Fees">Tuition and Other Fees</a>
+                    <a href="http://admissions.northsouth.edu/tuition" class="nav-link" title="Tuition Fee Calculator">Tuition Fee Calculator</a>
+                    <a href="http://admissions.northsouth.edu/faq" class="nav-link" title="Frequently Ask Questions">Frequently Ask Questions</a>
+                  </div>
+
+                  <!-- Column 3 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Transfer & Sample</h6>
+                    <a href="http://admissions.northsouth.edu/transfer" class="nav-link" title="Transfer of Students">Transfer of Students</a>
+                    <a href="http://admissions.northsouth.edu/transfer" class="nav-link" title="Credit Transfer">Credit Transfer</a>
+                    <a href="https://admissions.northsouth.edu/download/sample_question" class="nav-link" target="_blank" title="Sample Question (UG Admission Test)">Sample Question (UG Admission Test)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- NSU Online Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#nsuOnlineMegaMenu" aria-expanded="false" aria-controls="nsuOnlineMegaMenu">
+                NSU Online
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="nsuOnlineMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu">NSU Online Systems</h6>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Faculty Portal">Faculty Portal (RDS)</a>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Employee Portal">Employee Portal (RDS)</a>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Student Portal">Student Portal (RDS)</a>
+                    <a href="https://rds3.northsouth.edu/index.php/welcome/parent_login" class="nav-link" target="_blank" title="Parent Portal">Parent Portal (RDS)</a>
+                    <a href="http://apply.northsouth.edu:8080/admissionWeb/login.view" class="nav-link" target="_blank" title="Online Admission">Online Admission</a>
+                    <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank" title="Online Degree Verification">Online Degree Verification</a>
+                    <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank" title="Online Job Portal">Online Job Portal</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Faculty: Guidelines (Step by Step)</h6>
+                    <a href="https://drive.google.com/open?id=1WUx6Rp-pV0U8OeivNLCXRTUVTTIYueaT" class="nav-link" target="_blank" title="Google ClassRoom">Faculty: Create Google ClassRoom</a>
+                    <a href="/newassets/images/IT/ArchiveCreateNewClassWithMeetLink.pdf" class="nav-link" target="_blank" title="Online Class Setup">Faculty: Online Class (Archive, Create new one & Meet Link)</a>
+                    <a href="/newassets/images/IT/Faculty-ClassAssignmentManual.pdf" class="nav-link" target="_blank" title="Create Assignment">Faculty: Create an Assignment for Student</a>
+                    <h6 class="submenu mt-4">Learning Management System (LMS)</h6>
+                    <a href="http://www.northsouth.edu/canvas/" class="nav-link" target="_blank" title="Canvas LMS">Canvas</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Student: Guidelines (Step by Step)</h6>
+                    <a href="/newassets/images/IT/PasswordRecoveryProcess.pdf" class="nav-link" target="_blank" title="Password Recovery">Students: Password Recovery Process for RDS</a>
+                    <a href="https://drive.google.com/file/d/0B8X_hvl8uyoIRF9Ud1RRdjNWNjg/view" class="nav-link" target="_blank" title="Course Registration">Students: Online Course Registration</a>
+                    <a href="/newassets/images/IT/OnlineClassRoom-Students.pdf" class="nav-link" target="_blank" title="Online ClassRoom">Students: Online ClassRoom</a>
+                    <a href="/newassets/images/IT/GooleAssignmentStudentPerspective.pdf" class="nav-link" target="_blank" title="Submit Assignment">Students: How to submit an assignment</a>
+                    <a href="http://www.northsouth.edu/assets/cv/RDS-NID-Update.pdf" class="nav-link" target="_blank" title="NID Input">Students: How to Input NID Through RDS</a>
+                    <a href="http://www.northsouth.edu/assets/cv/Degree_Analysis_Guideline%20(2).pdf" class="nav-link" target="_blank" title="Degree Analysis">Students: Online Degree Analysis</a>
+                    <a href="/newassets/images/IT/EnrollmentProcessOnline.pdf" class="nav-link" target="_blank" title="Enrollment Process">Applicants: Online Enrollment Process</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://alumni.northsouth.edu/landingPage" class="nav-link text-white">Alumni</a>
+            </li>
+            <li class="nav-item">
+              <a href="[[~8062~]]" class="nav-link text-white">Research</a>
+            </li>
+
+            <!-- Useful Links Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#usefulLinksMegaMenu" aria-expanded="false" aria-controls="usefulLinksMegaMenu">
+                Useful Links
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="usefulLinksMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">NSU Inquiry</h6>
+                    <a href="[[~249~]]" class="nav-link" title="Inquiry & Feedback">Inquiry & Feedback</a>
+                    <a href="[[~7716~]]" class="nav-link" title="Administrative Directory">Administrative Directory</a>
+                    <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank" title="Jobs at NSU">Jobs at NSU</a>
+                    <a href="[[~477~]]" class="nav-link" title="Tender Notice">Tender Notice</a>
+                    <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank" title="Degree Verification">Degree Verification</a>
+                    <a href="https://rds3.northsouth.edu/index.php/etender/auth" class="nav-link" target="_blank" title="E-Tender">E-Tender</a>
+                  </div>
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">NSU Services</h6>
+                    <a href="[[~3258~]]" class="nav-link" title="Service Requests">Services Request Forms</a>
+                    <a href="[[~85~]]" class="nav-link" title="NSU Facilities">NSU Facilities</a>
+                    <a href="[[~4199~]]" class="nav-link" title="Student Clubs">NSU Student Clubs</a>
+                    <a href="/newassets/images/IT/pabx-directory-update-30-june-2025.pdf" class="nav-link" target="_blank" title="PABX Directory">PABX Directory</a>
+                    <a href="http://www.northsouth.edu/archive.html" class="nav-link" target="_blank" title="NSU Archive">NSU Archive</a>
+                    <a href="[[~1188~]]" class="nav-link" title="Bank List">Bank List for Tuition Fees</a>
+                  </div>
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">Offices</h6>
+                    <a href="http://institutions.northsouth.edu/oea/" class="nav-link" target="_blank" title="Office of the External Affairs">Office of the External Affairs</a>
+                    <a href="[[~3179~]]" class="nav-link" title="Graduate Studies">Office of the Graduate Studies</a>
+                    <a href="[[~3148~]]" class="nav-link" title="Proctor's Office">Proctor's Office</a>
+                    <a href="[[~1175~]]" class="nav-link" title="Financial Aid Office">Financial Aid Office</a>
+                    <a href="[[~8041~]]" class="nav-link" title="Student Affairs">Office of the Student Affairs</a>
+                    <a href="https://nsustartupsnext.com/" class="nav-link" target="_blank" title="NSU Startups Next (NSUSN)">NSU Startups Next (NSUSN)</a>
+                    <a href="[[~8836~]]" class="nav-link" title="Registrar's Office">Registrar's Office</a>
+                    <a href="[[~9421~]]" class="nav-link" title="Controller of Examinations">Office of the Controller of Examinations</a>
+                  </div>
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">Policy, Procedures & Complaints</h6>
+                    <a href="[[~8700~]]" class="nav-link" title="Complaint Committee">Complaint Committee</a>
+                  </div>
+                  <div class="col-md-3 col-md-4 d-block d-lg-none">
+                    <h6 class="submenu">General Links</h6>
+                    <a href="contact-us.html" class="nav-link" title="Contact Us">Contact Us</a>
+                    <a href="archive.html" class="nav-link" title="Archive">Archive</a>
+                    <a href="newsletter/nsu-catalog.html" class="nav-link" title="Catalog">Catalog</a>
+                    <a href="journals.html" class="nav-link" title="Journals">Journals</a>
+                    <a href="newsletter.html" class="nav-link" title="Newsletters">Newsletters</a>
+                    <a href="http://library.northsouth.edu" class="nav-link" target="_blank" title="Library">Library</a>
+                    <a href="academic/academic-calendar/" class="nav-link" title="Academic Calendar">Academic Calendar</a>
+                    <a href="http://institutions.northsouth.edu/oea/home-2/" class="nav-link" target="_blank" title="International Students">International Students</a>
+                    <a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="nav-link" target="_blank" title="Publications">Publications</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapseEl = document.getElementById("navbarNav");
+        collapseEl.addEventListener("show.bs.collapse", function () {
+          document.body.classList.add("menu-open");
+        });
+        collapseEl.addEventListener("hidden.bs.collapse", function () {
+          document.body.classList.remove("menu-open");
+        });
+      });
+    </script>
+
+    <!-- Department section navigation -->
+    <div id="department" class="department-nav-section">
+      <div class="container">
+        <nav class="department-navbar">
+          <button class="department-nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="department-nav-links">
+            <li><a href="#" class="nav-link-item active">Home</a></li>
+            <li><a href="#overview" class="nav-link-item">About</a></li>
+            <li><a href="#programs" class="nav-link-item">Programs</a></li>
+            <li><a href="#people" class="nav-link-item">People</a></li>
+            <li><a href="#contact" class="nav-link-item">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Modern NSU BBA Page Header Start -->
+    <header class="page-header position-relative d-flex align-items-center" style="height: 340px">
+      <div class="container text-center position-relative" style="z-index: 2">
+        <h1 class="display-4 fw-bold text-white mb-2" style="text-shadow: 0 2px 8px #06174280">Department of Public Health</h1>
+        <p class="lead text-white-50 mb-0" style="text-shadow: 0 1px 6px #06174280">School of Business & Economics (SBE)</p>
+      </div>
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(6, 23, 66, 0.25); z-index: 1"></div>
+    </header>
+    <!-- Modern NSU BBA Page Header End -->
+
+    <!-- Main Content with Tabs -->
+    <div class="container py-6">
+      <!-- Department of Public Health Description Section Start -->
+      <section class="custom-slider py-5">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-8">
+            <div class="bba-desc-section-logo">
+              <div class="slick-carousel">
+                <!-- Slide 1 -->
+                <div class="position-relative">
+                  <img class="w-100" src="img/academic/shls/pbh/slider-1.jpg" alt="Public Health 1" />
+                  <div class="slide-content">
+                    <h3 class="slide-title">Excellence in Public Health Education</h3>
+                    <p class="slide-subtitle">Join our Master of Public Health program to become a leader in healthcare innovation and community wellness.</p>
+                    <a href="#admission" class="slide-btn">
+                      <i class="fas fa-arrow-right me-1"></i>
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="position-relative">
+                  <img class="w-100" src="img/academic/shls/pbh/slider-2.jpg" alt="Public Health 2" />
+                  <div class="slide-content">
+                    <h3 class="slide-title">Research & Innovation Hub</h3>
+                    <p class="slide-subtitle">Explore cutting-edge research opportunities in epidemiology, health policy, and global health initiatives.</p>
+                    <a href="#research" class="slide-btn">
+                      <i class="fas fa-flask me-1"></i>
+                      Explore Research
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Add more slides as needed -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="modern-notice-section h-100">
+              <!-- Notice Header -->
+              <div class="notice-header d-flex align-items-center justify-content-between">
+                <h5 class="text-white-75">
+                  <i class="fas fa-bullhorn me-2"></i>
+                  Department Notices
+                </h5>
+                <span class="notice-badge">NEW</span>
+              </div>
+
+              <!-- Notice Content -->
+              <div class="notice-content">
+                <!-- Notice Item 1 -->
+                <div class="notice-item">
+                  <div class="d-flex align-items-start">
+                    <div class="notice-icon">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <a href="dept-notices/public-health/mph-and-emph-admission-test-result-for-spring-2026.html" class="notice-title"> MPH & EMPH Admission Test Result for Spring 2026 </a>
+                      <div class="notice-meta">
+                        <span class="notice-date">
+                          <i class="far fa-calendar-alt"></i>
+                          24/12/2025
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="notice-divider"></div>
+
+                <!-- Notice Item 2 -->
+                <div class="notice-item">
+                  <div class="d-flex align-items-start">
+                    <div class="notice-icon">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <a href="dept-notices/public-health/mph-and-emph-admission-test-result-for-spring-2026.html" class="notice-title"> MPH & EMPH Admission Test Result for Spring 2026 </a>
+                      <div class="notice-meta">
+                        <span class="notice-date">
+                          <i class="far fa-calendar-alt"></i>
+                          24/12/2025
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="notice-divider"></div>
+
+                <!-- Notice Item 3 -->
+                <div class="notice-item">
+                  <div class="d-flex align-items-start">
+                    <div class="notice-icon">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <a href="dept-notices/public-health/mph-and-emph-admission-test-information-for-spring-2026/" class="notice-title"> MPH & EMPH Admission Test Information for Spring 2026 </a>
+                      <div class="notice-meta">
+                        <span class="notice-date">
+                          <i class="far fa-calendar-alt"></i>
+                          30/10/2025
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- View All Button -->
+                <div class="text-center mt-4 pt-2">
+                  <a href="dept-notices/public-health/" class="view-all-btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    View All Notices
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About the Department of Public Health -->
+      <section id="overview" class="py-5">
+        <div class="row g-4 align-items-center">
+          <!-- Left Column: Text Content -->
+          <div class="col-lg-6">
+            <div class="modern-underline mb-4">
+              <h2 class="display-5 fw-bold text-primary position-relative pb-3">
+                About Our Department
+                <span class="underline-accent" style="width: 40%"></span>
+              </h2>
+            </div>
+            <!-- <div class="modern-underline mb-4">
+              <h2 class="display-5 fw-bold text-primary position-relative pb-3">
+                About Our Department
+                <span class="underline-accent"></span>
+              </h2>
+            </div> -->
+
+            <style>
+              .modern-underline h2 {
+                position: relative;
+                display: inline-block;
+              }
+
+              .underline-accent {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 4px;
+                width: 100%;
+                background: linear-gradient(90deg, #2a5caa 0%, #ff9800 50%, #2a5caa 100%);
+                border-radius: 2px;
+                box-shadow: 0 4px 12px rgba(42, 92, 170, 0.2);
+              }
+            </style>
+
+            <!-- Brief Introduction -->
+            <div class="mb-4">
+              <h5 class="text-secondary fw-bold mb-2">Introduction</h5>
+              <p class="text-muted">
+                The Department of Public Health at NSU is dedicated to advancing health and well-being through innovative education, research, and community engagement. We prepare future public health leaders to address complex health challenges
+                locally and globally.
+              </p>
+            </div>
+
+            <!-- Mission -->
+            <div class="mb-4">
+              <h5 class="text-secondary fw-bold mb-2">Our Mission</h5>
+              <p class="text-muted">
+                To educate and train competent public health professionals equipped with knowledge, skills, and values to protect and promote the health of populations through evidence-based practices and community partnerships.
+              </p>
+            </div>
+
+            <!-- Vision -->
+            <div class="mb-4">
+              <h5 class="text-secondary fw-bold mb-2">Our Vision</h5>
+              <p class="text-muted">To be a leading institution in public health education and research that contributes to healthier communities and sustainable development in Bangladesh and beyond.</p>
+            </div>
+
+            <!-- Why Study Public Health -->
+            <div>
+              <h5 class="text-secondary fw-bold mb-3">Why Study Public Health at NSU?</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Industry-experienced faculty with global recognition</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Cutting-edge curriculum aligned with international standards</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Research opportunities in emerging health challenges</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Strong partnerships with local and international organizations</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Career support and alumni network</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column: Infographic -->
+          <div class="col-lg-6">
+            <div class="row g-4">
+              <!-- Year Founded -->
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100 stat-card" style="background: linear-gradient(135deg, #ff9800 0%, #ffcc80 100%); color: black; border-radius: 16px; transition: all 0.3s ease">
+                  <div class="mb-3">
+                    <div class="stat-icon-wrapper" style="width: 60px; height: 60px; margin: 0 auto 1rem; background: rgba(255, 255, 255, 0.25); border-radius: 12px; display: flex; align-items: center; justify-content: center">
+                      <i class="fas fa-calendar-alt" style="font-size: 1.8rem"></i>
+                    </div>
+                  </div>
+                  <h3 class="fw-bold mb-1" style="font-size: 2.5rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)">2008</h3>
+                  <p class="mb-0 small" style="opacity: 0.9; font-weight: 500">Year Founded</p>
+                </div>
+              </div>
+
+              <!-- Students -->
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100 stat-card" style="background: linear-gradient(135deg, #66bb6a 0%, #c8e6c9 100%); color: black; border-radius: 16px; transition: all 0.3s ease">
+                  <div class="mb-3">
+                    <div class="stat-icon-wrapper" style="width: 60px; height: 60px; margin: 0 auto 1rem; background: rgba(255, 255, 255, 0.25); border-radius: 12px; display: flex; align-items: center; justify-content: center">
+                      <i class="fas fa-graduation-cap" style="font-size: 1.8rem"></i>
+                    </div>
+                  </div>
+                  <h3 class="fw-bold mb-1" style="font-size: 2.5rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)">450+</h3>
+                  <p class="mb-0 small" style="opacity: 0.9; font-weight: 500">Active Students</p>
+                </div>
+              </div>
+
+              <!-- Faculty Members -->
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100 stat-card" style="background: linear-gradient(135deg, #42a5f5 0%, #bbdefb 100%); color: black; border-radius: 16px; transition: all 0.3s ease">
+                  <div class="mb-3">
+                    <div class="stat-icon-wrapper" style="width: 60px; height: 60px; margin: 0 auto 1rem; background: rgba(255, 255, 255, 0.25); border-radius: 12px; display: flex; align-items: center; justify-content: center">
+                      <i class="fas fa-users" style="font-size: 1.8rem"></i>
+                    </div>
+                  </div>
+                  <h3 class="fw-bold mb-1" style="font-size: 2.5rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)">25+</h3>
+                  <p class="mb-0 small" style="opacity: 0.9; font-weight: 500">Faculty Members</p>
+                </div>
+              </div>
+
+              <!-- Global Recognition -->
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm text-center p-4 h-100 stat-card" style="background: linear-gradient(135deg, #ff7043 0%, #ffccbc 100%); color: black; border-radius: 16px; transition: all 0.3s ease">
+                  <div class="mb-3">
+                    <div class="stat-icon-wrapper" style="width: 60px; height: 60px; margin: 0 auto 1rem; background: rgba(255, 255, 255, 0.25); border-radius: 12px; display: flex; align-items: center; justify-content: center">
+                      <i class="fas fa-star" style="font-size: 1.8rem"></i>
+                    </div>
+                  </div>
+                  <h3 class="fw-bold mb-1" style="font-size: 2.5rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)">QS Ranked</h3>
+                  <p class="mb-0 small" style="opacity: 0.9; font-weight: 500">International Recognition</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <style>
+            .stat-card:hover {
+              transform: translateY(-8px);
+              box-shadow: 0 12px 32px rgba(42, 92, 170, 0.2) !important;
+            }
+          </style>
+        </div>
+      </section>
+
+      <!-- Program section  -->
+      <section id="programs" class="py-5">
+        <div class="container">
+          <div class="modern-underline mb-5 text-center">
+            <h2 class="display-5 fw-bold text-primary position-relative pb-3 d-inline-block">
+              Our Programs
+              <span class="underline-accent" style="width: 40%; left: 50%; transform: translateX(-50%)"></span>
+            </h2>
+          </div>
+          <!-- <h2 class="display-5 fw-bold mb-5 text-primary text-center">Our Programs</h2> -->
+
+          <div class="row g-4">
+            <!-- MPH Card -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm h-100 program-card" style="border-radius: 16px; transition: all 0.3s ease; overflow: hidden">
+                <div style="background: linear-gradient(135deg, #2a5caa 0%, #1a4788 100%); height: 200px; display: flex; align-items: center; justify-content: center">
+                  <i class="fas fa-stethoscope" style="font-size: 4rem; color: white; opacity: 0.9"></i>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold text-primary mb-3">Masters of Public Health (MPH)</h5>
+
+                  <a href="#admission" class="btn btn-primary btn-sm rounded-pill">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- EMPH Card -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm h-100 program-card" style="border-radius: 16px; transition: all 0.3s ease; overflow: hidden; box-shadow: 0 8px 24px rgba(42, 92, 170, 0.15)">
+                <div style="background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%); height: 200px; display: flex; align-items: center; justify-content: center">
+                  <i class="fas fa-briefcase" style="font-size: 4rem; color: white; opacity: 0.9"></i>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-2">
+                    <h5 class="card-title fw-bold text-primary mb-0">Executive MPH (EMPH)</h5>
+                  </div>
+
+                  <a href="#admission" class="btn btn-primary btn-sm rounded-pill">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- BPH Card -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm h-100 program-card" style="border-radius: 16px; transition: all 0.3s ease; overflow: hidden">
+                <div style="background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%); height: 200px; display: flex; align-items: center; justify-content: center">
+                  <i class="fas fa-book-medical" style="font-size: 4rem; color: white; opacity: 0.9"></i>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold text-primary mb-3">Bachelor of Public Health (BPH)</h5>
+
+                  <a href="#admission" class="btn btn-primary btn-sm rounded-pill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .program-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 32px rgba(42, 92, 170, 0.2) !important;
+          }
+
+          .program-card .card-title {
+            font-size: 1.25rem;
+          }
+
+          @media (max-width: 768px) {
+            .col-lg-4.col-md-6 {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+          }
+        </style>
+      </section>
+
+      <!-- People section -->
+      <section id="people" class="py-5">
+        <div class="container">
+          <div class="modern-underline mb-5 text-center">
+            <h2 class="display-5 fw-bold text-primary position-relative pb-3 d-inline-block">
+              People & Community
+              <span class="underline-accent" style="width: 40%; left: 50%; transform: translateX(-50%)"></span>
+            </h2>
+          </div>
+          <!-- <h2 class="display-5 fw-bold mb-4 text-primary text-center">People & Community</h2> -->
+          <div class="row g-4">
+            <!-- Faculty Card -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card people-card uniform-card h-100 border-0 text-white p-4 d-flex flex-column" style="border-radius: 16px">
+                <div class="d-flex align-items-center mb-4">
+                  <div class="icon-wrap me-3">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-0 fw-bold">Faculty</h5>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <a href="#faculty" class="btn btn-light btn-sm rounded-pill px-4">View Faculty</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Alumni Card -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card people-card uniform-card h-100 border-0 text-white p-4 d-flex flex-column" style="border-radius: 16px">
+                <div class="d-flex align-items-center mb-4">
+                  <div class="icon-wrap me-3">
+                    <i class="fas fa-user-friends"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-0 fw-bold">Alumni</h5>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <a href="https://alumni.northsouth.edu/landingPage" target="_blank" class="btn btn-light btn-sm rounded-pill px-4">Visit Alumni</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- MPH Student Association Card -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card people-card uniform-card h-100 border-0 text-white p-4 d-flex flex-column" style="border-radius: 16px">
+                <div class="d-flex align-items-center mb-4">
+                  <div class="icon-wrap me-3">
+                    <i class="fas fa-users-cog"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-0 fw-bold">MPH Student Association</h5>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <a href="student-life/mph-student-association.html" class="btn btn-light btn-sm rounded-pill px-4">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .uniform-card {
+            background: linear-gradient(135deg, #1a4788 0%, #2a5caa 100%);
+            box-shadow: 0 12px 30px rgba(26, 71, 136, 0.12);
+            color: #fff;
+            transition:
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .uniform-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(26, 71, 136, 0.18);
+          }
+          .uniform-card .icon-wrap {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(10, 30, 80, 0.08);
+          }
+          .uniform-card .icon-wrap i {
+            transform: translateY(1px);
+          }
+          .people-card h5 {
+            color: #fff;
+            font-size: 1.05rem;
+            letter-spacing: 0.2px;
+          }
+          .people-card p {
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .uniform-card .btn-light {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1a4788;
+            border: none;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(10, 30, 80, 0.06);
+          }
+          .uniform-card .btn-light:hover {
+            background: #fff;
+            color: #0f2646;
+          }
+          @media (max-width: 767px) {
+            .col-md-6 {
+              max-width: 100% !important;
+              flex: 0 0 100%;
+            }
+          }
+        </style>
+      </section>
+
+      <!-- contact section -->
+      <section id="contact" class="py-5">
+        <div class="container">
+          <div class="modern-underline mb-5 text-center">
+            <h2 class="display-5 fw-bold text-primary position-relative pb-3 d-inline-block">
+              Get In Touch
+              <span class="underline-accent" style="width: 40%; left: 50%; transform: translateX(-50%)"></span>
+            </h2>
+          </div>
+
+          <div class="row g-4">
+            <!-- Contact Info Cards -->
+            <div class="col-lg-6">
+              <div class="row g-4">
+                <!-- Address Card -->
+                <div class="col-md-6">
+                  <div class="card border-0 shadow-sm h-100 p-4" style="border-radius: 16px; border-left: 5px solid #2a5caa">
+                    <div class="mb-3">
+                      <i class="fas fa-map-marker-alt text-primary" style="font-size: 2rem"></i>
+                    </div>
+                    <h5 class="fw-bold text-primary mb-3">Office Address</h5>
+                    <p class="text-muted mb-0">
+                      Department of Public Health<br />
+                      School of Health & Life Sciences<br />
+                      North South University<br />
+                      Bashundhara, Dhaka-1229<br />
+                      Bangladesh
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="col-md-6">
+                  <div class="card border-0 shadow-sm h-100 p-4" style="border-radius: 16px; border-left: 5px solid #2a5caa">
+                    <div class="mb-3">
+                      <i class="fas fa-phone-alt text-primary" style="font-size: 2rem"></i>
+                    </div>
+                    <h5 class="fw-bold text-primary mb-3">Phone</h5>
+                    <p class="text-muted mb-2">
+                      <a href="tel:+8802-55668200" class="text-decoration-none text-muted">+880-2-55668200</a>
+                    </p>
+                    <p class="text-muted mb-0">Ext: 1234</p>
+                  </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="col-md-6">
+                  <div class="card border-0 shadow-sm h-100 p-4" style="border-radius: 16px; border-left: 5px solid #2a5caa">
+                    <div class="mb-3">
+                      <i class="fas fa-envelope text-primary" style="font-size: 2rem"></i>
+                    </div>
+                    <h5 class="fw-bold text-primary mb-3">Email</h5>
+                    <p class="text-muted mb-0">
+                      <a href="mailto:pbh@northsouth.edu" class="text-decoration-none text-muted">pbh@northsouth.edu</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Social Links Card -->
+                <div class="col-md-6">
+                  <div class="card border-0 shadow-sm h-100 p-4" style="border-radius: 16px; border-left: 5px solid #2a5caa">
+                    <div class="mb-3">
+                      <i class="fas fa-share-alt text-primary" style="font-size: 2rem"></i>
+                    </div>
+                    <h5 class="fw-bold text-primary mb-3">Follow Us</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-twitter"></i></a>
+                      <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="col-lg-6">
+              <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(42, 92, 170, 0.1); height: 100%; min-height: 300px">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.7367989367!2d90.41174!3d23.81127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7331b4b3b3d%3A0x4b4f4b4b4b4b4b4b!2sNorth%20South%20University!5e0!3m2!1sen!2sbd!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style="border: none"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer Start (copy from index.html) -->
+    <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-light mb-2 ftr-title">North South University</h5>
+            <a href="#" class="d-inline-block mb-3">
+              <img src="slogan.png" alt="Footer Logo" class="img-fluid w-75" />
+            </a>
+            <p class="text-light mb-1"><i class="fa fa-map-marker-alt me-2"></i>Bashundhara, Dhaka-1229, Bangladesh</p>
+            <p class="text-light mb-1"><i class="fa fa-phone-alt me-2"></i>+880-2-55668200</p>
+            <p class="text-light mb-1"><i class="fa fa-fax me-2"></i>+880-2-55668202</p>
+            <p class="text-light"><i class="fa fa-envelope me-2"></i>registrar@northsouth.edu</p>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-start justify-content-md-end pt-2 mb-4">
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-start text-md-end">Developed & Maintained By IT Office, NSU</div>
+            <div class="text-start text-md-end">&copy; 1993-2025 NSU, All Right Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Logo Slider Initialization -->
+    <script>
+      $(document).ready(function () {
+        $(".slick-carousel").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3500,
+          arrows: true,
+          dots: false,
+          fade: true,
+          speed: 800,
+          pauseOnHover: true,
+          adaptiveHeight: true,
+          prevArrow: '<button class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+          nextArrow: '<button class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+        });
+      });
+    </script>
+
+    <!-- Department Navigation Toggle Script -->
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.querySelector(".department-nav-toggle");
+        const navLinks = document.querySelector(".department-nav-links");
+        const navItems = document.querySelectorAll(".nav-link-item");
+
+        // Toggle mobile menu
+        if (navToggle) {
+          navToggle.addEventListener("click", function () {
+            this.classList.toggle("active");
+            navLinks.classList.toggle("active");
+
+            // Prevent body scroll when menu is open
+            if (navLinks.classList.contains("active")) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "";
+            }
+          });
+        }
+
+        // Close menu when clicking a nav item (mobile)
+        navItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            if (window.innerWidth <= 992) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          });
+        });
+
+        // Handle active state based on scroll position
+        window.addEventListener("scroll", function () {
+          let current = "";
+          const sections = document.querySelectorAll("section[id]");
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - 150) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navItems.forEach((item) => {
+            item.classList.remove("active");
+            if (item.getAttribute("href") === "#" + current) {
+              item.classList.add("active");
+            }
+            // Set Home as active when at top
+            if (scrollY < 300 && item.getAttribute("href") === "#") {
+              item.classList.add("active");
+            }
+          });
+        });
+
+        // Close menu when clicking outside (mobile)
+        document.addEventListener("click", function (event) {
+          if (window.innerWidth <= 992) {
+            const isClickInside = event.target.closest(".department-navbar");
+            if (!isClickInside && navLinks.classList.contains("active")) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          }
+        });
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 992) {
+            navToggle.classList.remove("active");
+            navLinks.classList.remove("active");
+            document.body.style.overflow = "";
+          }
+        });
+      });
+    </script> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.querySelector(".department-nav-toggle");
+        const navLinks = document.querySelector(".department-nav-links");
+        const navItems = document.querySelectorAll(".nav-link-item");
+        const deptNavSection = document.querySelector(".department-nav-section");
+        const mainNav = document.querySelector(".navbar.sticky-top");
+
+        // Variables for sticky behavior
+        let deptNavOriginalTop = 0;
+        let deptNavHeight = 0;
+        let isSticky = false;
+        let ticking = false;
+        let placeholder = null;
+
+        // Calculate original position after page load
+        function calculateOriginalPosition() {
+          if (deptNavSection) {
+            // Temporarily reset to get accurate position
+            deptNavSection.classList.remove("is-sticky");
+            deptNavSection.style.position = "relative";
+            deptNavSection.style.top = "0";
+            deptNavSection.style.width = "";
+            deptNavSection.style.left = "";
+
+            // Remove placeholder if exists
+            if (placeholder && placeholder.parentNode) {
+              placeholder.parentNode.removeChild(placeholder);
+              placeholder = null;
+            }
+
+            // Get accurate measurements
+            const rect = deptNavSection.getBoundingClientRect();
+            deptNavOriginalTop = rect.top + window.pageYOffset;
+            deptNavHeight = rect.height;
+          }
+        }
+
+        // Create placeholder to prevent content jump
+        function createPlaceholder() {
+          if (!placeholder) {
+            placeholder = document.createElement("div");
+            placeholder.style.height = deptNavHeight + "px";
+            placeholder.style.width = "100%";
+            placeholder.className = "dept-nav-placeholder";
+          }
+          return placeholder;
+        }
+
+        // Handle sticky behavior synced with main nav
+        function handleStickyNav() {
+          if (!deptNavSection || !mainNav) return;
+
+          const scrollY = window.pageYOffset;
+          const mainNavHeight = mainNav.offsetHeight;
+
+          // Department nav becomes sticky ONLY when:
+          // 1. Scroll > 300px (when main nav appears)
+          // 2. AND scrolled past the department nav's natural position
+          const mainNavVisible = scrollY > 300;
+          const passedDeptNav = scrollY > deptNavOriginalTop;
+          const shouldBeSticky = mainNavVisible && passedDeptNav;
+
+          if (shouldBeSticky && !isSticky) {
+            isSticky = true;
+
+            // Insert placeholder before making it fixed
+            const placeholderElement = createPlaceholder();
+            deptNavSection.parentNode.insertBefore(placeholderElement, deptNavSection);
+
+            // Apply sticky styles with smooth transition
+            deptNavSection.classList.add("is-sticky");
+            deptNavSection.style.position = "fixed";
+            deptNavSection.style.top = "-100px"; // Start hidden like main nav
+            deptNavSection.style.width = "100%";
+            deptNavSection.style.left = "0";
+
+            // Trigger reflow then slide in
+            setTimeout(() => {
+              deptNavSection.style.top = mainNavHeight + "px";
+            }, 10);
+          } else if (!shouldBeSticky && isSticky) {
+            isSticky = false;
+
+            // Disable transition so it snaps back naturally
+            deptNavSection.classList.add("no-transition");
+
+            // Remove placeholder
+            if (placeholder && placeholder.parentNode) {
+              placeholder.parentNode.removeChild(placeholder);
+            }
+
+            // Reset styles immediately
+            deptNavSection.classList.remove("is-sticky");
+            deptNavSection.style.position = "relative";
+            deptNavSection.style.top = "0";
+            deptNavSection.style.width = "";
+            deptNavSection.style.left = "";
+
+            // Re-enable transition for next sticky
+            requestAnimationFrame(() => {
+              deptNavSection.classList.remove("no-transition");
+            });
+          }
+
+          // else if (!shouldBeSticky && isSticky) {
+          //   // Slide out before removing sticky
+          //   deptNavSection.style.top = "-100px";
+
+          //   // Wait for transition to complete
+          //   setTimeout(() => {
+          //     isSticky = false;
+
+          //     // Remove placeholder
+          //     if (placeholder && placeholder.parentNode) {
+          //       placeholder.parentNode.removeChild(placeholder);
+          //     }
+
+          //     // Reset to normal position
+          //     deptNavSection.classList.remove("is-sticky");
+          //     deptNavSection.style.position = "relative";
+          //     deptNavSection.style.top = "0";
+          //     deptNavSection.style.width = "";
+          //     deptNavSection.style.left = "";
+          //   }, 500); // Match transition duration
+          // }
+
+          ticking = false;
+        }
+
+        // Request animation frame for smooth scrolling
+        function requestTick() {
+          if (!ticking) {
+            window.requestAnimationFrame(handleStickyNav);
+            ticking = true;
+          }
+        }
+
+        // Initialize after page fully loads
+        window.addEventListener("load", function () {
+          setTimeout(calculateOriginalPosition, 200);
+        });
+
+        // Toggle mobile menu
+        if (navToggle) {
+          navToggle.addEventListener("click", function () {
+            this.classList.toggle("active");
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "";
+            }
+          });
+        }
+
+        // Close menu when clicking a nav item (mobile)
+        navItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            if (window.innerWidth <= 992) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          });
+        });
+
+        // Handle scroll events with RAF
+        window.addEventListener("scroll", function () {
+          requestTick();
+
+          // Handle active state based on scroll position
+          let current = "";
+          const sections = document.querySelectorAll("section[id]");
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 150) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navItems.forEach((item) => {
+            item.classList.remove("active");
+            if (item.getAttribute("href") === "#" + current) {
+              item.classList.add("active");
+            }
+            if (window.pageYOffset < 300 && item.getAttribute("href") === "#") {
+              item.classList.add("active");
+            }
+          });
+        });
+
+        // Close menu when clicking outside (mobile)
+        document.addEventListener("click", function (event) {
+          if (window.innerWidth <= 992) {
+            const isClickInside = event.target.closest(".department-navbar");
+            if (!isClickInside && navLinks.classList.contains("active")) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          }
+        });
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            if (window.innerWidth > 992) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+            isSticky = false;
+
+            // Remove placeholder on resize
+            if (placeholder && placeholder.parentNode) {
+              placeholder.parentNode.removeChild(placeholder);
+              placeholder = null;
+            }
+
+            calculateOriginalPosition();
+            requestTick();
+          }, 250);
+        });
+      });
+    </script>
+  </body>
+</html>

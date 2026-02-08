@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <base href="http://localhost/nsu/" />
+    <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+    <title>Dr. A. K. M. Atiqur Rahman | North South University</title>
+    <meta name="description" content="North South University is the first private university of Bangladesh, was established in 1992" />
+    <meta name="keywords" content="NSU,North South University,nsu,nsu bd,private university bd,university,bd university" />
+    <meta name="author" content="North South University" />
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="google-site-verification" content="BJURJjWfIslCAsbu0-WFXPORa09RFWOo9h5JenrysZ4" />
+
+    <link rel="icon" type="image/png" href="http://www.northsouth.edu/favicon.png" />
+    <link rel="stylesheet" href="newassets/stylesheets/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="newassets/stylesheets/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="newassets/stylesheets/jquery.fancybox.css" type="text/css" />
+    <link rel="stylesheet" href="newassets/stylesheets/owl.carousel.css" type="text/css" />
+    <link rel="stylesheet" href="newassets/stylesheets/newstyle.css" type="text/css" />
+    <link rel="stylesheet" href="newassets/stylesheets/responsive-utilities.css" type="text/css" />
+
+    <script type="text/javascript" src="newassets/javascript/jquery.js"></script>
+    <script type="text/javascript" src="newassets/javascript/popper.min.js"></script>
+    <script type="text/javascript" src="newassets/javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="newassets/javascript/owl.carousel.js"></script>
+    <script type="text/javascript" src="newassets/javascript/jquery.fancybox.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#admissionModal").modal("show");
+
+        $(".fancybox-media").fancybox({
+          openEffect: "none",
+          closeEffect: "none",
+          helpers: {
+            media: {},
+          },
+        });
+
+        $(".fancybox").fancybox();
+
+        $(".main-slider").owlCarousel({
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 13000,
+          dots: false,
+          items: 1,
+          nav: true,
+          touchDrag: false,
+          mouseDrag: false,
+        });
+
+        $(".news-carousel").owlCarousel({
+          loop: false,
+          autoplay: false,
+          autoplayTimeout: 5000,
+          dots: false,
+          items: 2,
+          nav: true,
+          margin: 5,
+          touchDrag: false,
+          mouseDrag: false,
+        });
+
+        $("#admissionModal").on("hidden.bs.modal", function (e) {
+          $("#video").attr("src", "");
+          console.log("src removed");
+        });
+
+        function fader() {
+          var yourFade = 2,
+            yourDelay = 3,
+            fadeTime = yourFade * 1000,
+            delayTime = yourDelay * 1000,
+            totalTime = fadeTime + delayTime,
+            allElems,
+            elemNoFade,
+            i,
+            fadingElem;
+
+          for (i = 0, allElems = $(".toBeFaded").length, elemNoFade = allElems - 1; i < allElems; i += 1) {
+            fadingElem = "#elem" + i;
+            if (i === 0) {
+              $(fadingElem).fadeIn(fadeTime).delay(delayTime).fadeOut(fadeTime);
+            } else if (i === elemNoFade) {
+              $(fadingElem)
+                .delay(totalTime * i)
+                .fadeIn(fadeTime);
+            } else {
+              $(fadingElem)
+                .delay(totalTime * i)
+                .fadeIn(fadeTime)
+                .delay(delayTime)
+                .fadeOut(fadeTime);
+            }
+          }
+        }
+
+        fader();
+        setInterval(function () {
+          $("#elem0").css("display", "none");
+          $("#elem1").css("display", "none");
+          fader();
+        }, 8000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="header-wrapper header-position">
+      <header id="header" class="container-header type1">
+        <div class="top-nav">
+          <div class="container">
+            <div class="row">
+              <div class="top-right col-sm-12">
+                <nav class="navbar navbar-light navbar-expand-lg">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link" href="https://rds3.northsouth.edu/index.php/nsuresearch">Publications</a></li>
+                      <li class="nav-item"><a class="nav-link" href="http://institutions.northsouth.edu/oea/">International Students</a></li>
+                      <li class="nav-item"><a class="nav-link" href="academic/academic-calendar/">Academic Calendar</a></li>
+                      <li class="nav-item"><a class="nav-link" href="newsletter.html">Newsletters</a></li>
+                      <li class="nav-item"><a class="nav-link" href="journals.html">Journals</a></li>
+                      <li class="nav-item"><a class="nav-link" href="newsletter/nsu-catalog.html">Catalog</a></li>
+                      <li class="nav-item"><a class="nav-link" href="http://library.northsouth.edu">Library</a></li>
+                      <li class="nav-item"><a class="nav-link" href="all-career-at-nsu/">Career</a></li>
+                      <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                      <li class="top-search"></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-logo d-xl-none"><img src="newassets/images/logo.png" alt="logo" width="320" /></div>
+
+        <div class="header-middle">
+          <div class="container">
+            <div class="menu">
+              <nav class="navbar navbar-light navbar-expand-lg">
+                <a class="navbar-brand d-none d-xl-block" href="#"><img src="newassets/images/nsu-photo/logo-4.png" width="400" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse js-navbar-collapse" id="navbarNavDropdown">
+                  <ul class="nav navbar-nav">
+                    <li style="display: block"><a href="http://localhost/nsu/" title="Home">Home</a></li>
+
+                    <li class="dropdown mega-dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+                      <ul class="dropdown-menu mega-dropdown-menu">
+                        <li class="col-lg-3" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header">ABOUT NSU</li>
+                            <li><a href="about/brief-history/" title="Brief History">Brief History</a></li>
+                            <li><a href="about/vms.html" title="NSU Vision, Mission and Strategy">Vision, Mission &amp; Strategy</a></li>
+                            <li><a href="about/int-ab.html" title="International Advisory Board">International Advisory Board</a></li>
+                            <li><a href="about/accreditation.html" title="Accreditation">Accreditation</a></li>
+                            <li><a href="about/international-recognition.html" title="International Recognition">International Recognition</a></li>
+                            <li><a href="about/facts.html" title="Facts About NSU">Facts About NSU</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-3" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header">NSU Trustees</li>
+                            <li><a href="about/bot/">Board of Trustees</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-3" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header">Executive Leaders</li>
+                            <li><a href="about/executive-leaders.html#one" target="_blank" title="Vice, Pro Vice & Treasurer ">VC, Pro-VC & Treasurer</a></li>
+                            <li><a href="about/executive-leaders.html#six" target="_blank" title="Deans, Chairs & Directors">Deans, Chairs & Directors</a></li>
+                            <li><a href="about/executive-leaders.html#two" target="_blank" title="Administration">Administration</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-3">
+                          <ul>
+                            <li class="dropdown-header dh">Authorities</li>
+                            <li><a href="/newassets/images/Registrs Office/syndicatememberlist-8april2025.pdf" target="_blank" title="Syndicate">Syndicate</a></li>
+                            <li><a href="/newassets/images/Registrs Office/academiccouncilmember-26122024.pdf" target="_blank" title="Academic Council">Academic Council</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown mega-dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academic <span class="caret"></span></a>
+                      <ul class="dropdown-menu mega-dropdown-menu">
+                        <li class="col-lg-4" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header"><a href="academic/sbe/">School of Business &amp; Economics</a></li>
+                            <li><a href="academic/sbe/acc-fin/" title="Department of Accounting &amp; Finance">Accounting &amp; Finance</a></li>
+                            <li><a href="academic/sbe/economics.html" title="Department of Economics">Economics</a></li>
+                            <li><a href="academic/sbe/mgt.html" title="Department of Management">Management</a></li>
+                            <li><a href="academic/sbe/mib.html" title="Department of Marketing &amp; International Business">Marketing &amp; International Business</a></li>
+                            <li><a href="academic/sbe/mba-emba/" title="MBA &amp; EMBA Programs">MBA &amp; EMBA Programs</a></li>
+                            <li><a href="academic/sbe/bba-program.html" title="BBA Program">BBA Program</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header"><a href="academic/seps/">School of Engineering &amp; Physical Sciences</a></li>
+                            <li><a href="academic/seps/architecture.html" title="Department of Architecture">Architecture</a></li>
+                            <li><a href="academic/seps/cee/" title="Department of Civil and Environmental Engineering">Civil and Environmental Engineering</a></li>
+                            <li><a href="http://ece.northsouth.edu/" title="Department of Electrical &amp; Computer Engineering">Electrical &amp; Computer Engineering</a></li>
+                            <li><a href="academic/seps/math-physics/" title="Department of Mathematics &amp; Physics">Mathematics &amp; Physics</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-4" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header"><a href="academic/shss/">School of Humanities &amp; Social Sciences</a></li>
+                            <li><a href="academic/shss/lml.html" title="Department of English &amp; Modern Languages">English &amp; Modern Languages</a></li>
+                            <li><a href="academic/shss/pss/" title="Department of Political Science &amp; Sociology">Political Science &amp; Sociology</a></li>
+                            <li><a href="academic/shss/law/" title="LLB">Law</a></li>
+                            <li><a href="academic/shss/dhp.html" title="Department of History &amp; Philosophy">History &amp; Philosophy</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header"><a href="academic/shls/">School of Health &amp; Life Sciences</a></li>
+                            <li><a href="academic/shls/bmd/" title="Department of Biochemistry &amp; Microbiology">Biochemistry &amp; Microbiology</a></li>
+                            <li><a href="academic/shls/esm/" title="Department of Environmental Science &amp; Management">Environmental Science &amp; Management</a></li>
+                            <li><a href="academic/shls/pharmacy/" title="Department of Pharmaceutical Sciences">Pharmaceutical Sciences</a></li>
+                            <li><a href="academic/shls/public-health.html" title="Department of Public Health">Public Health</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-4">
+                          <ul>
+                            <li class="dropdown-header dh">Institutes &amp; Centers</li>
+                            <li><a href="academic/shss/lml-01/" title="Institute of Modern Languages">Institute of Modern Languages</a></li>
+                            <li><a href="academic/ic/confucius-institute.html" title="Confucius Institute">Confucius Institute</a></li>
+                            <li><a href="research-innovation/nghi/" title="NSU Global Health Institute">NSU Global Health Institute (NGHI)</a></li>
+                            <li><a href="research-innovation/nsu-genome-research-institute.html" title="">NSU Genome Research Institute (NGRI)</a></li>
+                            <li><a href="https://cpc.northsouth.edu/" title="">Career & Placement Center (CPC)</a></li>
+                            <li><a href="https://www.northsouth.edu/sipg/" title="South Asian Institute of Policy and Governance (SIPG)">South Asian Institute of Policy and Governance (SIPG)</a></li>
+                            <li><a href="http://www.northsouth.edu/research-innovation/cbr" title="NSU Center for Business Research (NSU CBR)">NSU Center for Business Research (NSU CBR)</a></li>
+                            <li><a href="http://www.northsouth.edu/academic/seps/cee/cirs.html" title="Center for Infrastructure Research and Services">Center for Infrastructure Research and Services (CIRS)</a></li>
+                            <li><a href="https://www.cscssnsu.org/" title="CSCSS">China–South Asia Center for Sociocultural Studies (CSCSS)</a></li>
+                            <li><a href="http://www.northsouth.edu/resources/cwc.html" title="Counseling & Wellbeing Center (CWC)">NSU Counseling & Wellbeing Center (CWC)</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://www.northsouth.edu/sipg/cms.html" title="Center for Migration Studies (CMS)">Center for Migration Studies (CMS)</a></li>
+                            <li><a href="https://www.cpsnsu.org/" title="Center for Peace Studies (CPS)">Center for Peace Studies (CPS)</a></li>
+                            <li><a href="https://www.northsouth.edu/sdg/" title="Center for Social Impact and Sustainability (CSIS)">Center for Social Impact and Sustainability (CSIS)</a></li>
+                            <li><a href="https://www.northsouth.edu/academic/ic/cdr.html" title="Center for Climate Change and Disaster Resilience (CDR)">Center for Climate Change and Disaster Resilience (CDR)</a></li>
+                            <li><a href="https://www.northsouth.edu/academic/ic/sbc.html" title="NSU Social Business Center (SBC)">NSU Social Business Center (SBC)</a></li>
+                            <li><a href="https://www.northsouth.edu/academic/ic/ace.html" title="Agribusiness Centre of Excellence">Agribusiness Centre of Excellence (ACE)</a></li>
+                            <li class="dropdown-header">Miscellaneous</li>
+                            <li><a href="academic/grading-policy.html" title="Grading Policy">Grading Policy</a></li>
+                            <li><a href="academic/student-records.html" title="Student Records">Student Records</a></li>
+                            <li><a href="/newassets/images/5-80.17-09-2023 Academic Information and Policies.pdf" title="Academic Information and Policies">Academic Information and Policies</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown mega-dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faculty <span class="caret"></span></a>
+                      <ul class="dropdown-menu mega-dropdown-menu">
+                        <li class="col-lg-6" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header">School of Business &amp; Economics</li>
+                            <li><a href="faculty-members/sbe/acc-fin/" title="Department of Accounting &amp; Finance">Accounting &amp; Finance</a></li>
+                            <li><a href="faculty-members/sbe/economics/" title="Department of Economics">Economics</a></li>
+                            <li><a href="faculty-members/sbe/mgt/" title="Department of Management">Management</a></li>
+                            <li><a href="faculty-members/sbe/marketing-ib/" title="Department of Marketing &amp; International Business">Marketing &amp; International Business</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">School of Engineering&amp; Physical Sciences</li>
+                            <li><a href="faculty-members/seps/architecture/" title="Department of Architecture">Architecture</a></li>
+                            <li><a href="faculty-members/seps/cee/" title="Department of Civil and Environmental Engineering">Civil and Environmental Engineering</a></li>
+                            <li><a href="http://ece.northsouth.edu/people/type/faculty/" title="Department of Electrical &amp; Computer Engineering">Electrical &amp; Computer Engineering</a></li>
+                            <li><a href="faculty-members/seps/mathematics-physics/" title="Department of Mathematics &amp; Physics">Mathematics &amp; Physics</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-6">
+                          <ul>
+                            <li class="dropdown-header">School of Humanities &amp; Social Sciences</li>
+                            <li><a href="faculty-members/shss/eml/" title="Department of English &amp; Modern Languages">English &amp; Modern Languages</a></li>
+                            <li><a href="faculty-members/shss/pss/" title="Department of Political Science &amp; Sociology">Political Science &amp; Sociology</a></li>
+                            <li><a href="faculty-members/shss/law/" title="LLB">Law</a></li>
+                            <li><a href="faculty-members/shss/history-philosophy/" title="Department of History &amp; Philosophy">History &amp; Philosophy</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">School of Health &amp; Life Sciences</li>
+                            <li><a href="faculty-members/shls/biochemistry-microbiology/" title="Department of Biochemistry &amp; Microbiology">Biochemistry &amp; Microbiology</a></li>
+                            <li><a href="faculty-members/shls/esm/" title="Department of Environmental Science &amp; Management">Environmental Science &amp; Management</a></li>
+                            <li><a href="faculty-members/shls/pharmacy/" title="Department of Pharmaceutical Sciences">Pharmaceutical Sciences</a></li>
+                            <li><a href="faculty-members/shls/pbh/" title="Department of Public Health">Public Health</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown mega-dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <span class="caret"></span></a>
+                      <ul class="dropdown-menu mega-dropdown-menu">
+                        <li class="col-lg-4" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header dh">Admission Information</li>
+                            <li><a href="http://admissions.northsouth.edu/" title="Admissions Home Page">Admissions Home Page</a></li>
+                            <li><a href="http://admissions.northsouth.edu/undergraduate_requirement" title="Undergraduate Admission Requirements">Undergraduate Admission Requirements</a></li>
+                            <li><a href="http://admissions.northsouth.edu/graduate_requirement" title="Graduate Admission Requirements">Graduate Admission Requirements</a></li>
+                            <li><a href="http://admissions.northsouth.edu/int_student" title="Admission of International Applicants">Admission of International Applicants</a></li>
+                            <li><a href="https://admissions.northsouth.edu/nondegree" title="Non-degree Students">Non-degree Students</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-4" style="border-right: 1px dashed #105bc0">
+                          <ul class="others">
+                            <li><a href="resources/fao.html" title="Financial Assistance">Financial Aid</a></li>
+                            <li><a href="tuition-fees/" title="Tuition and Other Fees">Tuition and Other Fees</a></li>
+                            <li><a href="http://admissions.northsouth.edu/tuition" title="Tuition and Other Fees">Tuition Fee Calculator</a></li>
+                            <li><a href="http://admissions.northsouth.edu/faq" title="Frequently Ask Questions">Frequently Ask Questions</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-4">
+                          <ul>
+                            <li><a href="http://admissions.northsouth.edu/transfer" title="Transfer of Students">Transfer of Students</a></li>
+                            <li><a href="http://admissions.northsouth.edu/transfer" title="Credit Transfer">Credit Transfer</a></li>
+                            <li><a target="_blank" href="http://admissions.northsouth.edu/ug_download" title="UG Admission Test- Sample Question">UG Admission Test- Sample Question</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown mega-dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">NSU Online <span class="caret"></span></a>
+                      <ul class="dropdown-menu mega-dropdown-menu">
+                        <li class="col-lg-4">
+                          <ul>
+                            <li class="dropdown-header dh">NSU Online Systems</li>
+                            <li><a href="http://portal.northsouth.edu/" title="Faculty Portal">Faculty Portal (RDS)</a></li>
+                            <li><a href="http://portal.northsouth.edu/" title="Employee Portal">Employee Portal (RDS)</a></li>
+                            <li><a href="http://portal.northsouth.edu/" title="Online Student Portal">Student Portal (RDS)</a></li>
+                            <li><a href="https://rds3.northsouth.edu/index.php/welcome/parent_login" title="Online Parent Portal">Parent Portal (RDS)</a></li>
+                            <li><a href="http://apply.northsouth.edu:8080/admissionWeb/login.view" title="Apply for Online Admission">Online Admission</a></li>
+                            <li><a href="https://rds3.northsouth.edu/index.php/verification/verification" title="" target="_blank">Online Degree Verification</a></li>
+                            <li><a href="https://jobs.northsouth.edu/" title="" target="_blank">Online Job Portal</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-4">
+                          <ul>
+                            <li class="dropdown-header dh">Faculty: Guidelines (Step by Step)</li>
+                            <li>
+                              <a href="http://www.northsouth.edu/newassets/images/5-477.GoogleVirtualClassANDOnlineMeetLink.pdf" title="How to Create New Virtual Class & Generate Meet Link" target="_blank"
+                                >Online Google Class (New Class & Meet Link)</a
+                              >
+                            </li>
+                            <li><a href="/newassets/images/IT/ArchiveCreateNewClassWithMeetLink.pdf" title="How to Archive Virtual Class, Create New & Generate Meet Link" target="_blank">Online Google Class (Archiving Process)</a></li>
+                            <li><a href="/newassets/images/IT/Faculty-ClassAssignmentManual.pdf" title="How to Create an Assignment" target="_blank">Create an Assignment for Student</a></li>
+                            <li class="dropdown-header dh">Learning Management System (LMS)</li>
+                            <li><a href="http://www.northsouth.edu/canvas/" title="">Canvas</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-4">
+                          <ul>
+                            <li class="dropdown-header dh">Student: Guidelines (Step by Step)</li>
+                            <li><a href="/newassets/images/IT/PasswordRecoveryProcess.pdf" title="Reset Your Own Password for RDS" target="_blank">Students: Password Recovery Process for RDS</a></li>
+                            <li><a href="https://drive.google.com/file/d/0B8X_hvl8uyoIRF9Ud1RRdjNWNjg/view" title="Online Course Registration Process" target="_blank">Students: Online Course Registration</a></li>
+                            <li><a href="/newassets/images/IT/OnlineClassRoom-Students.pdf" title="Guideline for Students OnlineClass" target="_blank">Students: Online ClassRoom</a></li>
+                            <li><a href="/newassets/images/IT/GooleAssignmentStudentPerspective.pdf" title="Guideline for Students Submit Assignment" target="_blank">Students: How to submit an assignment</a></li>
+                            <li><a href="http://www.northsouth.edu/assets/cv/RDS-NID-Update.pdf" title="Guideline for Students OnlineClass" target="_blank">Students: How to Input NID Through RDS</a></li>
+                            <li><a href="http://www.northsouth.edu/assets/cv/Degree_Analysis_Guideline%20(2).pdf" title="Online Degree Analysis Process for Next Convocation" target="_blank">Students: Online Degree Analysis</a></li>
+                            <li><a href="/newassets/images/5-8822.EnrollmentProcess.pdf" title="Online Enrollment Process" target="_blank">Applicants: Online Enrollment Process</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-4"></li>
+                      </ul>
+                    </li>
+
+                    <li class=""><a href="https://alumni.northsouth.edu/landingPage" class="">Alumni</a></li>
+                    <li class=""><a href="research-office/" class="">Research</a></li>
+
+                    <li class="dropdown mega-dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful Links<span class="caret"></span></a>
+                      <ul class="dropdown-menu mega-dropdown-menu">
+                        <li class="col-lg-3" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header">NSU Inquiry</li>
+                            <li><a href="resources/inquiry-feedback.html" title="">Inquiry & Feedback</a></li>
+                            <li><a href="resources/nsu-directory.html" title="">Administrative Directory</a></li>
+                            <li><a href="https://jobs.northsouth.edu/" title="" target="_blank">Jobs at NSU</a></li>
+                            <li><a href="resources/tender/" title="">Tender Notice</a></li>
+                            <li><a href="https://rds3.northsouth.edu/index.php/verification/verification" title="" target="_blank">Degree Verification</a></li>
+                            <li><a href="https://rds3.northsouth.edu/index.php/etender/auth" title="">E-Tender</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-3" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header">NSU Services</li>
+                            <li><a href="resources/nsuforms.html" title="">Services Request Forms</a></li>
+                            <li><a href="nsu-facilities/" title="">NSU Facilities</a></li>
+                            <li><a href="resources/nsu-student-clubs.html" title="">NSU Student Clubs</a></li>
+                            <li><a href="/newassets/images/IT/pabx-directory-1-september-2025.pdf" title="">PABX Directory</a></li>
+                            <li><a href="http://www.gmail.com">NSU Email Service</a></li>
+                            <li><a href="http://www.northsouth.edu/archive.html">NSU Archive</a></li>
+                            <li><a href="bank-list-for-tuition-fees.html" title="">Bank List for Tuition Fees</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-3" style="border-right: 1px dashed #105bc0">
+                          <ul>
+                            <li class="dropdown-header">Offices</li>
+                            <li><a href="http://institutions.northsouth.edu/oea/" title="">Office of the External Affairs</a></li>
+                            <li><a href="ogs.html">Office of the Graduate Studies</a></li>
+                            <li><a href="proctoroffice/">Proctor's Office</a></li>
+                            <li><a href="resources/fao.html">Financial Aid Office</a></li>
+                            <li><a href="osa/">Office of the Student Affairs</a></li>
+                            <li><a href="https://nsustartupsnext.com/" title="NSU Startups Next (NSUSN)">NSU Startups Next (NSUSN)</a></li>
+                            <li><a href="registrars-office/">Registrar's Office</a></li>
+                            <li><a href="controller-office/">Office of the Controller of Examinations</a></li>
+                          </ul>
+                        </li>
+                        <li class="col-lg-3">
+                          <ul>
+                            <li class="dropdown-header">Policy, Procedures & Complaints</li>
+                            <li><a href="pshc/">Complaint Committee</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="slogan-bar d-none d-lg-block" style="background: #1a265c; color: #fff; text-align: center; padding: 6px">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="text-slider">
+                <div id="elem0" class="toBeFaded">Center of Excellence in Higher Education</div>
+                <div id="elem1" class="toBeFaded">The First Private University in Bangladesh</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-title full-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-title-heading">
+              <h2 class="title">Dr. A. K. M. Atiqur Rahman</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content faculty-profile">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="assets/images/Photo/ECO/AKM.jpg" width="300" />
+          </div>
+          <div class="col-md-9">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td width="551">
+                    <p>
+                      <strong>Full Time Faculty<br />Professor &amp; Director, Economics Research Platform</strong><br /><br />Ph.D., in Economics University of Houston, USA<br />M.A. in Economics University of Houston, USA <br />B.S.S. in Economics
+                      University of Dhaka
+                    </p>
+                    <p><strong>Phone</strong>: +880-2-55668200 Ext: 1803<br /><strong>Email</strong>: akm.atiqur@northsouth.edu<br /><strong>Office</strong>:</p>
+                    <p>
+                      <a href="assets/files/Vita-Dr.-Atiq(1).docx"><strong>Curriculum Vitae</strong></a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="faculty-tabs" data-example-id="togglable-tabs">
+              <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                <li><a href="#one" role="tab" data-toggle="tab" class="active">About</a></li>
+                <li>
+                  <a href="#two" data-toggle="tab">Selected<br />Publications</a>
+                </li>
+                <li>
+                  <a href="#three" data-toggle="tab">Awards &<br />Honors</a>
+                </li>
+                <li>
+                  <a href="#four" data-toggle="tab">Educational<br />Qualifications</a>
+                </li>
+                <li>
+                  <a href="#five" data-toggle="tab">Academic<br />Experience</a>
+                </li>
+                <li>
+                  <a href="#six" data-toggle="tab">Corporate <br />Experience</a>
+                </li>
+                <li><a href="#seven" data-toggle="tab">Courses</a></li>
+                <li>
+                  <a href="#eight" data-toggle="tab">Membership and<br />professional Activites</a>
+                </li>
+                <li>
+                  <a href="#nine" data-toggle="tab">Research<br />Interests</a>
+                </li>
+              </ul>
+              <div id="tabcontent" class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="one">
+                  <p style="text-align: justify">
+                    A.K.M. Atiqur Rahman is a Professor at the Department of Economics. He also serves as the Director of Economic Research Platform (ERP). Professor Rahman is professional economist serving the academia, research and consultancy for
+                    more than three decades. He holds a PhD in Economics and MA in Economics from the University of Houston, USA. He also obtained Bachelor and Master degrees in Economics from the University of Dhaka. He worked as economist at the
+                    World Bank for a while. He has been teaching Economics and Finance courses at the North South University for about three decades. In addition to the professorial position, he served important administrative responsibilities
+                    including Dean of the School, Chair of the Department and the Registrar of the university. He published numerous articles in peer-reviewed journals and produced many other research and policy reports. Dr. Rahman also served as the
+                    resource person and delivered numerous lectures for government employees, including lectures at planning academy, Army Staff College, Ministry of Commerce, Ministry of Woman and Child Affairs. He has been widely consulted by
+                    different Ministries of the Government of Bangladesh (GOB), the World Bank, Center for Policy Dialogue (CPD), Consumer Unity and Trust Society (CUTS), etc.
+                  </p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="two">
+                  <p>&nbsp;</p>
+                  <p>Selected Journal Publications:</p>
+                  <p>
+                    &ldquo;The role of Fintech in containing the carbon curse of natural resources: Evidence from resource-rich countries.&rdquo; With Samiha Khan, &nbsp;M.M. Alam, M. M., &amp; H. Mahmood,.
+                    <strong>Resources Policy,</strong> &nbsp;Vol. 90, 2024.
+                  </p>
+                  <p>
+                    &ldquo;The importance of settling geopolitical disputes in neutralizing the carbon curse of natural resources: evidence from South and Southeast Asia.&rdquo; With M. Murshed, <strong>Mineral Economics</strong>,September
+                    2024.&nbsp;
+                  </p>
+                  <p>
+                    &ldquo;Drivers of Green Growth in the Kingdom of Saudi Arabia: Can FinancialDevelopment Promote Environmentally Sustainable Economic Growth?&rdquo; with Asif&nbsp;Ali&nbsp;Abro &nbsp;&middot; Naushad&nbsp;Alam,&nbsp;&middot;
+                    Muntasir&nbsp;Murshed,&nbsp; Haider&nbsp;Mahmood forthcoming <strong>Environmental Science &amp; Pollution Research</strong>. Springer , published online on 3<sup>rd</sup> November 2022
+                  </p>
+                  <p>&ldquo;Roadmap for achieving energy sustainability in Sub-Saharan Africa: The mediating role of energy use efficiency,&rdquo; with Samiha Khan and M Morshed <strong>Energy Reports</strong>, 8(C):4535-455, November 2022</p>
+                  <p>-&ldquo; Does Microcredit Empower Urban Poor Women? Evidence from Slums in Dhaka City.&rdquo; <strong>Global Review of Accounting and Finance,</strong> Vol 7, no.2, September 2020</p>
+                  <p>-&ldquo;Diversification and Bank Performance in a Developing Economy: Evidence from Bangladesh,&rdquo;&nbsp; <strong>North South Business Review</strong>, Vol 9, no. 2, June 2019</p>
+                  <p>-&ldquo;Does Economic Resilience Enhance Private Investment? Evidence from Panel Data<strong>&rdquo; Journal of Business and policy</strong>, Vol&nbsp; 13, no. 1,&nbsp; July 2018</p>
+                  <p>
+                    -&ldquo;Interaction Between Monetary Policy and Exchange Rate Stabilization Policy in Bangladesh: A Joint Analysis Using SVAR model&rdquo; with M. Muzahidul Anam Khan, <strong>Journal of Developing Areas</strong>, Volume 51, No.
+                    2. Spring 2017&nbsp;
+                  </p>
+                  <p>
+                    -&ldquo;Food Inflation&nbsp; and Inflation&nbsp; Dynamics in Bangladesh&rdquo;,&nbsp; <strong><em>International Review of Business Research Papers</em></strong
+                    >, Vol 12 , September 2016
+                  </p>
+                  <p>
+                    -&ldquo;Human capital and Technological Catch up of the Developing Countries: In Search of a Technological Leader,&rdquo; with Meithy Zaman,<em> <strong>Journal of Developing Areas</strong>,</em> Vol 50, no 1. Winter 2016
+                  </p>
+                  <p>
+                    &ldquo;Revisiting Finance Growth Relations in Bangladesh,&rdquo;<em> <strong>Journal of Business and Economics</strong>, Volume 6, no. 2, 2014</em>
+                  </p>
+                  <p>
+                    -&ldquo;Monetary Policy Transmission in Low Income Countries: Do traditional Channels work in Bangladesh?&rdquo;<em> <strong>Journal of Academic Research in Economics</strong></em
+                    >, Vol. 6, no.2. June 2014&nbsp;
+                  </p>
+                  <p>
+                    &ldquo;Disaggregated Spending and the Productivity Bias Hypothesis&rdquo; with Gour Gobinda Goswami, <strong><em>The Journal of Developing Area</em></strong
+                    >s, Volume 41, No. 2, Spring 2008
+                  </p>
+                  <p>
+                    -"Potentials of Trade Cooperation Among the BIMST-EC Countries", with Shamsur Rahman,&nbsp; <strong><em>BIISS</em></strong
+                    ><em> <strong>journal</strong></em
+                    >, Volume 25, no.2,&nbsp; April 2004&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </p>
+                  <p>
+                    - &ldquo;Real Exchange Rate Behavior and Exchange Rate Misalignment in Bangladesh: A Single Equation Approach&rdquo; with Syed Abul Basher, <strong><em>Bangladesh Development Studies</em></strong
+                    ><em>,</em> Vol 27, number 2, June 2001. -&ldquo;An Empirical Investigation into the Causality and Implications of Bangladesh&rsquo;s Rapid Import Growth With India&rdquo; with Shamsur Rahman,
+                    <strong><em>BIISS Journal</em></strong
+                    ><em>,</em> Vol 22, No.1, January 2001.
+                  </p>
+                  <p>&nbsp;</p>
+                  <p>Selected Book Chapters and Published Working Papers:</p>
+                  <p>Growth and Productivity: Recent Literature and the Bangladesh Experience&rdquo;, Chapter in &ldquo;<em>Agami Diner Bangladesh</em>&rdquo;, 2017</p>
+                  <p>
+                    -&ldquo;BIMSTEC-Japan Cooperation in Trade and Investment: Bangladesh Perspective&rdquo; published in <strong><em>Towards BIMSTEC-Japan Comprehensive Economic Cooperation</em></strong> , Bookwell, New Delhi, India, 2007.
+                  </p>
+                  <p>-&ldquo;Understanding Reform: The Case of Bangladesh&rdquo;, Environment and Development Series, No. 20, published by <strong>Institute of Development, Environmental and Strategic Studies (IDESS), NSU,</strong> March 2006.</p>
+                  <p>
+                    -&ldquo;General Administration: Gender Sensitive Public Expenditure Analysis&rdquo; a chapter of the book titled <strong><em>Who Gets What: A Gender Analysis of Public Expenditure in Bangladesh,</em></strong> published by
+                    University Press Limited (<strong>UPL</strong>), Bangladesh , 2005&nbsp;
+                  </p>
+                  <p>
+                    -&ldquo;Trade and Economic Security: The Case of Bangladesh&rdquo;, chapter in conference proceedings based book titled <em>Comprehensive Security in South Asia: Economic Dimension,</em> published by Delhi Policy Group, 2003.
+                    <strong
+                      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong
+                    >&nbsp;
+                  </p>
+                  <p>
+                    -&ldquo;Economic Cost of Terrorism: The case of Bangladesh&rdquo; chapter in the book titled <em>Terrorism in South Asia: Impact on Development and Democratic Process</em>, edited by Sridhar K. Khatri and Gert. W.&nbsp; Kueck,
+                    Regional Center for Strategic Studies, Colombo. 2003.
+                    <strong
+                      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </strong>
+                  </p>
+                  <p>-&ldquo;The Estimation of Capital Stock for the Bangladesh Economy&rdquo;, with Shamsur Rahman, MIMAP Bangladesh Focus Study No 1, October 2002, Bangladesh Institute of Development Studies.</p>
+                  <p>
+                    -&ldquo;Bangladesh Perspective of Regional Cooperation and Integration in South East Asia&rdquo; with A.K. Enamul Haque, APDC Working Paper<em>,</em> Asia and Pacific Development Center, Kuala Lumpur, Malaysia, September 2001.
+                  </p>
+                  <p>-&ldquo;Environmental Life Cycle Analysis: a Literature Review&rdquo; MERC working paper, New Jersey Institute of Technology, Newark, New Jersey, U.S.A., 1997.</p>
+                  <p>-"Technological Convergence and International Trade" with Dan Ben-David, <em>CEPR Discussion Paper</em>, no. 1359, Center for Policy Research, London, UK, March 1996.</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="three">
+                  <p>&nbsp;</p>
+                  <p>Best Paper award at the<strong> </strong>Asian Business Conference, December, 2016</p>
+                  <p><strong>- </strong>Journal Best Paper Award at the Asian Business Conference, December, 2015</p>
+                  <p>- Letter of Congratulations from Pro-Vice Chancellor for Excellence in Teaching, Spring 2000, Spring 2001, Summer2001.</p>
+                  <p>-Watamool Scholarship, University of Houston, 1991, 1992.</p>
+                  <p>-Nomination for Teaching Excellence Award, 1996, Houston Community College System.</p>
+                  <p>-Merit Scholarship, University of Dhaka.1980-84</p>
+                  <p>-Official Recognition by the President, Government of the Peoples Republic of Bangladesh for excellence in the Higher Secondary Certificate Exam, 1980.</p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="four">
+                  <p>Ph.D. in Economics, University of Houston, USA, 1996</p>
+                  <p>(With substantial course work in Finance, academically qualified to teach Finance according to ACBSP)</p>
+                  <p>Field of concentration: International Economics, Macroeconomics.</p>
+                  <p>Dissertation Title: &ldquo;Why Incomes Converge: The Roles of Technology, Trade, and Time Preference&rdquo;</p>
+                  <p>Supervisor: Roy J. Ruffin, MD Anderson Professor of Economics</p>
+                  <p>&nbsp;</p>
+                  <p>Master of Arts in Economics, University of Houston, USA, 1991</p>
+                  <p>&nbsp;</p>
+                  <p>Master of Social Science in Economics, University of Dhaka, 1988.</p>
+                  <p>&nbsp;</p>
+                  <p>Bachelor of Social Science in Economics, University of Dhaka, 1985.</p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Subsidiary: Mathematics, Statistics, and Sociology.</p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="five">
+                  <p><strong>Academic Appointments (Teaching And Academic Administration) </strong></p>
+                  <p><strong>&nbsp;</strong></p>
+                  <p><strong>Director, </strong>Economic Research Platform(ERP), North South University, September 2024 -<strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>
+                  <p>&nbsp;</p>
+                  <p><strong>Professor</strong>, Department of Economics, North South University, April 2007- Present&nbsp;&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;<strong>Dean</strong>, School of Arts and Social Science, North South University, May 2011-October 2013</p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp; (Also served as VC in Charge including duties of Treasurer for about a month while Acting VC was on Leave)</p>
+                  <p>&nbsp;</p>
+                  <p><strong>Registrar</strong>-in Charge (additional duty with teaching and research responsibility as Professor), July 2008 &ndash; February 2009, North South University</p>
+                  <p>&nbsp;</p>
+                  <p><strong>Chairman</strong>, Department of Economics, North South University, September 2002-January 2007.</p>
+                  <p>&nbsp;</p>
+                  <p>Associate Professor, Department of Economics, North South University, January 2002- April 2007.&nbsp;</p>
+                  <p>Assistant Professor, Department of Economics, North South University, September 1997-January 2002.</p>
+                  <p>&nbsp;</p>
+                  <p>Visiting Fellow, New Jersey Institute of Technology, September 1996 to August 1997.&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>Teaching Fellow, Department of Economics, University of Houston, Summer 1994 -Summer 1996.</p>
+                  <p>&nbsp;</p>
+                  <p>Instructor, Houston Community College, Fall 1995 - Spring 1996</p>
+                  <p>&nbsp;</p>
+                  <p>Adjunct Faculty, Department of Economics and Finance, Prairie View A &amp; M University, Fall 1993 - Spring 1995.&nbsp;</p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="six">
+                  <p>- Economist, World Bank Dhaka Office, Bangladesh. January 1999-December 1999 (on leave from NSU)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <p><strong>&nbsp;</strong>&nbsp;-Assistant Director, Bangladesh Bank, Bangladesh, June 1989 - August 1990.&nbsp;</p>
+                  <p><strong>&nbsp;</strong>-Economist, Bangladesh Rural Advancement Committee (BRAC), Bangladesh, October 1988-June 1989.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <p>-Research Associate, Bangladesh Institute of Development studies (BIDS), Bangladesh, May 1988 - October 1988.</p>
+                  <p>-Research Officer, Bangladesh Institute of Development Studies (BIDS), March 1985- March 1986</p>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="seven"></div>
+                <div role="tabpanel" class="tab-pane" id="eight"></div>
+                <div role="tabpanel" class="tab-pane" id="nine"></div>
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer full-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="regular">North South University</h5>
+            <img src="newassets/images/nsu-photo/slogan.png" style="width: 300px; margin-top: 0px; margin-left: -10px" />
+            <p>
+              Bashundhara, Dhaka-1229, Bangladesh
+              <br />
+              <i class="fa fa-phone"></i> +880-2-55668200 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fa fa-fax"></i> Fax: +880-2-55668202
+              <br />
+              <i class="fa fa-envelope"></i> registrar@northsouth.edu
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="social-box">
+              <ul class="social-list">
+                <li>
+                  <a href="https://www.facebook.com/NorthSouthUniversity" class="btn btn-default social-icon" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/NorthSouthU" class="btn btn-default social-icon" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://plus.google.com/118022124355407741002" class="btn btn-default social-icon" target="_blank">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/NorthSouthUniversity/" class="btn btn-default social-icon" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/NorthSouthUniversity" class="btn btn-default social-icon" target="_blank">
+                    <i class="fa fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="copyright">
+              Developed & Maintained by IT Office, NSU
+              <br />
+              &copy 1993-2025 North South University. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

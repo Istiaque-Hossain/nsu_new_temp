@@ -1,0 +1,313 @@
+:root {
+  --nsu-primary: #1a265c;
+  --nsu-accent: #2a5caa;
+  --nsu-accent-light: #3b7ed8;
+  --card-bg: #fff;
+  --muted: #6b7280;
+  --bg-light: #f8fbff;
+  --border-color: #e1e9ff;
+  --gold: #d4a574;
+}
+
+/* ================= PROFILE CARD ================= */
+.faculty-profile .profile-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(16, 50, 110, 0.12);
+  border: 1px solid #f0f5ff;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.faculty-profile .profile-card:hover {
+  box-shadow: 0 30px 80px rgba(16, 50, 110, 0.15);
+}
+
+/* Photo styling */
+.photo {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 6px solid #fff;
+  box-shadow: 0 15px 40px rgba(42, 92, 170, 0.2);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 90%;
+  margin: auto;
+  max-width: 100%;
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(42, 92, 170, 0.3);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.02);
+}
+
+/* Intro styling */
+.faculty_intro h1 {
+  color: var(--nsu-primary);
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.faculty_intro > p:first-of-type strong {
+  color: var(--nsu-accent);
+  font-size: 1.1rem;
+}
+
+.faculty_intro p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+.faculty_intro strong {
+  color: var(--nsu-primary);
+  font-weight: 600;
+}
+
+.faculty_intro a {
+  color: var(--nsu-accent);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.faculty_intro a:hover {
+  color: var(--nsu-accent-light);
+  text-decoration: underline;
+}
+
+/* ================= TABS ================= */
+.faculty-tabs .nav-pills {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.faculty-tabs .nav-link {
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  color: var(--nsu-primary);
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+
+.faculty-tabs .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--nsu-accent), var(--nsu-accent-light));
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.faculty-tabs .nav-link:hover {
+  background-color: rgba(42, 92, 170, 0.08);
+  color: var(--nsu-accent);
+  border: 1px solid var(--nsu-accent);
+  transform: translateX(4px);
+}
+
+.faculty-tabs .nav-link.active {
+  background: linear-gradient(135deg, var(--nsu-accent), var(--nsu-accent-light));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(42, 92, 170, 0.25);
+  border: 1px solid var(--nsu-accent);
+}
+
+/* ================= TAB CONTENT ================= */
+.tab-content {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(16, 50, 110, 0.08);
+  min-height: 400px;
+  padding: 30px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content h6 {
+  color: var(--nsu-primary);
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--nsu-accent);
+  font-size: 1.1rem;
+}
+
+.tab-content ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.tab-content li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: #555;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.tab-content li:hover {
+  color: var(--nsu-accent);
+}
+
+.tab-content li::marker {
+  color: var(--nsu-accent);
+  font-weight: 600;
+}
+
+.tab-content p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.tab-pane {
+  animation: fadeIn 0.4s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .faculty-profile .profile-card {
+    padding: 25px;
+  }
+
+  .faculty_intro {
+    text-align: center;
+  }
+
+  .faculty_intro h1 {
+    font-size: 1.6rem;
+  }
+
+  .photo {
+    max-width: 220px;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(42, 92, 170, 0.15);
+  }
+
+  .faculty-tabs .nav-item {
+    flex: 1;
+    min-width: 110px;
+    margin-bottom: 0;
+  }
+
+  .faculty-tabs .nav-pills {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: var(--bg-light);
+    border-radius: 12px;
+  }
+
+  .faculty-tabs .nav-link {
+    text-align: center;
+    padding: 12px 14px;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto;
+    flex: 1;
+    min-width: 110px;
+  }
+
+  .tab-content {
+    padding: 20px;
+    margin-top: 15px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .faculty-profile .profile-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .faculty_intro h1 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .faculty_intro p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .photo {
+    max-width: 180px;
+  }
+
+  .faculty-tabs .nav-link {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+
+  .tab-content h6 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .tab-content li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1420px !important;
+  }
+
+  .faculty-profile .profile-card {
+    padding: 50px;
+  }
+}
