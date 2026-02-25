@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSU: a brief history · North South University</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          sans-serif;
+        background: #fafbfc;
+        color: #1e293b;
+        line-height: 1.6;
+      }
+
+      /* subtle texture */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+        background-size: 30px 30px;
+        opacity: 0.3;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      /* header */
+      .header {
+        background: #0b2a4a; /* deep navy */
+        box-shadow: 0 8px 16px -6px rgba(0, 20, 40, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .header-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 2rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+
+      .logo-circle {
+        width: 44px;
+        height: 44px;
+        background: #f1c40f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #0b2a4a;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+      }
+
+      .logo:hover .logo-circle {
+        transform: scale(1.03);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+      }
+
+      .logo-text-main {
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: white;
+      }
+
+      .logo-text-sub {
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: #cad7ed;
+      }
+
+      nav {
+        display: flex;
+        gap: 2.2rem;
+      }
+
+      nav a {
+        color: #f0f4fa;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        letter-spacing: 0.3px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+      }
+
+      nav a:hover {
+        border-bottom-color: #f1c40f;
+        color: white;
+      }
+
+      /* gold banner */
+      .banner {
+        background: #e8b12c;
+        color: #0b2a4a;
+        text-align: center;
+        padding: 0.7rem 1.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.3px;
+        border-bottom: 2px solid #cf9f20;
+      }
+
+      /* hero */
+      .hero {
+        background: linear-gradient(135deg, #103a5e 0%, #1b4b77 100%);
+        color: white;
+        padding: 5rem 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "⚑ 1992";
+        font-size: 9rem;
+        font-weight: 800;
+        color: rgba(255, 215, 100, 0.06);
+        position: absolute;
+        bottom: -20px;
+        right: 30px;
+        pointer-events: none;
+        white-space: nowrap;
+      }
+
+      .hero-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #f7e3b2;
+        margin-bottom: 2rem;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1.2rem;
+      }
+
+      .btn {
+        padding: 0.8rem 2.2rem;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+        border: 2px solid transparent;
+      }
+
+      .btn-primary {
+        background: #f1c40f;
+        color: #0f2c44;
+        box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn-primary:hover {
+        background: #ffd966;
+        transform: translateY(-3px);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #f1c40f;
+      }
+
+      /* main layout */
+      .main-content {
+        max-width: 1280px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 3rem;
+      }
+
+      /* article typography */
+      .article-section h2 {
+        font-size: 2rem;
+        color: #0f2c44;
+        margin-bottom: 1.5rem;
+        border-left: 8px solid #e8b12c;
+        padding-left: 1.2rem;
+      }
+
+      .intro-block {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+        background: white;
+        border-radius: 24px;
+        padding: 1.8rem;
+        box-shadow: 0 12px 30px -12px rgba(0, 30, 50, 0.15);
+        margin-bottom: 2.8rem;
+      }
+
+      .intro-image {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+      }
+
+      .intro-text h3 {
+        color: #1b4b77;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .intro-text p {
+        color: #334155;
+        margin-bottom: 1rem;
+      }
+
+      strong {
+        color: #0f2c44;
+        font-weight: 600;
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: 0 8px 24px -10px rgba(0, 40, 60, 0.1);
+        margin-bottom: 2.5rem;
+      }
+
+      .content-section h3 {
+        font-size: 1.8rem;
+        color: #0b2a4a;
+        margin-bottom: 1.5rem;
+        border-bottom: 3px solid #e8b12c;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+      }
+
+      .content-block {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .content-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+      }
+
+      .governance-text h4 {
+        color: #1b4b77;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      /* sidebar cards */
+      .sidebar-card {
+        background: #1e2f44; /* deep slate */
+        color: white;
+        border-radius: 28px;
+        padding: 2rem 1.6rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 18px 30px -12px #0b1f30;
+      }
+
+      .sidebar-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-left: 6px solid #f1c40f;
+        padding-left: 1rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .fact-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .fact-item:last-child {
+        border-bottom: none;
+      }
+
+      .fact-label i {
+        color: #f1c40f;
+        width: 1.6rem;
+      }
+      .fact-value {
+        font-weight: 500;
+        background: #2a3f58;
+        padding: 0.3rem 1rem;
+        border-radius: 40px;
+        font-size: 0.9rem;
+      }
+
+      .model-list {
+        list-style: none;
+      }
+      .model-list li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .model-list li i {
+        color: #f1c40f;
+        width: 1.6rem;
+      }
+
+      .timeline-item {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        align-items: baseline;
+      }
+      .timeline-year {
+        background: #f1c40f;
+        color: #0b2a4a;
+        font-weight: 700;
+        padding: 0.2rem 1rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        min-width: 70px;
+        text-align: center;
+      }
+      .timeline-event {
+        color: #ecf3fa;
+      }
+
+      /* footer */
+      .footer {
+        background: #0a1c2f;
+        color: #dfeaf5;
+        padding: 3rem 2rem 1.5rem;
+        border-top: 5px solid #e8b12c;
+      }
+
+      .footer-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.2fr;
+        gap: 2.5rem;
+      }
+
+      .footer-about .logo {
+        margin-bottom: 1rem;
+      }
+      .footer-about p {
+        opacity: 0.8;
+        font-size: 0.9rem;
+      }
+
+      .footer-section h4 {
+        color: white;
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.3px;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+      .footer-section ul li {
+        margin-bottom: 0.6rem;
+      }
+      .footer-section ul a {
+        color: #bdd1e8;
+        text-decoration: none;
+        transition: 0.2s;
+        font-size: 0.9rem;
+      }
+      .footer-section ul a:hover {
+        color: #f1c40f;
+        padding-left: 4px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        color: #cbd8eb;
+      }
+      .contact-item i {
+        width: 1.2rem;
+        color: #e8b12c;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1.2rem;
+        margin-top: 1.5rem;
+      }
+      .social-links a {
+        color: white;
+        background: #1f3a57;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+      }
+      .social-links a:hover {
+        background: #e8b12c;
+        color: #0b2a4a;
+      }
+
+      .footer-bottom {
+        max-width: 1280px;
+        margin: 2rem auto 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.8rem;
+        text-align: center;
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+
+      /* responsive */
+      @media (max-width: 1000px) {
+        .main-content {
+          grid-template-columns: 1fr;
+        }
+        .intro-block {
+          grid-template-columns: 1fr;
+        }
+        .content-block {
+          grid-template-columns: 1fr;
+        }
+        .footer-content {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .header-content {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+        nav {
+          gap: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .hero h1 {
+          font-size: 2.4rem;
+        }
+        .hero-buttons {
+          flex-direction: column;
+          align-items: start;
+        }
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <div class="logo-circle">NSU</div>
+          <div class="logo-text">
+            <span class="logo-text-main">NORTH SOUTH</span>
+            <span class="logo-text-sub">UNIVERSITY</span>
+          </div>
+        </a>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Academic</a>
+          <a href="#">Faculty</a>
+          <a href="#">Admission</a>
+          <a href="#">Alumni</a>
+          <a href="#">Research</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="banner"><i class="fas fa-university" style="margin-right: 8px"></i> Center of Excellence in Higher Education — Est. 1992</div>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>NSU: a brief history</h1>
+        <p class="hero-subtitle">The first private university in Bangladesh</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary"><i class="fas fa-calendar-alt" style="margin-right: 8px"></i>Est. 1992</a>
+          <a href="#" class="btn btn-secondary"><i class="fas fa-chevron-circle-right"></i> About NSU</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-content">
+      <article class="article-section">
+        <!-- intro block -->
+        <div class="intro-block">
+          <img src="https://images.pexels.com/photos/12091126/pexels-photo-12091126.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="North South University building" class="intro-image" />
+          <div class="intro-text">
+            <h3>North South University (NSU)</h3>
+            <p>
+              <strong>North South University</strong>, the first private university in Bangladesh, was established in 1992 by the Foundation for Promotion of Education and Research (FPER) – a non‑profit, non‑commercial, non‑political organization.
+              The FPER later became the NSU Foundation and is now called The North South Foundation for Education and Research.
+            </p>
+            <p>
+              The Foundation brought together eminent industrialists, patrons of education, philanthropists, academics and senior civil servants. In the early 1990s, they set out to build a world‑class university as a centre of excellence in the
+              private sector.
+            </p>
+          </div>
+        </div>
+
+        <!-- legislative -->
+        <section class="content-section">
+          <h3>⚖️ Legislative foundation</h3>
+          <p>At that time there was no law to establish a private university. The founders took the burden upon themselves and assisted the government in formulating and enacting the first Private University Act (PUA‑1992).</p>
+          <p>Pursuant to the new act, NSU was approved. <strong>The University was formally inaugurated on 10 February 1993</strong> and started its journey modestly.</p>
+          <p>In 2012, following PUA‑2010, the NSU Foundation formed the NSU Trust with the same group, vesting management in the Board of Trustees (BOT).</p>
+        </section>
+
+        <!-- governance -->
+        <section class="content-section">
+          <h3>🏛️ Governance structure</h3>
+          <div class="content-block">
+            <img src="https://images.pexels.com/photos/35385546/pexels-photo-35385546.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="NSU campus view" class="content-image" />
+            <div class="governance-text">
+              <h4>The Honorable President of Bangladesh is the Chancellor of NSU.</h4>
+              <p>The Syndicate, headed by the Vice‑Chancellor, is next to the BOT. The Vice‑Chancellor is the CEO, managing academic and administrative affairs according to PUA‑2010 and the BOT’s policies.</p>
+              <p>A Pro Vice‑Chancellor and a Treasurer assist him. All are appointed by the Chancellor on the BOT’s recommendation.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- academic excellence -->
+        <section class="content-section">
+          <h3>📚 Academic excellence</h3>
+          <p>
+            <strong>NSU is modelled on US universities</strong> – semester system, credit hours, letter grades. Early undergraduate curricula (Economics, Business, Computer Science) were largely adapted from the University of Illinois at
+            Urbana‑Champaign, approved by the UGC.
+          </p>
+          <p>
+            An International Advisory Board of scholars from around the world counsels on academic matters. NSU delivers a robust general education curriculum, has a strategic plan, and implements instructional learning assessment for all degree
+            programs, moving toward institutional accreditation.
+          </p>
+        </section>
+      </article>
+
+      <!-- sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>📌 Key facts</h3>
+          <div class="fact-item">
+            <span class="fact-label"><i class="fas fa-calendar"></i> Established</span><span class="fact-value">1992</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label"><i class="fas fa-flag"></i> Inaugurated</span><span class="fact-value">10 Feb 1993</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label"><i class="fas fa-trophy"></i> Distinction</span><span class="fact-value">First private uni</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label"><i class="fas fa-user-tie"></i> Chancellor</span><span class="fact-value">President of BD</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>📐 Academic model</h3>
+          <ul class="model-list">
+            <li><i class="fas fa-gem"></i> US university model</li>
+            <li><i class="fas fa-calendar-week"></i> Semester system</li>
+            <li><i class="fas fa-clock"></i> Credit hour system</li>
+            <li><i class="fas fa-globe"></i> International advisory board</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>⏳ Timeline</h3>
+          <div class="timeline-item"><span class="timeline-year">1992</span><span class="timeline-event">Foundation established</span></div>
+          <div class="timeline-item"><span class="timeline-year">1993</span><span class="timeline-event">Official inauguration</span></div>
+          <div class="timeline-item"><span class="timeline-year">2010</span><span class="timeline-event">New Private University Act</span></div>
+          <div class="timeline-item"><span class="timeline-year">2012</span><span class="timeline-event">NSU Trust formed</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-about">
+          <a href="#" class="logo">
+            <div class="logo-circle">NSU</div>
+            <div class="logo-text">
+              <span class="logo-text-main">NORTH SOUTH</span>
+              <span class="logo-text-sub">UNIVERSITY</span>
+            </div>
+          </a>
+          <p>The first private university in Bangladesh, established in 1992 as a center of excellence in higher education.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="#">About NSU</a></li>
+            <li><a href="#">Academic programs</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Alumni</a></li>
+            <li><a href="#">NSU Online</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact us</h4>
+          <div class="contact-item"><i class="fas fa-map-pin"></i> <span>Plot 15, Block B, Bashundhara, Dhaka‑1229, Bangladesh</span></div>
+          <div class="contact-item"><i class="fas fa-phone-alt"></i> <span>+880-2-55668200</span></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i> <span>registrar@northsouth.edu</span></div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 North South University. All Rights Reserved.</div>
+    </footer>
+  </body>
+</html>
