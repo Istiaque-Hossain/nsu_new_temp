@@ -1,0 +1,1733 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Executive Leaders | North South University</title>
+    <link rel="icon" href="img/favicon.ico" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" />
+
+    <!-- Local CSS -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Mega Menu Styles -->
+    <style>
+      /* Navigation mega menu styles */
+      .mega-menu {
+        max-height: 75vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        box-shadow: 0 10px 20px rgb(255 255 255 / 30%);
+        z-index: 1000;
+        margin-top: 1rem;
+      }
+
+      .mega-menu::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .mega-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+
+      .mega-menu > .row {
+        padding: 20px;
+      }
+
+      .submenu {
+        color: white;
+        font-weight: 400;
+        margin-top: 15px;
+        font-size: 1rem;
+      }
+
+      .submenu a {
+        color: white;
+      }
+
+      .mega-menu .nav-link {
+        color: #333;
+        padding: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .mega-menu .nav-link:hover {
+        color: #002147;
+        font-weight: 500;
+      }
+
+      .mega-menu hr {
+        margin: 15px 0;
+        opacity: 0.2;
+      }
+
+      li.dropdown.nav-item {
+        position: static;
+      }
+
+      .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-x' viewBox='0 0 16 16'%3e%3cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+      }
+
+      @media (max-width: 1199px) {
+        .mega-menu {
+          position: static;
+          box-shadow: none;
+          padding: 0;
+          margin: 0;
+          max-height: 55vh;
+        }
+
+        .mega-menu > .row {
+          padding: 10px;
+          padding-top: 0;
+        }
+
+        .navbar .navbar-nav {
+          border-top: 1px solid #eeeeee3d;
+          padding: 0.5rem 0;
+          margin-top: 0.5rem;
+        }
+
+        .navbar-collapse {
+          max-height: 80vh;
+          overflow-y: auto;
+        }
+
+        .mega-menu {
+          max-height: 60vh;
+          overflow-y: auto;
+        }
+      }
+    </style>
+
+    <!-- Executive Leaders Content Styles -->
+    <style>
+      .content-main-section {
+        background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+        border: 1px solid rgba(6, 23, 66, 0.1);
+        border-radius: 1.1rem;
+        box-shadow: 0 1rem 2rem rgba(6, 23, 66, 0.1);
+        padding: 1.75rem;
+      }
+
+      .content-main-section .leaders-header {
+        margin-bottom: 1.25rem;
+      }
+
+      .content-main-section .leaders-header h3 {
+        color: var(--primary);
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .leader-sidebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+        align-self: flex-start;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        padding: 0;
+      }
+
+      .leader-sidebar .nav-pills {
+        background: #f4f7ff;
+        border: 1px solid rgba(6, 23, 66, 0.15);
+        border-radius: 14px;
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .leader-sidebar .nav-item .nav-link {
+        width: 100%;
+        text-align: left;
+        border: 1px solid rgba(6, 23, 66, 0.15);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 0;
+        padding: 14px 20px;
+        font-size: 0.92rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .leader-sidebar .nav-item .nav-link:hover {
+        background: rgba(42, 92, 170, 0.08);
+        color: var(--secondary-light);
+        border-color: var(--secondary-light);
+        transform: translateX(4px);
+      }
+
+      .leader-sidebar .nav-item .nav-link.active {
+        background: linear-gradient(135deg, var(--secondary-light), var(--secondary));
+        border-color: var(--secondary-light);
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(42, 92, 170, 0.25);
+      }
+
+      .content-main-section .tab-content {
+        background: #fff;
+        border: 1px solid rgba(6, 23, 66, 0.15);
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(16, 50, 110, 0.08);
+        min-height: 400px;
+        padding: 30px;
+        margin-top: 0;
+      }
+
+      .content-main-section .tab-pane > h5,
+      .content-main-section .tab-pane > h4 {
+        color: var(--primary);
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .content-main-section .listview-item {
+        display: flex;
+        gap: 1rem;
+        background: #fff;
+        border: 1px solid rgba(6, 23, 66, 0.1);
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 0.4rem 0.95rem rgba(6, 23, 66, 0.06);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .content-main-section .listview-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0.85rem 1.35rem rgba(6, 23, 66, 0.12);
+      }
+
+      .content-main-section .listview-item .pull-left {
+        flex: 0 0 120px;
+        float: none;
+      }
+
+      .content-main-section .listview-item-object {
+        width: 110px;
+        height: 110px;
+        border-radius: 0.75rem;
+        object-fit: cover;
+        border: 1px solid rgba(6, 23, 66, 0.12);
+      }
+
+      .content-main-section .listview-item-heading {
+        font-size: 1.15rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .content-main-section .listview-item-body {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .content-main-section .listview-item .clearfix {
+        display: none;
+      }
+
+      .content-main-section .listview-item-body a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .content-main-section .listview-item-body a:hover {
+        text-decoration: underline;
+      }
+
+      .content-main-section .listview-item-body div {
+        line-height: 1.6;
+      }
+
+      .content-main-section .leader-meta {
+        color: #242424;
+      }
+
+      @media (max-width: 767px) {
+        .content-main-section {
+          padding: 1rem;
+        }
+
+        .leader-sidebar {
+          position: static;
+          margin-bottom: 1rem;
+        }
+
+        .content-main-section .listview-item {
+          flex-direction: column;
+        }
+
+        .content-main-section .listview-item .pull-left {
+          flex: 0 0 auto;
+        }
+
+        .content-main-section .listview-item-object {
+          width: 100%;
+          max-width: 220px;
+          height: auto;
+        }
+
+        .content-main-section .tab-content {
+          padding: 20px;
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Top Nav -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-12 px-5 py-2 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="contact-us.html" class="text-light">Contact Us</a></li>
+            <li class="list-inline-item"><a href="archive.html" class="text-light">Archive</a></li>
+            <li class="list-inline-item"><a href="newsletter/nsu-catalog.html" class="text-light">Catalog</a></li>
+            <li class="list-inline-item"><a href="journals.html" class="text-light">Journals</a></li>
+            <li class="list-inline-item"><a href="newsletter.html" class="text-light">Newsletters</a></li>
+            <li class="list-inline-item"><a href="http://library.northsouth.edu" class="text-light">Library</a></li>
+            <li class="list-inline-item"><a href="academic/academic-calendar/" class="text-light">Academic Calendar</a></li>
+            <li class="list-inline-item"><a href="http://institutions.northsouth.edu/oea/home-2/" class="text-light">International Students</a></li>
+            <li class="list-inline-item"><a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="text-light">Publications</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar (copy from index.html) -->
+    <nav class="navbar navbar-expand-xl navbar-dark bg-primary sticky-top">
+      <div class="container position-relative">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="logo-4.png" alt="Logo" style="width: 6rem" />
+        </a>
+
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="menuAccordion">
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#aboutMegaMenu" aria-expanded="false" aria-controls="aboutMegaMenu">
+                About
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="aboutMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h6 class="submenu">ABOUT NSU</h6>
+                    <a href="[[~47~]]" class="nav-link">Brief History</a>
+                    <a href="[[~167~]]" class="nav-link">Vision, Mission & Strategy</a>
+                    <a href="[[~49~]]" class="nav-link">International Advisory Board</a>
+                    <a href="[[~168~]]" class="nav-link">Accreditation</a>
+                    <a href="[[~169~]]" class="nav-link">International Recognition</a>
+                    <a href="[[~388~]]" class="nav-link">Facts About NSU</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">NSU Trustees</h6>
+                    <a href="[[~109~]]" class="nav-link">Board of Trustees</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Executive Leaders</h6>
+                    <a href="[[~4145~]]#one" class="nav-link" target="_blank">VC, Pro-VC & Treasurer</a>
+                    <a href="[[~4145~]]#six" class="nav-link" target="_blank">Deans, Chairs & Directors</a>
+                    <a href="[[~4145~]]#two" class="nav-link" target="_blank">Administration</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Authorities</h6>
+                    <a href="/newassets/images/Registrs Office/syndicatememberlist-8april2025.pdf" class="nav-link" target="_blank">Syndicate</a>
+                    <a href="/newassets/images/Registrs Office/academiccouncilmember-26122024.pdf" class="nav-link" target="_blank">Academic Council</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Academic Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicMegaMenu" aria-expanded="false" aria-controls="academicMegaMenu">
+                Academic
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="academicMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~56~]]">School of Business & Economics</a></h6>
+                    <a href="[[~57~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~2890~]]" class="nav-link">Economics</a>
+                    <a href="[[~58~]]" class="nav-link">Management</a>
+                    <a href="[[~69~]]" class="nav-link">Marketing & International Business</a>
+                    <a href="[[~3581~]]" class="nav-link">MBA & EMBA Programs</a>
+                    <a href="[[~9696~]]" class="nav-link">PBH Program</a>
+
+                    <h6 class="submenu"><a href="[[~62~]]">School of Engineering & Physical Sciences</a></h6>
+                    <a href="[[~64~]]" class="nav-link">Architecture</a>
+                    <a href="[[~8351~]]" class="nav-link">Civil and Environmental Engineering</a>
+                    <a href="http://ece.northsouth.edu/" class="nav-link">Electrical & Computer Engineering</a>
+                    <a href="[[~9063~]]" class="nav-link">Mathematics & Physics</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~65~]]">School of Humanities & Social Sciences</a></h6>
+                    <a href="[[~9149~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~67~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~191~]]" class="nav-link">Law</a>
+                    <a href="[[~1540~]]" class="nav-link">History & Philosophy</a>
+
+                    <h6 class="submenu"><a href="[[~59~]]">School of Health & Life Sciences</a></h6>
+                    <a href="[[~61~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~2643~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~70~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~60~]]" class="nav-link">Public Health</a>
+
+                    <h6 class="submenu">Miscellaneous</h6>
+                    <a href="[[~124~]]" class="nav-link">Grading Policy</a>
+                    <a href="[[~1366~]]" class="nav-link">Student Records</a>
+                    <a href="/newassets/images/5-80.17-09-2023 Academic Information and Policies.pdf" class="nav-link">Academic Information and Policies</a>
+                  </div>
+
+                  <div class="col-md-4">
+                    <h6 class="submenu">Institutes & Centers</h6>
+                    <a href="[[~1806~]]" class="nav-link">Institute of Modern Languages</a>
+                    <a href="[[~189~]]" class="nav-link">Confucius Institute</a>
+                    <a href="[[~3171~]]" class="nav-link">NSU Global Health Institute (NGHI)</a>
+                    <a href="[[~4212~]]" class="nav-link">NSU Genome Research Institute (NGRI)</a>
+                    <a href="https://cpc.northsouth.edu/" class="nav-link">Career & Placement Center (CPC)</a>
+                    <a href="https://www.northsouth.edu/sipg/" class="nav-link">South Asian Institute of Policy and Governance (SIPG)</a>
+
+                    <a href="http://www.northsouth.edu/research-innovation/cbr" class="nav-link">NSU Center for Business Research (NSU CBR)</a>
+                    <a href="http://www.northsouth.edu/academic/seps/cee/cirs.html" class="nav-link">Center for Infrastructure Research and Services (CIRS)</a>
+                    <a href="https://www.cscssnsu.org/" class="nav-link">Chinaâ€“South Asia Center for Sociocultural Studies (CSCSS)</a>
+                    <a href="http://www.northsouth.edu/resources/scc.html" class="nav-link">Student Counseling Center (SCC)</a>
+                    <a href="http://www.northsouth.edu/sipg/cms.html" class="nav-link">Center for Migration Studies (CMS)</a>
+                    <a href="https://www.cpsnsu.org/" class="nav-link">Center for Peace Studies (CPS)</a>
+                    <a href="https://www.northsouth.edu/sdg/" class="nav-link">Social Impact and Sustainability Center</a>
+                    <a href="https://www.northsouth.edu/academic/ic/cdr.html" class="nav-link">Center for Climate Change and Disaster Resilience (CDR)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/sbc.html" class="nav-link">NSU Social Business Center (SBC)</a>
+                    <a href="https://www.northsouth.edu/academic/ic/ace.html" class="nav-link">Agribusiness Centre of Excellence (ACE)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Faculty Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#facultyMegaMenu" aria-expanded="false" aria-controls="facultyMegaMenu">
+                Faculty
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="facultyMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Business & Economics</h6>
+                    <a href="[[~1785~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~181~]]" class="nav-link">Economics</a>
+                    <a href="[[~1784~]]" class="nav-link">Management</a>
+                    <a href="[[~1787~]]" class="nav-link">Marketing & International Business</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Engineering & Physical Sciences</h6>
+                    <a href="[[~177~]]" class="nav-link">Architecture</a>
+                    <a href="[[~179~]]" class="nav-link">Civil and Environmental Engineering</a>
+                    <a href="http://ece.northsouth.edu/people/type/faculty/" class="nav-link">Electrical & Computer Engineering</a>
+                    <a href="[[~1960~]]" class="nav-link">Mathematics & Physics</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Humanities & Social Sciences</h6>
+                    <a href="[[~180~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~182~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~2266~]]" class="nav-link">Law</a>
+                    <a href="[[~2665~]]" class="nav-link">History & Philosophy</a>
+                  </div>
+
+                  <div class="col-md-3">
+                    <h6 class="submenu">School of Health & Life Sciences</h6>
+                    <a href="[[~173~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~178~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~175~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~174~]]" class="nav-link">Public Health</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Offices Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#officesMegaMenu" aria-expanded="false" aria-controls="officesMegaMenu">
+                Offices
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="officesMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu">All Offices</h6>
+                    <a href="[[~8836~]]" class="nav-link">Registrar's Office</a>
+                    <a href="[[~3148~]]" class="nav-link">Proctor's Office</a>
+                    <a href="[[~9421~]]" class="nav-link">Controller's Office</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Other Offices</h6>
+                    <a href="http://institutions.northsouth.edu/oea/" class="nav-link" title="Office of External Affairs">Office of External Affairs</a>
+                    <a href="[[~3179~]]" class="nav-link">Office of Graduate Studies</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Student & Startup</h6>
+                    <a href="[[~8041~]]" class="nav-link">Office of Student Affairs</a>
+                    <a href="[[~1175~]]" class="nav-link">Financial Aid Office</a>
+                    <a href="https://nsustartupsnext.com/" class="nav-link" title="NSU Startups Next (NSUSN)">NSU Startups Next (NSUSN)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Admission Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#admissionMegaMenu" aria-expanded="false" aria-controls="admissionMegaMenu">
+                Admission
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="admissionMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <!-- Column 1 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Admission Information</h6>
+                    <a href="http://admissions.northsouth.edu/" class="nav-link" title="Admissions Home Page">Admissions Home Page</a>
+                    <a href="http://admissions.northsouth.edu/undergraduate_requirement" class="nav-link" title="Undergraduate Admission Requirements">Undergraduate Admission Requirements</a>
+                    <a href="http://admissions.northsouth.edu/graduate_requirement" class="nav-link" title="Graduate Admission Requirements">Graduate Admission Requirements</a>
+                    <a href="http://admissions.northsouth.edu/int_student" class="nav-link" title="Admission of International Applicants">Admission of International Applicants</a>
+                    <a href="https://admissions.northsouth.edu/nondegree" class="nav-link" title="Non-degree Students">Non-degree Students</a>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Financial & FAQs</h6>
+                    <a href="[[~1175~]]" class="nav-link" title="Financial Assistance">Financial Aid</a>
+                    <a href="[[~158~]]" class="nav-link" title="Tuition and Other Fees">Tuition and Other Fees</a>
+                    <a href="http://admissions.northsouth.edu/tuition" class="nav-link" title="Tuition Fee Calculator">Tuition Fee Calculator</a>
+                    <a href="http://admissions.northsouth.edu/faq" class="nav-link" title="Frequently Ask Questions">Frequently Ask Questions</a>
+                  </div>
+
+                  <!-- Column 3 -->
+                  <div class="col-md-4">
+                    <h6 class="submenu">Transfer & Sample</h6>
+                    <a href="http://admissions.northsouth.edu/transfer" class="nav-link" title="Transfer of Students">Transfer of Students</a>
+                    <a href="http://admissions.northsouth.edu/transfer" class="nav-link" title="Credit Transfer">Credit Transfer</a>
+                    <a href="https://admissions.northsouth.edu/download/sample_question" class="nav-link" target="_blank" title="Sample Question (UG Admission Test)">Sample Question (UG Admission Test)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- NSU Online Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#nsuOnlineMegaMenu" aria-expanded="false" aria-controls="nsuOnlineMegaMenu">
+                NSU Online
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="nsuOnlineMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu">NSU Online Systems</h6>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Faculty Portal">Faculty Portal (RDS)</a>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Employee Portal">Employee Portal (RDS)</a>
+                    <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank" title="Student Portal">Student Portal (RDS)</a>
+                    <a href="https://rds3.northsouth.edu/index.php/welcome/parent_login" class="nav-link" target="_blank" title="Parent Portal">Parent Portal (RDS)</a>
+                    <a href="http://apply.northsouth.edu:8080/admissionWeb/login.view" class="nav-link" target="_blank" title="Online Admission">Online Admission</a>
+                    <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank" title="Online Degree Verification">Online Degree Verification</a>
+                    <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank" title="Online Job Portal">Online Job Portal</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Faculty: Guidelines (Step by Step)</h6>
+                    <a href="https://drive.google.com/open?id=1WUx6Rp-pV0U8OeivNLCXRTUVTTIYueaT" class="nav-link" target="_blank" title="Google ClassRoom">Faculty: Create Google ClassRoom</a>
+                    <a href="/newassets/images/IT/ArchiveCreateNewClassWithMeetLink.pdf" class="nav-link" target="_blank" title="Online Class Setup">Faculty: Online Class (Archive, Create new one & Meet Link)</a>
+                    <a href="/newassets/images/IT/Faculty-ClassAssignmentManual.pdf" class="nav-link" target="_blank" title="Create Assignment">Faculty: Create an Assignment for Student</a>
+                    <h6 class="submenu mt-4">Learning Management System (LMS)</h6>
+                    <a href="http://www.northsouth.edu/canvas/" class="nav-link" target="_blank" title="Canvas LMS">Canvas</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Student: Guidelines (Step by Step)</h6>
+                    <a href="/newassets/images/IT/PasswordRecoveryProcess.pdf" class="nav-link" target="_blank" title="Password Recovery">Students: Password Recovery Process for RDS</a>
+                    <a href="https://drive.google.com/file/d/0B8X_hvl8uyoIRF9Ud1RRdjNWNjg/view" class="nav-link" target="_blank" title="Course Registration">Students: Online Course Registration</a>
+                    <a href="/newassets/images/IT/OnlineClassRoom-Students.pdf" class="nav-link" target="_blank" title="Online ClassRoom">Students: Online ClassRoom</a>
+                    <a href="/newassets/images/IT/GooleAssignmentStudentPerspective.pdf" class="nav-link" target="_blank" title="Submit Assignment">Students: How to submit an assignment</a>
+                    <a href="http://www.northsouth.edu/assets/cv/RDS-NID-Update.pdf" class="nav-link" target="_blank" title="NID Input">Students: How to Input NID Through RDS</a>
+                    <a href="http://www.northsouth.edu/assets/cv/Degree_Analysis_Guideline%20(2).pdf" class="nav-link" target="_blank" title="Degree Analysis">Students: Online Degree Analysis</a>
+                    <a href="/newassets/images/IT/EnrollmentProcessOnline.pdf" class="nav-link" target="_blank" title="Enrollment Process">Applicants: Online Enrollment Process</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://alumni.northsouth.edu/landingPage" class="nav-link text-white">Alumni</a>
+            </li>
+            <li class="nav-item">
+              <a href="[[~8062~]]" class="nav-link text-white">Research</a>
+            </li>
+
+            <!-- Useful Links Dropdown -->
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#usefulLinksMegaMenu" aria-expanded="false" aria-controls="usefulLinksMegaMenu">
+                Useful Links
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="usefulLinksMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">NSU Inquiry</h6>
+                    <a href="[[~249~]]" class="nav-link" title="Inquiry & Feedback">Inquiry & Feedback</a>
+                    <a href="[[~7716~]]" class="nav-link" title="Administrative Directory">Administrative Directory</a>
+                    <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank" title="Jobs at NSU">Jobs at NSU</a>
+                    <a href="[[~477~]]" class="nav-link" title="Tender Notice">Tender Notice</a>
+                    <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank" title="Degree Verification">Degree Verification</a>
+                    <a href="https://rds3.northsouth.edu/index.php/etender/auth" class="nav-link" target="_blank" title="E-Tender">E-Tender</a>
+                  </div>
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">NSU Services</h6>
+                    <a href="[[~3258~]]" class="nav-link" title="Service Requests">Services Request Forms</a>
+                    <a href="[[~85~]]" class="nav-link" title="NSU Facilities">NSU Facilities</a>
+                    <a href="[[~4199~]]" class="nav-link" title="Student Clubs">NSU Student Clubs</a>
+                    <a href="/newassets/images/IT/pabx-directory-update-30-june-2025.pdf" class="nav-link" target="_blank" title="PABX Directory">PABX Directory</a>
+                    <a href="http://www.northsouth.edu/archive.html" class="nav-link" target="_blank" title="NSU Archive">NSU Archive</a>
+                    <a href="[[~1188~]]" class="nav-link" title="Bank List">Bank List for Tuition Fees</a>
+                  </div>
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">Offices</h6>
+                    <a href="http://institutions.northsouth.edu/oea/" class="nav-link" target="_blank" title="Office of the External Affairs">Office of the External Affairs</a>
+                    <a href="[[~3179~]]" class="nav-link" title="Graduate Studies">Office of the Graduate Studies</a>
+                    <a href="[[~3148~]]" class="nav-link" title="Proctor's Office">Proctor's Office</a>
+                    <a href="[[~1175~]]" class="nav-link" title="Financial Aid Office">Financial Aid Office</a>
+                    <a href="[[~8041~]]" class="nav-link" title="Student Affairs">Office of the Student Affairs</a>
+                    <a href="https://nsustartupsnext.com/" class="nav-link" target="_blank" title="NSU Startups Next (NSUSN)">NSU Startups Next (NSUSN)</a>
+                    <a href="[[~8836~]]" class="nav-link" title="Registrar's Office">Registrar's Office</a>
+                    <a href="[[~9421~]]" class="nav-link" title="Controller of Examinations">Office of the Controller of Examinations</a>
+                  </div>
+                  <div class="col-md-3 col-md-4">
+                    <h6 class="submenu">Policy, Procedures & Complaints</h6>
+                    <a href="[[~8700~]]" class="nav-link" title="Complaint Committee">Complaint Committee</a>
+                  </div>
+                  <div class="col-md-3 col-md-4 d-block d-lg-none">
+                    <h6 class="submenu">General Links</h6>
+                    <a href="contact-us.html" class="nav-link" title="Contact Us">Contact Us</a>
+                    <a href="archive.html" class="nav-link" title="Archive">Archive</a>
+                    <a href="newsletter/nsu-catalog.html" class="nav-link" title="Catalog">Catalog</a>
+                    <a href="journals.html" class="nav-link" title="Journals">Journals</a>
+                    <a href="newsletter.html" class="nav-link" title="Newsletters">Newsletters</a>
+                    <a href="http://library.northsouth.edu" class="nav-link" target="_blank" title="Library">Library</a>
+                    <a href="academic/academic-calendar/" class="nav-link" title="Academic Calendar">Academic Calendar</a>
+                    <a href="http://institutions.northsouth.edu/oea/home-2/" class="nav-link" target="_blank" title="International Students">International Students</a>
+                    <a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="nav-link" target="_blank" title="Publications">Publications</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapseEl = document.getElementById("navbarNav");
+        collapseEl.addEventListener("show.bs.collapse", function () {
+          document.body.classList.add("menu-open");
+        });
+        collapseEl.addEventListener("hidden.bs.collapse", function () {
+          document.body.classList.remove("menu-open");
+        });
+      });
+    </script>
+
+    <!-- ============================================ -->
+    <!-- ============================================ -->
+    <!-- default Page               -->
+    <!-- ============================================ -->
+    <!-- ============================================ -->
+
+    <!-- Modern NSU About Page Header Start -->
+    <header class="page-header position-relative d-flex align-items-center" style="height: 340px">
+      <div class="container text-center position-relative" style="z-index: 2">
+        <h1 class="display-4 fw-bold text-white mb-2" style="text-shadow: 0 2px 8px #06174280">Executive Leaders</h1>
+        <p class="lead text-white-50 mb-0" style="text-shadow: 0 1px 6px #06174280">North South University</p>
+      </div>
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(6, 23, 66, 0.25); z-index: 1"></div>
+    </header>
+    <!-- Modern NSU About Page Header End -->
+
+    <!-- Main Content with Tabs -->
+    <div class="container py-6">
+      <section class="content-main-section">
+        <div class="leaders-header">
+          <h3>Executive Leaders</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="sidebar leader-sidebar">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <button class="nav-link active" id="one-tab" data-bs-toggle="pill" data-bs-target="#one" type="button" role="tab" aria-controls="one" aria-selected="true">VC, Pro-VC &amp; Treasurer</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" id="six-tab" data-bs-toggle="pill" data-bs-target="#six" type="button" role="tab" aria-controls="six" aria-selected="false">Deans, Chairs &amp; Directors</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" id="two-tab" data-bs-toggle="pill" data-bs-target="#two" type="button" role="tab" aria-controls="two" aria-selected="false">Administration</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="tab-content">
+              <div id="one" class="tab-pane fade show active" role="tabpanel" aria-labelledby="one-tab">
+                <h5 class="no-margin">VC, Pro-VC &amp; Treasurer</h5>
+                <div class="listview list-layout big">
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img alt="VC" class="listview-item-object" src="/newassets/images/mgt/profhannan-vc-v1.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Vice-Chancellor </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/mgt/dr.-abdul-hannan-chowdhury.html" target="_blank"><strong>Prof. Abdul Hannan Chowdhury</strong></a> </span
+                      ><br />
+                      <div class="leader-meta">
+                        <b>Chairman, Grameen Bank</b> <br />
+                        Post-Doc., University of Calgary, Canada <br />
+                        Ph.D., Northeastern University, USA <br />Email: vicechancellor@northsouth.edu <br />
+                        <a href="vice-chancellor-msg.html" target="_blank"><strong>Message from Vice-Chancellor</strong></a>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img alt="PRO-VC" class="listview-item-object" src="/newassets/images/nsu-photo/nasar.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Pro Vice-Chancellor </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/pbh/dr.-nasar-u.-ahmed.html" target="_blank"><b>Prof. Nasar U. Ahmed </b></a> </span
+                      ><br />
+                      <div class="leader-meta">Ph.D., Tufts University, USA <br />Email: pro-vc@northsouth.edu</div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img alt="VC" class="listview-item-object" src="assets/images/faculty/AbdurRob.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Treasurer </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/pss/abdur.khan.html" target="_blank"><strong>Prof. Abdur Rob Khan</strong></a> </span
+                      ><br />
+                      <div class="leader-meta">
+                        Ph.D., University of Kent at Canterbury (UKC), UK <br />
+                        Email: treasurer@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="six" class="tab-pane fade" role="tabpanel" aria-labelledby="six-tab">
+                <h5 class="no-margin">Deans, Chairs &amp; Directors</h5>
+                <div class="listview list-layout big">
+                  <h4 class="no-margin">School Deans</h4>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/dipak-kumar-mitra.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Dean, School of Health &amp; Life Sciences </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/pbh/dr.-dipak-kumar-mitra/" target="_blank"><b>Prof. Dr. Dipak Kumar Mitra </b></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Johns Hopkins University, USA <br />
+                        MPH, Harvard University, USA <br />Email: dipak.mitra@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-8936.Dr. Warisul.jpg" />
+                    </div>
+
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Dean, School of Business &amp; Economics</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/acc-fin/dr.-akm-waresul-karim.html" target="_blank"><b>Prof. Dr. AKM Waresul Karim</b></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">Ph.D., University of Leeds, UK <br />Email: waresul.karim@northsouth.edu</div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/shazzad-hosain.jpg" />
+                    </div>
+
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Dean, School of Engineering &amp; Physical Sciences </strong></h2>
+                      <span class="two-lines"
+                        ><a href="http://ece.northsouth.edu/people/shazzad-hosain/" target="_blank"><b>Prof. Dr. Shazzad Hosain </b> </a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Wayne State University, USA
+                        <br />Email: shazzad.hosain@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-4091.Md Rizwanul Islam.JPG" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Dean, School of Humanities &amp; Social Sciences</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/law/dr.-md.-rizwanul-islam.html" target="_blank"><b>Prof. Dr. Md. Rizwanul Islam </b></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Macquarie University, Australia <br />
+                        LL.M. (IP &amp; IT Law), National University of Singapore, SG <br />Email: rizwanul.islam@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <br />
+                  <h4 class="no-margin">Department Chairs : School of Business &amp; Economics</h4>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-2165.Jamy Mohaimen Print.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of Accounting &amp; Finance</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/acc-fin/dr.-fj-mohaimen-fjm.html" target="_blank"><strong>Asst. Prof. Dr. FJ Mohaimen</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D., Victoria University of Wellington, New Zealand <br />MS., Baruch College-Zicklin School of Business, USA <br />
+                        Email: fj.mohaimen@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-8966.photo-Adnan-16May2022-transparent.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of Management</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/mgt/ziaul-haq-adnan.html" target="_blank"><strong>Assoc. Prof. Dr. Ziaul Haq Adnan </strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., The University of North Carolina at Charlotte, USA <br />
+                        M.S., The University of Southern Mississippi, USA <br />
+                        Email: ziaul.adnan@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-4134.DSC08983-Edited.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of Economics</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/economics/dr.-syed-mortuza-asif-ehsan.html" target="_blank"><strong>Assoc. Prof. Dr. Syed Mortuza Asif Ehsan</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Virginia Tech., USA <br />
+                        MA, Virginia Tech., USA <br />
+                        Email: syed.ehsan@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/mkt/khandker-md-nahin.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of Marketing &amp; Int. Business</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/marketing-ib/khandker-md.-nahin-mamun.html" target="_blank"><strong> Assist. Prof. Dr. Khandker Md Nahin Mamun</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D., University of Strathclyde, UK
+
+                        <br />
+                        Email: khandker.mamun@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <br />
+
+                  <h4 class="no-margin">Department Chairs : School of Engineering &amp; Physical Sciences</h4>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/mohammad-abdul-matin.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of Electrical &amp; Computer Engineering</strong></h2>
+                      <span class="two-lines"
+                        ><a href="http://ece.northsouth.edu/people/dr-mohammad-abdul-matin/ " target="_blank"><strong>Prof. Dr. Mohammad Abdul Matin</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Newcastle University, UK <br />
+                        M.Sc., Loughborough University, UK <br />
+                        Email: mohammad.matin@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-1975.Mamun Sir Pic+2_n.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of Mathematics &amp; Physics</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/seps/mathematics-physics/mla.html" target="_blank"><strong>Prof. Dr. Md. Mamun Molla</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., University of Glasgow, UK <br />
+                        Email: mamun.molla@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/shahriar-iqbal-raj.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of Architecture</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/seps/architecture/mr.-shahriar-iqbal-raj.html" target="_blank"><strong>Asst. Prof. Ar. Shahriar Iqbal Raj</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        M.Sc., Newcastle University, UK
+                        <br />
+                        Email: shahriar.raj@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-1471.S-M-ashfaqul-hoq.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of Civil &amp; Env. Engineering</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/seps/cee/sm-ashfaqul-hoq.html" target="_blank"><strong>Assoc. Prof. Dr. S M Ashfaqul Hoq</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., The University of Wyoming, USA <br />
+                        MS., The University of Texas at Arlington (UTA), USA <br />
+                        Email: ashfaqul.hoq@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <br />
+
+                  <h4 class="no-margin">Department Chairs : School of Humanities and Social Sciences</h4>
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-1104.PHOTO OF AHMED.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of Law</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/law/ishtiaque.ahmed.html" target="_blank"><strong>Prof. Dr. Ishtiaque Ahmed</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        J.S.D., University of Maine School of Law, USA <br />
+                        LL.M., University of London in Association with Queen Mary &amp; UCL, UK
+
+                        <br />
+                        Email: ishtiaque.ahmed@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="assets/images/pic1.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of History &amp; Philosophy</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/history-philosophy/dr.-mahbubur-rahman.html" target="_blank"><strong>Prof. Dr. Mahbubur Rahman</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Clark Atlanta University, USA <br />
+                        Email: mahbubur.rahman@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-8019.Dr. Rizwan Khair.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of Political Science &amp; Sociology</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/pss/dr.-rizwan-khair.html" target="_blank"><strong>Assoc. Prof. Dr. Rizwan Khair </strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., The University of New England, Australia <br />
+                        Email: rizwan.khair@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/nazia-manzoor.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of English &amp; Modern Languages</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/eml/nazia.manzoor.html" target="_blank"><strong>Asst. Prof. Dr. Nazia Manzoor</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., University at Albany, State University of New York, USA <br />
+                        M.A., University at Albany, State University of New York, USA <br />
+                        Email: nazia.manzoor@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <br />
+
+                  <h4 class="no-margin">Department Chairs : School of Health and Life Sciences</h4>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-1674.Mohammad Shariare.PNG" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of Pharmaceutical Sciences</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/pharmacy/mna.html" target="_blank"><strong>Prof. Dr. Mohammad Hossain Shariare</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., University of Bradford, UK <br />
+                        Email: mohammad.shariare@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <!--   -->
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-3684.M_Sujauddin.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of Environmental Science &amp; Management</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/esm/dr.-mohammad-sujauddin-sud.html" target="_blank"><strong>Assoc. Prof. Dr. Mohammad Sujauddin</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D, The University of Tokyo, Japan
+                        <br />
+                        Email: mohammad.sujauddin@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="assets/images/Biochemestry/mainul.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Dept. of Biochemistry and Microbiology</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/biochemistry-microbiology/dr.-md.-mainul-hossain-mh1.html" target="_blank"><strong>Assoc. Prof. Dr. Md. Mainul Hossain</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., University of Montana, USA <br />
+                        Email: mainul.hossain01@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-8867.Image_Azaz.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Chair, Department of Public Health</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/pbh/azaz-bin-sharif.html" target="_blank"><strong> Assoc. Prof. Dr. Azaz Bin Sharif</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Western University,&nbsp; Canada <br />
+                        M.Sc., Western University, Canada <br />
+                        Email: azaz.sharif@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <br />
+
+                  <h4 class="no-margin">Directors</h4>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-1191.DSC_1903-1.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Graduate Studies </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/pharmacy/mn.islamn.html" target="_blank"><strong>Prof. Dr. MN Islam</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., University of Tokushima, Japan
+                        <br />Email: mn.islam@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="newassets/images/IT/Dr.-Norman-K-Swazo-1.JPG" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Office of Research-NSU </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/history-philosophy/norman.swazo.html" target="_blank"><strong>Dr. Norman Kenneth Swazo</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., The University of Georgia, USA <br />
+                        Graduate Certificate in Global Policy Studies, The University of Georgia, USA <br />M.H.S.A, The University of Michigan, USA <br />Email: norman.swazo@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-8671.Nazlee Siddiqui.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, MBA &amp; EMBA Programs</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/mgt/nazlee-siddiqui.html" target="_blank"><strong>Prof. Dr. Nazlee Siddiqui</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D., Western Sydney University, Australia <br />
+                        Email: nazlee.siddiqui@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/mkt/faisolchowdhury.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, BBA Program</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/mgt/muhammad-faisol-chowdhury-mfc.html" target="_blank"><strong>Assoc. Prof. Dr. Muhammad Faisol Chowdhury</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D., University of Glasgow, UK <br />
+                        Email: faisol.chowdhury@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="two" class="tab-pane fade" role="tabpanel" aria-labelledby="two-tab">
+                <h5 class="no-margin">Administration</h5>
+
+                <div class="listview list-layout big">
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-2652.Ahmed Tazmeen.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Registrar </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/economics/dr.-ahmed-tazmeen.html" target="_blank"><b>Dr. Ahmed Tazmeen </b></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">Ph.D., University of Manitoba, Canada <br />M.S., Illinois State University, USA <br />Email: registrar@northsouth.edu</div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="newassets/images/AbdulKhaleque.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Proctor </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/biochemistry-microbiology/klq.html" target="_blank"><b>Dr. Abdul Khaleque </b></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Kumamoto University Medical School, Japan
+                        <br />Email: proctor@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/controller-sir-2.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Controller of Examinations</strong></h2>
+                      <span class="two-lines"
+                        ><a href="https://ece.northsouth.edu/people/kazi-salam/" target="_blank"><b>Prof. Dr. K. M. A. Salam </b></a>
+                      </span>
+
+                      <div class="leader-meta">
+                        Ph.D., Muroran Institute of Tech., Japan
+
+                        <br />Email: controller@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="assets/images/Dr. Jahid.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Librarian </strong></h2>
+                      <span class="two-lines"
+                        ><a href="#" target="_blank"><strong>Dr. Md. Zahid Hossain Shoeb</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        PhD, MPhil, MA in Information Sc. &amp; Library Mgmt. (DU) <br />
+                        MSc in Computer Science (IUB) <br />Email: zahid.shoeb@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="assets/images/%231-Mushtaque-Habib.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Project Director </strong></h2>
+                      <span class="two-lines"
+                        ><a href="#" target="_blank"><strong>Mushtaque Habib</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        M.Engg., University of California, Berkeley <br />
+                        B.Sc.Engg., University of Zambia, Lusaka <br />Email: mushtaque.habib@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="assets/images/Fmamun.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director (In-Charge), Information Technology </strong></h2>
+                      <span class="two-lines"
+                        ><a href="" target="_blank"><strong>Engr. Faisal Mamun</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">M.Sc. in Computer Science and Applications, IUT <br />B.Sc.Engg., Khulna University of Engineering &amp; Technology (KUET) <br />Email: director.it@northsouth.edu</div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/nurul-momen-khan.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Administration </strong></h2>
+                      <span class="two-lines"
+                        ><a href="#" target="_blank"><strong>Brig Gen (Rtd) Md Nurul Momen Khan</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        MBA., American International University of Management &amp;Technology (AIUMT), USA
+                        <br />Email: director.admin@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/IT/sayed.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Finance &amp; Accounts </strong></h2>
+                      <span class="two-lines"
+                        ><a href="#" target="_blank"><strong>Mohammad Sayed Ahmed</strong></a>
+                      </span>
+                      <div class="leader-meta">
+                        Chartered Accountant, ICAB
+                        <br />Email: director.fa@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/nsu-photo/nahid-jahan-hussain.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Operation &amp; Maintenance </strong></h2>
+                      <span class="two-lines"
+                        ><a href="#" target="_blank"><strong>Nahid Jahan Hussain</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        <br />
+                        <br />Email: director.om@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="assets/images/Photo/PSS/Cynthia-Mckinney.JPG" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, External Affairs </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/pss/cynthia.mckinney.html" target="_blank"><strong>Dr. Cynthia McKinney</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Antioch University, Ohio, USA
+                        <br />Email: director.oea@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/PRO/syed-mansur-hashim.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong> Director, Public Relations Office </strong></h2>
+                      <span class="two-lines"
+                        ><a href="#"><strong>Syed Mansur Hashim</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        <!--   <br/> -->
+
+                        <br />Email: directorpr@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-3158.IMG-20220117-WA0113.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Confucius Institute </strong></h2>
+                      <span class="two-lines"
+                        ><a href="http://www.northsouth.edu/faculty-members/shss/pss/mohammad.siddiqi.html" target="_blank"><strong>Dr. Mohammad Bulbul Ashraf Siddiqi</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Cardiff University, UK
+
+                        <br />Email: mohammad.siddiqi@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/nsu-photo/farzana-nahid.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Career &amp; Placement Center (CPC)</strong></h2>
+                      <span class="two-lines"
+                        ><a href="https://www.northsouth.edu/faculty-members/sbe/marketing-ib/farzana-nahid.html" target="_blank"><strong>Dr. Farzana Nahid</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D., University of Malaya (UM), Malaysia
+
+                        <br />
+                        Email: director.cpc@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-4075.1.JPG" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Startups Next </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/mgt/samuel-mursalin.html" target="_blank"><strong>Samuel Mursalin</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        M.Sc., Johns Hopkins University, USA
+
+                        <br />Email: director.sn@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="newassets/images/IT/default-faculty.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Institutional Quality Assurance Cell (IQAC)</strong></h2>
+                      <span class="two-lines"
+                        ><a href="#" target="_blank"><strong>Dr. Halimur R. Khan</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta"><br />Email: director.iqac@northsouth.edu</div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="http://www.northsouth.edu/assets/newimages/Muhammad_Hossain22.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, NSU Genome Research Institute (NGRI)</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/biochemistry-microbiology/muhammad.maqsud.html" target="_blank"><strong>Dr. Muhammad Maqsud Hossain</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., University of Nottingham, UK
+
+                        <br />Email: muhammad.maqsud@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-8075.Md. Nurul Kabir.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Office of Admissions (Undergrad)</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/acc-fin/dr.-md.-nurul-kabir.html" target="_blank"><strong>Dr. Md. Nurul Kabir</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Griffith University, Australia
+
+                        <br />Email: nurul.kabir@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-1067.A. H. Lutful Hassan.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Internal Affairs</strong></h2>
+                      <span class="two-lines"
+                        ><a href="#" target="_blank"><strong>A.H.Lutful Hassan</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        MCPA ( University of Ballarat, Australia) <br />Hon.s &amp; Masters in Finance ( Dhaka University)
+
+                        <br />Email: lutful.hassan@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src="/newassets/images/5-3229.SBn2.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Accreditation Project Team</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/economics/dr.-sakib-bin-amin.html" target="_blank"><strong>Dr. Sakib Bin Amin</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D., Durham University, UK <br />M.Sc., University of Essex, UK
+
+                        <br />Email: sakib.amin@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src=" assets/images/Photo/ECO/AKM.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Economics Research Platform</strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/sbe/economics/akm.atiqur.html" target="_blank"><strong>Dr. A. K. M. Atiqur Rahman</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph.D.,University of Houston, USA
+
+                        <br />Email: director.erp@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src=" /newassets/images/SIPG/sk.-tawfique.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, South Asian Institute of Policy and Governance (SIPG) </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/pss/tawfique.haque.html" target="_blank"><strong>Dr. Sk Tawfique M Haque</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Post Doc., University of Bergen, Norway <br />Ph. D., University of Dhaka, Bangladesh
+
+                        <br />Email: tawfique.haque@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src=" http://www.northsouth.edu/assets/newimages/Dr. Jashim.jpg" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Center for Peace Studies (CPS) </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shss/pss/jashim.uddin.html" target="_blank"><strong>Dr. M Jashim Uddin</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D., Osaka University, Japan
+
+                        <br />Email: director.cps@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#">
+                      <img class="listview-item-object" src=" /newassets/images/5-3933.Hybrid class-round 2.png" />
+                    </div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, NSU Global Health Institute (NGHI) </strong></h2>
+                      <span class="two-lines"
+                        ><a href="faculty-members/shls/pbh/mohammad-delwer-hossain-hawlader.html" target="_blank"><strong>Dr. Mohammad Delwer Hossain Hawlader</strong></a>
+                      </span>
+                      <br />
+                      <div class="leader-meta">
+                        Ph. D., University of Tsukuba, Japan
+
+                        <br />Email: mohammad.hawlader@northsouth.edu
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="listview-item big">
+                    <div class="pull-left" href="#"></div>
+                    <div class="listview-item-body">
+                      <h2 class="listview-item-heading"><strong>Director, Internal Audit </strong></h2>
+
+                      <br />Email: director.audit@northsouth.edu
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- tab content -->
+        </div>
+      </section>
+    </div>
+    <!--
+Source - https://stackoverflow.com/q/56291245
+Posted by Tristanisginger
+Retrieved 2026-03-01, License - CC BY-SA 4.0
+-->
+
+    <!-- Footer Start (copy from index.html) -->
+    <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-light mb-2 ftr-title">North South University</h5>
+            <a href="#" class="d-inline-block mb-3">
+              <img src="slogan.png" alt="Footer Logo" class="img-fluid w-75" />
+            </a>
+            <p class="text-light mb-1"><i class="fa fa-map-marker-alt me-2"></i>Bashundhara, Dhaka-1229, Bangladesh</p>
+            <p class="text-light mb-1"><i class="fa fa-phone-alt me-2"></i>+880-2-55668200</p>
+            <p class="text-light mb-1"><i class="fa fa-fax me-2"></i>+880-2-55668202</p>
+            <p class="text-light"><i class="fa fa-envelope me-2"></i>registrar@northsouth.edu</p>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-start justify-content-md-end pt-2 mb-4">
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-start text-md-end">Developed & Maintained By IT Office, NSU</div>
+            <div class="text-start text-md-end">&copy; 1993-2025 NSU, All Right Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
