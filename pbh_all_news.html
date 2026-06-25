@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Public Health News | North South University</title>
+    <link rel="icon" href="img/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/pbh_style.css" rel="stylesheet" />
+
+    <style>
+      .all-news-wrapper {
+        background: linear-gradient(180deg, #f6f9ff 0%, #ffffff 60%);
+      }
+
+      .news-page-title {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .news-page-subtitle {
+        color: #5f6f87;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .pbh-pagination .page-link {
+        border-radius: 999px;
+        margin: 0 0.2rem;
+        border: 1px solid #d8e3f4;
+        color: #2a5caa;
+        min-width: 42px;
+        text-align: center;
+      }
+
+      .pbh-pagination .page-item.active .page-link {
+        background: linear-gradient(90deg, #2a5caa 0%, #3a7bd5 100%);
+        border-color: #2a5caa;
+        color: #fff;
+      }
+
+      .pbh-pagination .page-link:hover {
+        background-color: #eef4ff;
+        color: #1b488b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-12 px-5 py-2 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="contact-us.html" class="text-light">Contact Us</a></li>
+            <li class="list-inline-item"><a href="archive.html" class="text-light">Archive</a></li>
+            <li class="list-inline-item"><a href="newsletter/nsu-catalog.html" class="text-light">Catalog</a></li>
+            <li class="list-inline-item"><a href="journals.html" class="text-light">Journals</a></li>
+            <li class="list-inline-item"><a href="newsletter.html" class="text-light">Newsletters</a></li>
+            <li class="list-inline-item"><a href="http://library.northsouth.edu" class="text-light">Library</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-xl navbar-dark bg-primary sticky-top">
+      <div class="container position-relative">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="logo-4.png" alt="Logo" style="width: 6rem" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="pbh.html" class="nav-link text-white">Department Home</a></li>
+            <li class="nav-item"><a href="pbh.html#overview" class="nav-link text-white">About</a></li>
+            <li class="nav-item"><a href="pbh.html#programs" class="nav-link text-white">Programs</a></li>
+            <li class="nav-item"><a href="pbh.html#people" class="nav-link text-white">People</a></li>
+            <li class="nav-item"><a href="pbh_all_news.html" class="nav-link text-white active">All News</a></li>
+            <li class="nav-item"><a href="pbh.html#contact" class="nav-link text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header position-relative d-flex align-items-center" style="height: 320px">
+      <div class="container text-center position-relative" style="z-index: 2">
+        <h1 class="display-5 fw-bold text-white mb-2 news-page-title" style="text-shadow: 0 2px 8px #06174280">All News - Department of Public Health</h1>
+        <p class="lead text-white-50 mb-0" style="text-shadow: 0 1px 6px #06174280">Department of Public Health, North South University</p>
+      </div>
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(6, 23, 66, 0.3); z-index: 1"></div>
+    </header>
+
+    <div class="all-news-wrapper py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold text-primary mb-3">Latest & Archive News</h2>
+          <p class="news-page-subtitle">Browse all announcements, achievements, and partnership updates from the Department of Public Health.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/GSNewsfeed.jpg" alt="News 1" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>15/01/2026</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">Department Hosts Global Health Symposium</h5>
+                <p class="news-text flex-grow-1 mb-3">Faculty and students shared research on health systems and policy innovation.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/Sara-Imani-1080x608.png" alt="News 2" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>02/12/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">MPH Students Win Research Grant</h5>
+                <p class="news-text flex-grow-1 mb-3">A student-led project on community health secured a national grant.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/survivor-pitch-forge-11-19-2025-1080x608.jpg" alt="News 3" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>20/11/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">New Partnership with Regional Hospitals</h5>
+                <p class="news-text flex-grow-1 mb-3">Expanded internship and fieldwork opportunities for MPH and BPH students.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/GSNewsfeed.jpg" alt="News 4" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>08/11/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">Public Health Seminar on Urban Wellness</h5>
+                <p class="news-text flex-grow-1 mb-3">Students presented evidence-driven ideas to improve urban community wellness.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/Sara-Imani-1080x608.png" alt="News 5" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>29/10/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">Department Launches Mentorship Circle</h5>
+                <p class="news-text flex-grow-1 mb-3">A new mentorship initiative connects students with faculty and alumni professionals.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/survivor-pitch-forge-11-19-2025-1080x608.jpg" alt="News 6" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>16/10/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">Workshop Focuses on Epidemiology Tools</h5>
+                <p class="news-text flex-grow-1 mb-3">Hands-on training introduced modern epidemiology analysis tools to students.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/GSNewsfeed.jpg" alt="News 7" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>01/10/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">Field Visit Program Begins New Cycle</h5>
+                <p class="news-text flex-grow-1 mb-3">Students started supervised visits to public health facilities across the city.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/Sara-Imani-1080x608.png" alt="News 8" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>17/09/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">Guest Lecture on Climate and Health</h5>
+                <p class="news-text flex-grow-1 mb-3">Experts discussed climate-linked health risks and preparedness strategies.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <article class="news-card h-100 d-flex flex-column">
+              <div class="news-img">
+                <img src="img/news/survivor-pitch-forge-11-19-2025-1080x608.jpg" alt="News 9" />
+                <span class="news-date"><i class="far fa-calendar-alt me-1"></i>02/09/2025</span>
+              </div>
+              <div class="news-body d-flex flex-column flex-grow-1">
+                <h5 class="news-title">Community Outreach Health Camp Completed</h5>
+                <p class="news-text flex-grow-1 mb-3">The department completed a student-supported outreach camp with local partners.</p>
+                <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"><i class="fas fa-arrow-right me-2"></i>Read Details</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <nav class="mt-5" aria-label="News pagination">
+          <ul class="pagination justify-content-center pbh-pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-light mb-2 ftr-title">North South University</h5>
+            <a href="#" class="d-inline-block mb-3">
+              <img src="slogan.png" alt="Footer Logo" class="img-fluid w-75" />
+            </a>
+            <p class="text-light mb-1"><i class="fa fa-map-marker-alt me-2"></i>Bashundhara, Dhaka-1229, Bangladesh</p>
+            <p class="text-light mb-1"><i class="fa fa-phone-alt me-2"></i>+880-2-55668200</p>
+            <p class="text-light mb-1"><i class="fa fa-fax me-2"></i>+880-2-55668202</p>
+            <p class="text-light"><i class="fa fa-envelope me-2"></i>registrar@northsouth.edu</p>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-start justify-content-md-end pt-2 mb-4">
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-start text-md-end">Developed & Maintained By IT Office, NSU</div>
+            <div class="text-start text-md-end">&copy; 1993-2025 NSU, All Right Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

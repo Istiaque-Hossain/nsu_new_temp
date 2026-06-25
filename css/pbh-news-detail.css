@@ -1,0 +1,209 @@
+:root {
+  --pbh-primary: #0b3d91;
+  --pbh-primary-dark: #062a66;
+  --pbh-accent: #f4b400;
+  --pbh-surface: #f5f8fc;
+  --pbh-text: #1f2a3d;
+  --pbh-muted: #62708a;
+  --pbh-border: #d9e3f2;
+  --pbh-shadow: 0 18px 40px rgba(10, 34, 77, 0.12);
+}
+
+body.pbh-news-page {
+  background: linear-gradient(180deg, #f4f7fc 0%, #ffffff 22%, #f8fbff 100%);
+  color: var(--pbh-text);
+  font-family: "Work Sans", sans-serif;
+}
+
+.news-detail-section {
+  /* margin-top: -4.5rem; */
+  position: relative;
+  z-index: 4;
+}
+
+.news-detail-shell {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(217, 227, 242, 0.9);
+  border-radius: 28px;
+  box-shadow: var(--pbh-shadow);
+  overflow: hidden;
+}
+
+.news-detail-media-wrap {
+  background: linear-gradient(135deg, rgba(11, 61, 145, 0.18), rgba(244, 180, 0, 0.14));
+  height: 100%;
+  min-height: 320px;
+  padding: 1.5rem;
+}
+
+.news-detail-image {
+  border-radius: 22px;
+  display: block;
+  height: 100%;
+  max-height: 540px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.news-detail-header {
+  background: linear-gradient(145deg, #ffffff, #f5f8fd);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.news-detail-topline {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.news-back-link {
+  color: var(--pbh-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.news-back-link:hover {
+  color: var(--pbh-primary-dark);
+}
+
+.news-detail-date {
+  align-items: center;
+  background: rgba(11, 61, 145, 0.08);
+  border: 1px solid rgba(11, 61, 145, 0.12);
+  border-radius: 999px;
+  color: var(--pbh-primary);
+  display: inline-flex;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+}
+
+.news-detail-title {
+  color: #0b214a;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.news-detail-summary {
+  color: var(--pbh-muted);
+  font-size: 1.1rem;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.news-detail-content {
+  padding: 2.4rem 2.5rem 2.8rem;
+}
+
+.news-detail-content-head {
+  align-items: center;
+  border-bottom: 1px solid rgba(98, 112, 138, 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.2rem;
+}
+
+.news-detail-label {
+  color: var(--pbh-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.news-detail-content-title {
+  color: #0b214a;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.news-detail-body p {
+  color: var(--pbh-text);
+  font-size: 1.06rem;
+  line-height: 1.95;
+  margin-bottom: 1.2rem;
+}
+
+.news-detail-body h2 {
+  color: var(--pbh-primary);
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.news-detail-body ul {
+  margin: 0 0 1.6rem;
+  padding-left: 1.2rem;
+}
+
+.news-detail-body li {
+  line-height: 1.85;
+  margin-bottom: 0.6rem;
+}
+
+.news-detail-lead {
+  color: var(--pbh-muted);
+  font-size: 1.14rem;
+  line-height: 1.95;
+  margin-bottom: 1.4rem;
+}
+
+.article-quote {
+  background: linear-gradient(135deg, rgba(11, 61, 145, 0.08), rgba(244, 180, 0, 0.12));
+  border-left: 4px solid var(--pbh-accent);
+  border-radius: 20px;
+  margin: 2rem 0;
+  padding: 1.5rem;
+}
+
+.article-quote p {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.article-quote span {
+  color: var(--pbh-muted);
+  display: block;
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 991.98px) {
+  .news-detail-header,
+  .news-detail-content {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .news-detail-media-wrap,
+  .news-detail-header,
+  .news-detail-content {
+    padding: 1.25rem;
+  }
+
+  .news-detail-title {
+    font-size: 1.8rem;
+  }
+
+  .news-detail-body p,
+  .news-detail-lead,
+  .news-detail-summary {
+    font-size: 1rem;
+  }
+}

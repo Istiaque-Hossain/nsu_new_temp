@@ -21,25 +21,15 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-
-    <!-- Style PBH  -->
     <link href="css/pbh_style.css" rel="stylesheet" />
 
-    <!-- Mega Menu Styles -->
+    <!-- Internal Styles -->
     <style>
       /* Navigation mega menu styles */
       .mega-menu {
         max-height: 75vh;
         overflow-y: auto;
         overflow-x: hidden;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        background: var(--primary);
-        box-shadow: 0 10px 20px rgb(255 255 255 / 30%);
-        z-index: 1000;
-        margin-top: 1rem;
       }
 
       .mega-menu::-webkit-scrollbar {
@@ -49,6 +39,17 @@
       .mega-menu::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 3px;
+      }
+
+      .mega-menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        box-shadow: 0 10px 20px rgb(255 255 255 / 30%);
+        z-index: 1000;
+        margin-top: 1rem;
       }
 
       .mega-menu > .row {
@@ -134,9 +135,220 @@
           overflow-y: auto;
         }
       }
+
+      /* Secondary navigation styles */
+      .bba-secondary-nav {
+        background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+        border-bottom: 3px solid #2a5caa;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .bba-secondary-nav .nav-link {
+        color: #2a5caa !important;
+        font-weight: 500;
+        padding: 0.75rem 1.25rem;
+        border-radius: 4px;
+        margin: 0 2px;
+        transition: all 0.3s;
+      }
+
+      .bba-secondary-nav .nav-link:hover,
+      .bba-secondary-nav .nav-link.active {
+        background-color: rgba(42, 92, 170, 0.1);
+        color: #1a4788 !important;
+      }
+
+      .bba-secondary-nav .dropdown-menu {
+        border: 1px solid rgba(42, 92, 170, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Page header styles */
+      /* Description section styles */
+      .bba-desc-section img {
+        transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .bba-desc-section img:hover {
+        transform: scale(1.08);
+        z-index: 2;
+      }
+
+      .bba-desc-section-logo img {
+        transition:
+          transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+          box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+          background-color 0.4s;
+        /* border-radius: 0.75rem; */
+      }
+
+      .bba-desc-section-logo img:hover {
+        transform: scale(1.08);
+        box-shadow:
+          0 8px 24px 0 rgba(42, 92, 170, 0.12),
+          0 1.5px 6px 0 rgba(6, 23, 66, 0.08);
+        background-color: #f3f6f8 !important;
+        outline: 2px solid #2a5caa22;
+      }
+
+      /* Logo slider styles */
+      .logo-slider img {
+        max-height: 180px;
+        margin: auto;
+      }
+
+      ul.fw-bold.list-unstyled.small {
+        line-height: 1.5rem;
+      }
+
+      /* Profile and letter styles */
+      .profile-header {
+        border: 1px solid #e3e3e3;
+        background: #fff;
+        border-radius: 10px;
+      }
+
+      .director-img {
+        border-radius: 1rem;
+        border: 3px solid #2a5caa33;
+        box-shadow: 0 6px 18px rgba(42, 92, 170, 0.1);
+        background: #f8f9fc;
+      }
+
+      .letter-content {
+        padding: 2rem;
+        background: #fafdff;
+        border: 1px solid #e3e3e3;
+        border-left: 5px solid #2a5caa;
+        border-radius: 12px;
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 1.08rem;
+        line-height: 1.8;
+        color: #333;
+        box-shadow: 0 4px 12px rgba(42, 92, 170, 0.05);
+      }
+
+      .letter-content p {
+        margin-bottom: 1.25rem;
+      }
+
+      .letter-content strong {
+        color: #2a5caa;
+      }
+
+      .letter-content .signature {
+        font-style: italic;
+        font-weight: 500;
+        margin-top: 2rem;
+        text-align: right;
+        color: #444;
+      }
+
+      /* Table styles */
+      .shadow--sm {
+        box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
+        border-radius: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 1.5rem 0;
+        background: #fff;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 16px rgba(42, 92, 170, 0.07);
+      }
+
+      table thead tr {
+        background-color: #e7f1ff;
+      }
+
+      table th,
+      table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e3e3e3;
+        font-family: "Work Sans", sans-serif;
+        font-size: 1rem;
+      }
+
+      table th {
+        color: var(--secondary-light);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid #2a5caa22;
+      }
+
+      table tr:last-child td {
+        border-bottom: none;
+      }
+
+      table tbody tr:nth-child(even) {
+        background-color: #f8f9fc;
+      }
+
+      table tbody tr td strong {
+        color: #2a5caa;
+      }
+
+      table tbody tr td {
+        vertical-align: middle;
+      }
+
+      #overview table tbody tr:last-child td,
+      #overview table tbody tr:nth-last-child(2) td {
+        background: #e7f1ff;
+        font-weight: 600;
+      }
+
+      /* Tab styles */
+      .nav-pills .nav-link {
+        margin: 2px;
+        background: none;
+        border: 1px solid #0617421c;
+        color: var(--primary);
+      }
+
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        background-color: var(--secondary) !important;
+      }
+
+      .slick-prev,
+      .slick-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        background: rgba(42, 92, 170, 0.85);
+        border: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        color: #fff;
+      }
+
+      .slick-prev {
+        left: 15px;
+      }
+
+      .slick-next {
+        right: 15px;
+      }
+
+      .slick-prev:hover,
+      .slick-next:hover {
+        background: #2a5caa;
+      }
+
+      .slick-dots li button:before {
+        font-size: 10px;
+        color: #2a5caa;
+      }
     </style>
   </head>
-
   <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -227,7 +439,7 @@
                     <a href="[[~58~]]" class="nav-link">Management</a>
                     <a href="[[~69~]]" class="nav-link">Marketing & International Business</a>
                     <a href="[[~3581~]]" class="nav-link">MBA & EMBA Programs</a>
-                    <a href="[[~9696~]]" class="nav-link">PBH Program</a>
+                    <a href="[[~9696~]]" class="nav-link">BBA Program</a>
 
                     <h6 class="submenu"><a href="[[~62~]]">School of Engineering & Physical Sciences</a></h6>
                     <a href="[[~64~]]" class="nav-link">Architecture</a>
@@ -536,7 +748,7 @@
       </div>
     </div>
 
-    <!-- Modern NSU PBH Page Header Start -->
+    <!-- Modern NSU BBA Page Header Start -->
     <header class="page-header position-relative d-flex align-items-center" style="height: 340px">
       <div class="container text-center position-relative" style="z-index: 2">
         <h1 class="display-4 fw-bold text-white mb-2" style="text-shadow: 0 2px 8px #06174280">Department of Public Health</h1>
@@ -544,42 +756,44 @@
       </div>
       <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(6, 23, 66, 0.25); z-index: 1"></div>
     </header>
-    <!-- Modern NSU PBH Page Header End -->
+    <!-- Modern NSU BBA Page Header End -->
 
     <!-- Main Content with Tabs -->
-    <div class="container pb-5">
+    <div class="container py-6">
       <!-- Department of Public Health Description Section Start -->
       <section class="custom-slider py-5">
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-8">
-            <div class="dept-banner">
-              <!-- Slide 1 -->
-              <div class="position-relative">
-                <img class="w-100" src="img/academic/shls/pbh/slider-1.jpg" alt="Public Health 1" />
-                <div class="slide-content">
-                  <h3 class="slide-title">Excellence in Public Health Education</h3>
-                  <p class="slide-subtitle">Join our Master of Public Health program to become a leader in healthcare innovation and community wellness.</p>
-                  <a href="#admission" class="slide-btn">
-                    <i class="fas fa-arrow-right me-1"></i>
-                    Apply Now
-                  </a>
+            <div class="bba-desc-section-logo">
+              <div class="dept-banner">
+                <!-- Slide 1 -->
+                <div class="position-relative">
+                  <img class="w-100" src="img/academic/shls/pbh/slider-1.jpg" alt="Public Health 1" />
+                  <div class="slide-content">
+                    <h3 class="slide-title">Excellence in Public Health Education</h3>
+                    <p class="slide-subtitle">Join our Master of Public Health program to become a leader in healthcare innovation and community wellness.</p>
+                    <a href="#admission" class="slide-btn">
+                      <i class="fas fa-arrow-right me-1"></i>
+                      Apply Now
+                    </a>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Slide 2 -->
-              <div class="position-relative">
-                <img class="w-100" src="img/academic/shls/pbh/slider-2.jpg" alt="Public Health 2" />
-                <div class="slide-content">
-                  <h3 class="slide-title">Research & Innovation Hub</h3>
-                  <p class="slide-subtitle">Explore cutting-edge research opportunities in epidemiology, health policy, and global health initiatives.</p>
-                  <a href="#research" class="slide-btn">
-                    <i class="fas fa-flask me-1"></i>
-                    Explore Research
-                  </a>
+                <!-- Slide 2 -->
+                <div class="position-relative">
+                  <img class="w-100" src="img/academic/shls/pbh/slider-2.jpg" alt="Public Health 2" />
+                  <div class="slide-content">
+                    <h3 class="slide-title">Research & Innovation Hub</h3>
+                    <p class="slide-subtitle">Explore cutting-edge research opportunities in epidemiology, health policy, and global health initiatives.</p>
+                    <a href="#research" class="slide-btn">
+                      <i class="fas fa-flask me-1"></i>
+                      Explore Research
+                    </a>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Add more slides as needed -->
+                <!-- Add more slides as needed -->
+              </div>
             </div>
           </div>
 
@@ -681,16 +895,39 @@
               </h2>
             </div>
 
+            <style>
+              .modern-underline h2 {
+                position: relative;
+                display: inline-block;
+              }
+
+              .underline-accent {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 4px;
+                width: 100%;
+                background: linear-gradient(90deg, #2a5caa 0%, #ff9800 50%, #2a5caa 100%);
+                border-radius: 2px;
+                box-shadow: 0 4px 12px rgba(42, 92, 170, 0.2);
+              }
+            </style>
+
             <!-- Brief Introduction -->
             <div class="mb-4">
               <h5 class="text-secondary fw-bold mb-2">Introduction</h5>
-              <p class="text-muted">The Department of Public Health at NSU is dedicated to advancing health and well-being through innovative education, research, and community engagement. We prepare future public health leaders to address complex health challenges locally and globally.</p>
+              <p class="text-muted">
+                The Department of Public Health at NSU is dedicated to advancing health and well-being through innovative education, research, and community engagement. We prepare future public health leaders to address complex health challenges
+                locally and globally.
+              </p>
             </div>
 
             <!-- Mission -->
             <div class="mb-4">
               <h5 class="text-secondary fw-bold mb-2">Our Mission</h5>
-              <p class="text-muted">To educate and train competent public health professionals equipped with knowledge, skills, and values to protect and promote the health of populations through evidence-based practices and community partnerships.</p>
+              <p class="text-muted">
+                To educate and train competent public health professionals equipped with knowledge, skills, and values to protect and promote the health of populations through evidence-based practices and community partnerships.
+              </p>
             </div>
 
             <!-- Vision -->
@@ -834,6 +1071,24 @@
             </div>
           </div>
         </div>
+
+        <style>
+          .program-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 32px rgba(42, 92, 170, 0.2) !important;
+          }
+
+          .program-card .card-title {
+            font-size: 1.25rem;
+          }
+
+          @media (max-width: 768px) {
+            .col-lg-4.col-md-6 {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+          }
+        </style>
       </section>
 
       <!-- People section -->
@@ -898,6 +1153,65 @@
             </div>
           </div>
         </div>
+
+        <style>
+          .uniform-card {
+            background: linear-gradient(135deg, #1a4788 0%, #2a5caa 100%);
+            box-shadow: 0 12px 30px rgba(26, 71, 136, 0.12);
+            color: #fff;
+            transition:
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .uniform-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(26, 71, 136, 0.18);
+          }
+          .uniform-card .icon-wrap {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(10, 30, 80, 0.08);
+          }
+          .uniform-card .icon-wrap i {
+            transform: translateY(1px);
+          }
+          .people-card h5 {
+            color: #fff;
+            font-size: 1.05rem;
+            letter-spacing: 0.2px;
+          }
+          .people-card p {
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .uniform-card .btn-light {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1a4788;
+            border: none;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(10, 30, 80, 0.06);
+          }
+          .uniform-card .btn-light:hover {
+            background: #fff;
+            color: #0f2646;
+          }
+          @media (max-width: 767px) {
+            .col-md-6 {
+              max-width: 100% !important;
+              flex: 0 0 100%;
+            }
+          }
+        </style>
       </section>
 
       <!-- News section -->
@@ -920,7 +1234,7 @@
                 <div class="news-body d-flex flex-column flex-grow-1">
                   <h5 class="news-title">Department Hosts Global Health Symposium</h5>
                   <p class="news-text flex-grow-1 mb-3">Faculty and students shared research on health systems and policy innovation.</p>
-                  <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"> <i class="fas fa-arrow-right me-2"></i>Read Details </a>
+                  <a href="news/public-health/global-health-symposium-2026.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"> <i class="fas fa-arrow-right me-2"></i>Read Details </a>
                 </div>
               </article>
             </div>
@@ -934,7 +1248,7 @@
                 <div class="news-body d-flex flex-column flex-grow-1">
                   <h5 class="news-title">MPH Students Win Research Grant</h5>
                   <p class="news-text flex-grow-1 mb-3">A student-led project on community health secured a national grant.</p>
-                  <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"> <i class="fas fa-arrow-right me-2"></i>Read Details </a>
+                  <a href="news/public-health/mph-research-grant.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"> <i class="fas fa-arrow-right me-2"></i>Read Details </a>
                 </div>
               </article>
             </div>
@@ -948,12 +1262,99 @@
                 <div class="news-body d-flex flex-column flex-grow-1">
                   <h5 class="news-title">New Partnership with Regional Hospitals</h5>
                   <p class="news-text flex-grow-1 mb-3">Expanded internship and fieldwork opportunities for MPH and BPH students.</p>
-                  <a href="pbh_single_news.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"> <i class="fas fa-arrow-right me-2"></i>Read Details </a>
+                  <a href="news/public-health/clinical-partnerships.html" class="btn btn-primary btn-sm rounded-pill btn-read-more"> <i class="fas fa-arrow-right me-2"></i>Read Details </a>
                 </div>
               </article>
             </div>
           </div>
         </div>
+
+        <style>
+          .news-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 12px 28px rgba(42, 92, 170, 0.1);
+            transition: box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+          }
+          .news-card:hover {
+            box-shadow: 0 24px 48px rgba(42, 92, 170, 0.25);
+          }
+          .news-img {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+          }
+          .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+          }
+          .news-card:hover .news-img img {
+            transform: scale(1.12);
+          }
+          .news-date {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            background: rgba(42, 92, 170, 0.9);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            transition: all 0.4s ease;
+            transform: translateY(0);
+          }
+          .news-card:hover .news-date {
+            background: rgba(42, 92, 170, 1);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(42, 92, 170, 0.3);
+          }
+          .news-body {
+            padding: 1.25rem 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+          }
+          .news-title {
+            color: #1a4788;
+            font-weight: 700;
+            margin: 0 0 0.6rem 0;
+            transition: color 0.3s ease;
+          }
+          .news-card:hover .news-title {
+            color: #2a5caa;
+          }
+          .news-text {
+            color: #5b6b7a;
+            margin: 0 0 auto 0;
+          }
+          .btn-read-more {
+            padding: 0.6rem 1.2rem !important;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #2a5caa 0%, #1a4788 100%);
+            border: none;
+            box-shadow: 0 4px 12px rgba(42, 92, 170, 0.2);
+          }
+          .btn-read-more:hover {
+            background: linear-gradient(135deg, #1a4788 0%, #0f2646 100%);
+            box-shadow: 0 8px 20px rgba(42, 92, 170, 0.35);
+            /* transform: translateY(-2px); */
+          }
+          .btn-read-more i {
+            transition: transform 0.3s ease;
+            font-size: 0.85rem;
+          }
+          .btn-read-more:hover i {
+            transform: translateX(4px);
+          }
+        </style>
       </section>
 
       <!-- contact section -->
@@ -1035,7 +1436,16 @@
             <!-- Google Map -->
             <div class="col-lg-6">
               <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(42, 92, 170, 0.1); height: 100%; min-height: 300px">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.7367989367!2d90.41174!3d23.81127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7331b4b3b3d%3A0x4b4f4b4b4b4b4b4b!2sNorth%20South%20University!5e0!3m2!1sen!2sbd!4v1234567890" width="100%" height="100%" style="border: none" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.7367989367!2d90.41174!3d23.81127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7331b4b3b3d%3A0x4b4f4b4b4b4b4b4b!2sNorth%20South%20University!5e0!3m2!1sen!2sbd!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style="border: none"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
               </div>
             </div>
           </div>
@@ -1083,7 +1493,255 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- js PBH  -->
-    <script src="js/pbh.js"></script>
+    <!-- Logo Slider Initialization -->
+    <script>
+      $(document).ready(function () {
+        $(".dept-banner").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3500,
+          arrows: true,
+          dots: false,
+          fade: true,
+          speed: 800,
+          pauseOnHover: true,
+          adaptiveHeight: true,
+          prevArrow: '<button class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+          nextArrow: '<button class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.querySelector(".department-nav-toggle");
+        const navLinks = document.querySelector(".department-nav-links");
+        const navItems = document.querySelectorAll(".nav-link-item");
+        const deptNavSection = document.querySelector(".department-nav-section");
+        const mainNav = document.querySelector(".navbar.sticky-top");
+
+        // Variables for sticky behavior
+        let deptNavOriginalTop = 0;
+        let deptNavHeight = 0;
+        let isSticky = false;
+        let ticking = false;
+        let placeholder = null;
+
+        // Calculate original position after page load
+        function calculateOriginalPosition() {
+          if (deptNavSection) {
+            // Temporarily reset to get accurate position
+            deptNavSection.classList.remove("is-sticky");
+            deptNavSection.style.position = "relative";
+            deptNavSection.style.top = "0";
+            deptNavSection.style.width = "";
+            deptNavSection.style.left = "";
+
+            // Remove placeholder if exists
+            if (placeholder && placeholder.parentNode) {
+              placeholder.parentNode.removeChild(placeholder);
+              placeholder = null;
+            }
+
+            // Get accurate measurements
+            const rect = deptNavSection.getBoundingClientRect();
+            deptNavOriginalTop = rect.top + window.pageYOffset;
+            deptNavHeight = rect.height;
+          }
+        }
+
+        // Create placeholder to prevent content jump
+        function createPlaceholder() {
+          if (!placeholder) {
+            placeholder = document.createElement("div");
+            placeholder.style.height = deptNavHeight + "px";
+            placeholder.style.width = "100%";
+            placeholder.className = "dept-nav-placeholder";
+          }
+          return placeholder;
+        }
+
+        // Handle sticky behavior synced with main nav
+        function handleStickyNav() {
+          if (!deptNavSection || !mainNav) return;
+
+          const scrollY = window.pageYOffset;
+          const mainNavHeight = mainNav.offsetHeight;
+
+          // Department nav becomes sticky ONLY when:
+          // 1. Scroll > 300px (when main nav appears)
+          // 2. AND scrolled past the department nav's natural position
+          const mainNavVisible = scrollY > 300;
+          const passedDeptNav = scrollY > deptNavOriginalTop;
+          const shouldBeSticky = mainNavVisible && passedDeptNav;
+
+          if (shouldBeSticky && !isSticky) {
+            isSticky = true;
+
+            // Insert placeholder before making it fixed
+            const placeholderElement = createPlaceholder();
+            deptNavSection.parentNode.insertBefore(placeholderElement, deptNavSection);
+
+            // Apply sticky styles with smooth transition
+            deptNavSection.classList.add("is-sticky");
+            deptNavSection.style.position = "fixed";
+            deptNavSection.style.top = "-100px"; // Start hidden like main nav
+            deptNavSection.style.width = "100%";
+            deptNavSection.style.left = "0";
+
+            // Trigger reflow then slide in
+            setTimeout(() => {
+              deptNavSection.style.top = mainNavHeight + "px";
+            }, 10);
+          } else if (!shouldBeSticky && isSticky) {
+            isSticky = false;
+
+            // Disable transition so it snaps back naturally
+            deptNavSection.classList.add("no-transition");
+
+            // Remove placeholder
+            if (placeholder && placeholder.parentNode) {
+              placeholder.parentNode.removeChild(placeholder);
+            }
+
+            // Reset styles immediately
+            deptNavSection.classList.remove("is-sticky");
+            deptNavSection.style.position = "relative";
+            deptNavSection.style.top = "0";
+            deptNavSection.style.width = "";
+            deptNavSection.style.left = "";
+
+            // Re-enable transition for next sticky
+            requestAnimationFrame(() => {
+              deptNavSection.classList.remove("no-transition");
+            });
+          }
+
+          // else if (!shouldBeSticky && isSticky) {
+          //   // Slide out before removing sticky
+          //   deptNavSection.style.top = "-100px";
+
+          //   // Wait for transition to complete
+          //   setTimeout(() => {
+          //     isSticky = false;
+
+          //     // Remove placeholder
+          //     if (placeholder && placeholder.parentNode) {
+          //       placeholder.parentNode.removeChild(placeholder);
+          //     }
+
+          //     // Reset to normal position
+          //     deptNavSection.classList.remove("is-sticky");
+          //     deptNavSection.style.position = "relative";
+          //     deptNavSection.style.top = "0";
+          //     deptNavSection.style.width = "";
+          //     deptNavSection.style.left = "";
+          //   }, 500); // Match transition duration
+          // }
+
+          ticking = false;
+        }
+
+        // Request animation frame for smooth scrolling
+        function requestTick() {
+          if (!ticking) {
+            window.requestAnimationFrame(handleStickyNav);
+            ticking = true;
+          }
+        }
+
+        // Initialize after page fully loads
+        window.addEventListener("load", function () {
+          setTimeout(calculateOriginalPosition, 200);
+        });
+
+        // Toggle mobile menu
+        if (navToggle) {
+          navToggle.addEventListener("click", function () {
+            this.classList.toggle("active");
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "";
+            }
+          });
+        }
+
+        // Close menu when clicking a nav item (mobile)
+        navItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            if (window.innerWidth <= 992) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          });
+        });
+
+        // Handle scroll events with RAF
+        window.addEventListener("scroll", function () {
+          requestTick();
+
+          // Handle active state based on scroll position
+          let current = "";
+          const sections = document.querySelectorAll("section[id]");
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 150) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navItems.forEach((item) => {
+            item.classList.remove("active");
+            if (item.getAttribute("href") === "#" + current) {
+              item.classList.add("active");
+            }
+            if (window.pageYOffset < 300 && item.getAttribute("href") === "#") {
+              item.classList.add("active");
+            }
+          });
+        });
+
+        // Close menu when clicking outside (mobile)
+        document.addEventListener("click", function (event) {
+          if (window.innerWidth <= 992) {
+            const isClickInside = event.target.closest(".department-navbar");
+            if (!isClickInside && navLinks.classList.contains("active")) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          }
+        });
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            if (window.innerWidth > 992) {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+            isSticky = false;
+
+            // Remove placeholder on resize
+            if (placeholder && placeholder.parentNode) {
+              placeholder.parentNode.removeChild(placeholder);
+              placeholder = null;
+            }
+
+            calculateOriginalPosition();
+            requestTick();
+          }, 250);
+        });
+      });
+    </script>
   </body>
 </html>

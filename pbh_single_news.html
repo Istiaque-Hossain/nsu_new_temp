@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Health News | North South University</title>
+    <link rel="icon" href="img/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" />
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/pbh_style.css" rel="stylesheet" />
+    <link href="css/pbh-news-detail.css" rel="stylesheet" />
+
+    <style>
+      .mega-menu {
+        max-height: 75vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        box-shadow: 0 10px 20px rgb(255 255 255 / 30%);
+        z-index: 1000;
+        margin-top: 1rem;
+      }
+
+      .mega-menu::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .mega-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+      }
+
+      .mega-menu > .row {
+        padding: 20px;
+      }
+
+      .submenu {
+        color: white;
+        font-weight: 400;
+        margin-top: 15px;
+        font-size: 1rem;
+      }
+
+      .submenu a {
+        color: white;
+      }
+
+      .mega-menu .nav-link {
+        color: #333;
+        padding: 5px 0;
+        font-size: 0.95rem;
+      }
+
+      .mega-menu .nav-link:hover {
+        color: #002147;
+        font-weight: 500;
+      }
+
+      .mega-menu hr {
+        margin: 15px 0;
+        opacity: 0.2;
+      }
+
+      li.dropdown.nav-item {
+        position: static;
+      }
+
+      .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-x' viewBox='0 0 16 16'%3e%3cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+      }
+
+      @media (max-width: 1199px) {
+        .mega-menu {
+          position: static;
+          box-shadow: none;
+          padding: 0;
+          margin: 0;
+          max-height: 55vh;
+        }
+
+        .mega-menu > .row {
+          padding: 10px;
+          padding-top: 0;
+        }
+
+        .navbar .navbar-nav {
+          border-top: 1px solid #eeeeee3d;
+          padding: 0.5rem 0;
+          margin-top: 0.5rem;
+        }
+
+        .navbar-collapse {
+          max-height: 80vh;
+          overflow-y: auto;
+        }
+
+        .mega-menu {
+          max-height: 60vh;
+          overflow-y: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="pbh-news-page">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-12 px-5 py-2 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="contact-us.html" class="text-light">Contact Us</a></li>
+            <li class="list-inline-item"><a href="archive.html" class="text-light">Archive</a></li>
+            <li class="list-inline-item"><a href="newsletter/nsu-catalog.html" class="text-light">Catalog</a></li>
+            <li class="list-inline-item"><a href="journals.html" class="text-light">Journals</a></li>
+            <li class="list-inline-item"><a href="newsletter.html" class="text-light">Newsletters</a></li>
+            <li class="list-inline-item"><a href="http://library.northsouth.edu" class="text-light">Library</a></li>
+            <li class="list-inline-item"><a href="academic/academic-calendar/" class="text-light">Academic Calendar</a></li>
+            <li class="list-inline-item"><a href="http://institutions.northsouth.edu/oea/home-2/" class="text-light">International Students</a></li>
+            <li class="list-inline-item"><a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="text-light">Publications</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-xl navbar-dark bg-primary sticky-top">
+      <div class="container position-relative">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="logo-4.png" alt="Logo" style="width: 6rem" />
+        </a>
+
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="menuAccordion">
+            <li class="nav-item dropdown position-static">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#aboutMegaMenu" aria-expanded="false" aria-controls="aboutMegaMenu">
+                About
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="aboutMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h6 class="submenu">ABOUT NSU</h6>
+                    <a href="[[~47~]]" class="nav-link">Brief History</a>
+                    <a href="[[~167~]]" class="nav-link">Vision, Mission & Strategy</a>
+                    <a href="[[~49~]]" class="nav-link">International Advisory Board</a>
+                    <a href="[[~168~]]" class="nav-link">Accreditation</a>
+                    <a href="[[~169~]]" class="nav-link">International Recognition</a>
+                    <a href="[[~388~]]" class="nav-link">Facts About NSU</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">NSU Trustees</h6>
+                    <a href="[[~109~]]" class="nav-link">Board of Trustees</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Executive Leaders</h6>
+                    <a href="[[~4145~]]#one" class="nav-link" target="_blank">VC, Pro-VC & Treasurer</a>
+                    <a href="[[~4145~]]#six" class="nav-link" target="_blank">Deans, Chairs & Directors</a>
+                    <a href="[[~4145~]]#two" class="nav-link" target="_blank">Administration</a>
+                  </div>
+                  <div class="col-md-3">
+                    <h6 class="submenu">Authorities</h6>
+                    <a href="/newassets/images/Registrs Office/syndicatememberlist-8april2025.pdf" class="nav-link" target="_blank">Syndicate</a>
+                    <a href="/newassets/images/Registrs Office/academiccouncilmember-26122024.pdf" class="nav-link" target="_blank">Academic Council</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicMegaMenu" aria-expanded="false" aria-controls="academicMegaMenu">
+                Academic
+                <i class="fa fa-chevron-down ms-2 arrow-icon"></i>
+              </a>
+              <div class="collapse mega-menu" id="academicMegaMenu" data-bs-parent="#menuAccordion">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~56~]]">School of Business & Economics</a></h6>
+                    <a href="[[~57~]]" class="nav-link">Accounting & Finance</a>
+                    <a href="[[~2890~]]" class="nav-link">Economics</a>
+                    <a href="[[~58~]]" class="nav-link">Management</a>
+                    <a href="[[~69~]]" class="nav-link">Marketing & International Business</a>
+                    <a href="[[~3581~]]" class="nav-link">MBA & EMBA Programs</a>
+                    <a href="[[~9696~]]" class="nav-link">PBH Program</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu"><a href="[[~65~]]">School of Humanities & Social Sciences</a></h6>
+                    <a href="[[~9149~]]" class="nav-link">English & Modern Languages</a>
+                    <a href="[[~67~]]" class="nav-link">Political Science & Sociology</a>
+                    <a href="[[~191~]]" class="nav-link">Law</a>
+                    <a href="[[~1540~]]" class="nav-link">History & Philosophy</a>
+                    <h6 class="submenu"><a href="[[~59~]]">School of Health & Life Sciences</a></h6>
+                    <a href="[[~61~]]" class="nav-link">Biochemistry & Microbiology</a>
+                    <a href="[[~2643~]]" class="nav-link">Environmental Science & Management</a>
+                    <a href="[[~70~]]" class="nav-link">Pharmaceutical Sciences</a>
+                    <a href="[[~60~]]" class="nav-link">Public Health</a>
+                  </div>
+                  <div class="col-md-4">
+                    <h6 class="submenu">Institutes & Centers</h6>
+                    <a href="[[~1806~]]" class="nav-link">Institute of Modern Languages</a>
+                    <a href="[[~189~]]" class="nav-link">Confucius Institute</a>
+                    <a href="[[~3171~]]" class="nav-link">NSU Global Health Institute (NGHI)</a>
+                    <a href="[[~4212~]]" class="nav-link">NSU Genome Research Institute (NGRI)</a>
+                    <a href="https://cpc.northsouth.edu/" class="nav-link">Career & Placement Center (CPC)</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item"><a href="https://alumni.northsouth.edu/landingPage" class="nav-link text-white">Alumni</a></li>
+            <li class="nav-item"><a href="[[~8062~]]" class="nav-link text-white">Research</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapseEl = document.getElementById("navbarNav");
+        collapseEl.addEventListener("show.bs.collapse", function () {
+          document.body.classList.add("menu-open");
+        });
+        collapseEl.addEventListener("hidden.bs.collapse", function () {
+          document.body.classList.remove("menu-open");
+        });
+      });
+    </script>
+
+    <div id="department" class="department-nav-section">
+      <div class="container">
+        <nav class="department-navbar">
+          <button class="department-nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="department-nav-links">
+            <li><a href="pbh.html" class="nav-link-item">Home</a></li>
+            <li><a href="pbh.html#overview" class="nav-link-item">About</a></li>
+            <li><a href="pbh.html#programs" class="nav-link-item">Programs</a></li>
+            <li><a href="pbh.html#people" class="nav-link-item">People</a></li>
+            <li><a href="pbh.html#news" class="nav-link-item active">News</a></li>
+            <li><a href="pbh.html#contact" class="nav-link-item">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <header class="page-header position-relative d-flex align-items-center" style="height: 340px">
+      <div class="container text-center position-relative" style="z-index: 2">
+        <h1 class="display-4 fw-bold text-white mb-2" style="text-shadow: 0 2px 8px #06174280">Department of Public Health</h1>
+        <p class="lead text-white-50 mb-0" style="text-shadow: 0 1px 6px #06174280">School of Business & Economics (SBE)</p>
+      </div>
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(6, 23, 66, 0.25); z-index: 1"></div>
+    </header>
+
+    <div class="container pb-5">
+      <section class="news-detail-section py-5">
+        <div class="news-detail-shell">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-lg-6">
+              <div class="news-detail-media-wrap">
+                <img src="img/news/GSNewsfeed.jpg" alt="Public Health news image" class="news-detail-image" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="news-detail-header">
+                <div class="news-detail-topline">
+                  <a href="pbh.html#news" class="news-back-link"><i class="fas fa-arrow-left me-2"></i>Back to all news</a>
+                  <span class="news-detail-date"><i class="far fa-calendar-alt me-2"></i>15 January 2026</span>
+                </div>
+                <h2 class="news-detail-title">Department Hosts Global Health Symposium</h2>
+                <p class="news-detail-summary">Faculty and students shared research on health systems and policy innovation through collaborative sessions with academics, policymakers, and development partners.</p>
+              </div>
+            </div>
+          </div>
+          <div class="news-detail-content">
+            <div class="news-detail-content-head"></div>
+            <div class="news-detail-body">
+              <p class="news-detail-lead">The Department of Public Health at North South University opened its 2026 academic calendar with a high-impact Global Health Symposium focused on practical solutions for resilient health systems in Bangladesh.</p>
+
+              <p>The event brought together faculty, students, public health experts, and institutional stakeholders. Sessions addressed disease surveillance, health communication, prevention frameworks, and policy translation for local implementation.</p>
+
+              <h2>Highlights From the Symposium</h2>
+              <ul>
+                <li>Interactive plenary sessions on health financing, equity, and community-based interventions.</li>
+                <li>Student poster presentations showcasing applied research on local health priorities.</li>
+                <li>Panel discussions connecting academic training with real-world public health practice.</li>
+              </ul>
+
+              <div class="article-quote">
+                <p>"This symposium created a direct bridge between evidence, policy, and student learning, which is exactly what modern public health education requires."</p>
+                <span>Department of Public Health, NSU</span>
+              </div>
+
+              <h2>Long Description</h2>
+              <p>Through this event, the department reaffirmed its commitment to preparing future public health leaders who can work across research, policy, and field implementation. The discussions and outcomes from the symposium will inform upcoming workshops, collaborative projects, and student engagement activities throughout the year.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-light mb-2 ftr-title">North South University</h5>
+            <a href="#" class="d-inline-block mb-3">
+              <img src="slogan.png" alt="Footer Logo" class="img-fluid w-75" />
+            </a>
+            <p class="text-light mb-1"><i class="fa fa-map-marker-alt me-2"></i>Bashundhara, Dhaka-1229, Bangladesh</p>
+            <p class="text-light mb-1"><i class="fa fa-phone-alt me-2"></i>+880-2-55668200</p>
+            <p class="text-light mb-1"><i class="fa fa-fax me-2"></i>+880-2-55668202</p>
+            <p class="text-light"><i class="fa fa-envelope me-2"></i>registrar@northsouth.edu</p>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-start justify-content-md-end pt-2 mb-4">
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light btn-sm rounded-25 social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="text-start text-md-end">Developed & Maintained By IT Office, NSU</div>
+            <div class="text-start text-md-end">&copy; 1993-2025 NSU, All Right Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pbh.js"></script>
+  </body>
+</html>
