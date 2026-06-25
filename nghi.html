@@ -1,0 +1,1280 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NSU Global Health Institute (NGHI) | North South University</title>
+        <link rel="icon" href="img/favicon.ico" />
+
+        <!-- Preconnect for performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <!-- Google Font: Work Sans -->
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- Font Awesome 5 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <!-- Lightbox for gallery -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet" />
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
+
+        <!-- PBH Component Styles (reused for NGHI) -->
+        <link href="css/pbh_style.css" rel="stylesheet" />
+
+        <style>
+            /* === MEGA MENU === */
+            .mega-menu {
+                max-height: 75vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                box-shadow: 0 10px 20px rgb(255 255 255 / 30%);
+                z-index: 1000;
+                margin-top: 1rem;
+            }
+            .mega-menu::-webkit-scrollbar {
+                width: 6px;
+            }
+            .mega-menu::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+            }
+            .mega-menu > .row {
+                padding: 20px;
+            }
+            .submenu {
+                color: white;
+                font-weight: 400;
+                margin-top: 15px;
+                font-size: 1rem;
+            }
+            .submenu a {
+                color: white;
+            }
+            .mega-menu .nav-link {
+                color: #333;
+                padding: 5px 0;
+                font-size: 0.95rem;
+            }
+            .mega-menu .nav-link:hover {
+                color: #002147;
+                font-weight: 500;
+            }
+            .mega-menu hr {
+                margin: 15px 0;
+                opacity: 0.2;
+            }
+            li.dropdown.nav-item {
+                position: static;
+            }
+            .navbar-toggler.collapsed .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M2.5 12.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e");
+            }
+            .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-x' viewBox='0 0 16 16'%3e%3cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+            body.menu-open {
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+            }
+            @media (max-width: 1199px) {
+                .mega-menu {
+                    position: static;
+                    box-shadow: none;
+                    padding: 0;
+                    margin: 0;
+                    max-height: 55vh;
+                }
+                .mega-menu > .row {
+                    padding: 10px;
+                    padding-top: 0;
+                }
+                .navbar .navbar-nav {
+                    border-top: 1px solid #eeeeee3d;
+                    padding: 0.5rem 0;
+                    margin-top: 0.5rem;
+                }
+                .navbar-collapse {
+                    max-height: 80vh;
+                    overflow-y: auto;
+                }
+            }
+
+            /* === NGHI CAROUSEL === */
+            .nghi-carousel {
+                min-height: 460px;
+            }
+            .nghi-carousel .carousel-item img {
+                height: 460px;
+                object-fit: cover;
+            }
+            @media (max-width: 768px) {
+                .nghi-carousel {
+                    min-height: 280px;
+                }
+                .nghi-carousel .carousel-item img {
+                    height: 280px;
+                }
+            }
+
+            .nghi-header-logo {
+                width: 118px;
+                height: auto;
+                display: block;
+                margin: 0;
+                background: rgba(255, 255, 255, 0.92);
+                border-radius: 18px;
+                padding: 0.5rem 0.65rem;
+                box-shadow: 0 8px 22px rgba(6, 23, 66, 0.18);
+                flex-shrink: 0;
+            }
+            .nghi-page-header-content {
+                z-index: 2;
+            }
+            .nghi-brand-panel {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                /* max-width: 920px; */
+                margin: 0 auto;
+                padding: 1.2rem 1.4rem;
+                border-radius: 24px;
+                background: rgba(6, 23, 66, 0.38);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 16px 38px rgba(6, 23, 66, 0.18);
+            }
+            .nghi-brand-copy {
+                text-align: left;
+            }
+            .nghi-eyebrow {
+                margin-bottom: 0.35rem;
+                color: rgba(255, 255, 255, 0.82);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+            }
+            @media (max-width: 576px) {
+                .nghi-header-logo {
+                    width: 96px;
+                }
+                .nghi-brand-panel {
+                    flex-direction: column;
+                    gap: 0.85rem;
+                    padding: 1rem 1rem 1.1rem;
+                }
+                .nghi-brand-copy {
+                    text-align: center;
+                }
+            }
+
+            /* === STAT CARDS === */
+            .nghi-stat-card {
+                border-radius: 16px;
+                transition: all 0.3s ease;
+            }
+            .nghi-stat-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 36px rgba(6, 23, 66, 0.18) !important;
+            }
+
+            /* === VOLUNTARY WORKS === */
+            .voluntary-work-card {
+                border-radius: 14px;
+                border: 1px solid #e5ebf5;
+                background: #ffffff;
+                box-shadow: 0 8px 20px rgba(6, 23, 66, 0.06);
+                overflow: hidden;
+                height: 100%;
+                transition: all 0.25s ease;
+            }
+            .voluntary-work-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 24px rgba(6, 23, 66, 0.12);
+            }
+            .voluntary-img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                display: block;
+            }
+            .voluntary-content {
+                padding: 1rem 1rem 1.1rem;
+            }
+            @media (max-width: 768px) {
+                .voluntary-img {
+                    height: 170px;
+                }
+            }
+
+            /* === PEOPLE SUBSECTIONS === */
+            .people-subsection {
+                border-radius: 18px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                border: 1px solid #e5ebf5;
+                background: #ffffff;
+                box-shadow: 0 10px 28px rgba(6, 23, 66, 0.06);
+            }
+            .people-subsection.staff-subsection {
+                border-top: 4px solid #2a5caa;
+            }
+            .people-subsection.fellow-subsection {
+                border-top: 4px solid #1e6f5c;
+            }
+            .people-subsection-title {
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .people-subsection-title i {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+            .staff-subsection .people-subsection-title i {
+                color: #2a5caa;
+                background: #eaf2ff;
+            }
+            .fellow-subsection .people-subsection-title i {
+                color: #1e6f5c;
+                background: #eaf8f3;
+            }
+            .people-rich-content {
+                padding: 0.2rem 0;
+            }
+            .people-rich-item {
+                display: flex;
+                align-items: center;
+                gap: 0.9rem;
+                background: #f8fbff;
+                border: 1px solid #e3ebf7;
+                border-radius: 12px;
+                padding: 0.75rem;
+                height: 100%;
+            }
+            .people-rich-img {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid #dbe6fb;
+                flex-shrink: 0;
+            }
+            .people-rich-content h1,
+            .people-rich-content h2,
+            .people-rich-content h3,
+            .people-rich-content h4,
+            .people-rich-content h5,
+            .people-rich-content h6 {
+                color: #163d7a;
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 0.35rem;
+            }
+            .people-rich-content p {
+                color: #4a5b78;
+                font-size: 0.86rem;
+                margin-bottom: 0;
+                line-height: 1.5;
+            }
+            .people-rich-content > *:last-child {
+                margin-bottom: 0;
+            }
+            @media (max-width: 576px) {
+                .people-rich-item {
+                    align-items: flex-start;
+                }
+            }
+
+            /* === PUBLICATION ITEMS === */
+            .pub-item {
+                padding: 0.85rem 1rem;
+                border-left: 3px solid transparent;
+                border-radius: 0 8px 8px 0;
+                background: white;
+                margin-bottom: 0.5rem;
+                transition: all 0.2s;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            }
+            .pub-item:hover {
+                border-left-color: var(--secondary-light);
+                background: #f0f4ff;
+            }
+
+            /* === TRAINING CARD === */
+            .training-card {
+                border-left: 4px solid var(--secondary) !important;
+                border-radius: 0 12px 12px 0 !important;
+                transition: all 0.3s;
+            }
+            .training-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 24px rgba(6, 23, 66, 0.12) !important;
+            }
+
+            /* === OPPORTUNITY CARD === */
+            .opp-card {
+                border-top: 4px solid var(--secondary) !important;
+                border-radius: 12px !important;
+                transition: all 0.3s;
+            }
+            .opp-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 28px rgba(6, 23, 66, 0.12) !important;
+            }
+
+            /* === GALLERY === */
+            .nghi-gallery-img {
+                height: 200px;
+                object-fit: cover;
+                width: 100%;
+                border-radius: 12px;
+                transition: 0.3s;
+                display: block;
+            }
+            .nghi-gallery-img:hover {
+                transform: scale(1.03);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Top Nav -->
+        <div class="container-fluid bg-dark text-light p-0">
+            <div class="row gx-0 d-none d-lg-flex">
+                <div class="col-lg-12 px-5 py-2 text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="contact-us.html" class="text-light">Contact Us</a></li>
+                        <li class="list-inline-item"><a href="archive.html" class="text-light">Archive</a></li>
+                        <li class="list-inline-item"><a href="newsletter/nsu-catalog.html" class="text-light">Catalog</a></li>
+                        <li class="list-inline-item"><a href="journals.html" class="text-light">Journals</a></li>
+                        <li class="list-inline-item"><a href="newsletter.html" class="text-light">Newsletters</a></li>
+                        <li class="list-inline-item"><a href="http://library.northsouth.edu" class="text-light">Library</a></li>
+                        <li class="list-inline-item"><a href="academic/academic-calendar/" class="text-light">Academic Calendar</a></li>
+                        <li class="list-inline-item"><a href="http://institutions.northsouth.edu/oea/home-2/" class="text-light">International Students</a></li>
+                        <li class="list-inline-item"><a href="https://rds3.northsouth.edu/index.php/nsuresearch" class="text-light">Publications</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-xl navbar-dark bg-primary sticky-top">
+            <div class="container position-relative">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="logo-4.png" alt="NSU Logo" style="width: 6rem" />
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" id="menuAccordion">
+                        <!-- About -->
+                        <li class="nav-item dropdown position-static">
+                            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#aboutMegaMenu" aria-expanded="false"> About <i class="fa fa-chevron-down ms-2 arrow-icon"></i> </a>
+                            <div class="collapse mega-menu" id="aboutMegaMenu" data-bs-parent="#menuAccordion">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">ABOUT NSU</h6>
+                                        <a href="[[~47~]]" class="nav-link">Brief History</a>
+                                        <a href="[[~167~]]" class="nav-link">Vision, Mission & Strategy</a>
+                                        <a href="[[~49~]]" class="nav-link">International Advisory Board</a>
+                                        <a href="[[~168~]]" class="nav-link">Accreditation</a>
+                                        <a href="[[~169~]]" class="nav-link">International Recognition</a>
+                                        <a href="[[~388~]]" class="nav-link">Facts About NSU</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">NSU Trustees</h6>
+                                        <a href="[[~109~]]" class="nav-link">Board of Trustees</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">Executive Leaders</h6>
+                                        <a href="[[~4145~]]#one" class="nav-link" target="_blank">VC, Pro-VC & Treasurer</a>
+                                        <a href="[[~4145~]]#six" class="nav-link" target="_blank">Deans, Chairs & Directors</a>
+                                        <a href="[[~4145~]]#two" class="nav-link" target="_blank">Administration</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">Authorities</h6>
+                                        <a href="/newassets/images/Registrs Office/syndicatememberlist-8april2025.pdf" class="nav-link" target="_blank">Syndicate</a>
+                                        <a href="/newassets/images/Registrs Office/academiccouncilmember-26122024.pdf" class="nav-link" target="_blank">Academic Council</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Academic -->
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#academicMegaMenu" aria-expanded="false"> Academic <i class="fa fa-chevron-down ms-2 arrow-icon"></i> </a>
+                            <div class="collapse mega-menu" id="academicMegaMenu" data-bs-parent="#menuAccordion">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h6 class="submenu"><a href="[[~56~]]">School of Business & Economics</a></h6>
+                                        <a href="[[~57~]]" class="nav-link">Accounting & Finance</a>
+                                        <a href="[[~2890~]]" class="nav-link">Economics</a>
+                                        <a href="[[~58~]]" class="nav-link">Management</a>
+                                        <a href="[[~69~]]" class="nav-link">Marketing & International Business</a>
+                                        <a href="[[~3581~]]" class="nav-link">MBA & EMBA Programs</a>
+                                        <a href="[[~9696~]]" class="nav-link">BBA Program</a>
+                                        <h6 class="submenu"><a href="[[~62~]]">School of Engineering & Physical Sciences</a></h6>
+                                        <a href="[[~64~]]" class="nav-link">Architecture</a>
+                                        <a href="[[~8351~]]" class="nav-link">Civil and Environmental Engineering</a>
+                                        <a href="http://ece.northsouth.edu/" class="nav-link">Electrical & Computer Engineering</a>
+                                        <a href="[[~9063~]]" class="nav-link">Mathematics & Physics</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu"><a href="[[~65~]]">School of Humanities & Social Sciences</a></h6>
+                                        <a href="[[~9149~]]" class="nav-link">English & Modern Languages</a>
+                                        <a href="[[~67~]]" class="nav-link">Political Science & Sociology</a>
+                                        <a href="[[~191~]]" class="nav-link">Law</a>
+                                        <a href="[[~1540~]]" class="nav-link">History & Philosophy</a>
+                                        <h6 class="submenu"><a href="[[~59~]]">School of Health & Life Sciences</a></h6>
+                                        <a href="[[~61~]]" class="nav-link">Biochemistry & Microbiology</a>
+                                        <a href="[[~2643~]]" class="nav-link">Environmental Science & Management</a>
+                                        <a href="[[~70~]]" class="nav-link">Pharmaceutical Sciences</a>
+                                        <a href="[[~60~]]" class="nav-link">Public Health</a>
+                                        <h6 class="submenu">Miscellaneous</h6>
+                                        <a href="[[~124~]]" class="nav-link">Grading Policy</a>
+                                        <a href="[[~1366~]]" class="nav-link">Student Records</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Institutes & Centers</h6>
+                                        <a href="[[~1806~]]" class="nav-link">Institute of Modern Languages</a>
+                                        <a href="[[~189~]]" class="nav-link">Confucius Institute</a>
+                                        <a href="nghi.html" class="nav-link fw-bold">NSU Global Health Institute (NGHI)</a>
+                                        <a href="[[~4212~]]" class="nav-link">NSU Genome Research Institute (NGRI)</a>
+                                        <a href="https://cpc.northsouth.edu/" class="nav-link">Career & Placement Center (CPC)</a>
+                                        <a href="https://www.northsouth.edu/sipg/" class="nav-link">South Asian Institute of Policy and Governance (SIPG)</a>
+                                        <a href="http://www.northsouth.edu/research-innovation/cbr" class="nav-link">NSU Center for Business Research</a>
+                                        <a href="https://www.cpsnsu.org/" class="nav-link">Center for Peace Studies (CPS)</a>
+                                        <a href="https://www.northsouth.edu/sdg/" class="nav-link">Social Impact and Sustainability Center</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Faculty -->
+                        <li class="nav-item dropdown position-static">
+                            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#facultyMegaMenu" aria-expanded="false"> Faculty <i class="fa fa-chevron-down ms-2 arrow-icon"></i> </a>
+                            <div class="collapse mega-menu" id="facultyMegaMenu" data-bs-parent="#menuAccordion">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">School of Business & Economics</h6>
+                                        <a href="[[~1785~]]" class="nav-link">Accounting & Finance</a>
+                                        <a href="[[~181~]]" class="nav-link">Economics</a>
+                                        <a href="[[~1784~]]" class="nav-link">Management</a>
+                                        <a href="[[~1787~]]" class="nav-link">Marketing & International Business</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">School of Engineering & Physical Sciences</h6>
+                                        <a href="[[~177~]]" class="nav-link">Architecture</a>
+                                        <a href="[[~179~]]" class="nav-link">Civil and Environmental Engineering</a>
+                                        <a href="http://ece.northsouth.edu/people/type/faculty/" class="nav-link">Electrical & Computer Engineering</a>
+                                        <a href="[[~1960~]]" class="nav-link">Mathematics & Physics</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">School of Humanities & Social Sciences</h6>
+                                        <a href="[[~180~]]" class="nav-link">English & Modern Languages</a>
+                                        <a href="[[~182~]]" class="nav-link">Political Science & Sociology</a>
+                                        <a href="[[~2266~]]" class="nav-link">Law</a>
+                                        <a href="[[~2665~]]" class="nav-link">History & Philosophy</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="submenu">School of Health & Life Sciences</h6>
+                                        <a href="[[~173~]]" class="nav-link">Biochemistry & Microbiology</a>
+                                        <a href="[[~178~]]" class="nav-link">Environmental Science & Management</a>
+                                        <a href="[[~175~]]" class="nav-link">Pharmaceutical Sciences</a>
+                                        <a href="[[~174~]]" class="nav-link">Public Health</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Offices -->
+                        <li class="nav-item dropdown position-static">
+                            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#officesMegaMenu" aria-expanded="false"> Offices <i class="fa fa-chevron-down ms-2 arrow-icon"></i> </a>
+                            <div class="collapse mega-menu" id="officesMegaMenu" data-bs-parent="#menuAccordion">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">All Offices</h6>
+                                        <a href="[[~8836~]]" class="nav-link">Registrar's Office</a>
+                                        <a href="[[~3148~]]" class="nav-link">Proctor's Office</a>
+                                        <a href="[[~9421~]]" class="nav-link">Controller's Office</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Other Offices</h6>
+                                        <a href="http://institutions.northsouth.edu/oea/" class="nav-link">Office of External Affairs</a>
+                                        <a href="[[~3179~]]" class="nav-link">Office of Graduate Studies</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Student & Startup</h6>
+                                        <a href="[[~8041~]]" class="nav-link">Office of Student Affairs</a>
+                                        <a href="[[~1175~]]" class="nav-link">Financial Aid Office</a>
+                                        <a href="https://nsustartupsnext.com/" class="nav-link">NSU Startups Next (NSUSN)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Admission -->
+                        <li class="nav-item dropdown position-static">
+                            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#admissionMegaMenu" aria-expanded="false"> Admission <i class="fa fa-chevron-down ms-2 arrow-icon"></i> </a>
+                            <div class="collapse mega-menu" id="admissionMegaMenu" data-bs-parent="#menuAccordion">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Admission Information</h6>
+                                        <a href="http://admissions.northsouth.edu/" class="nav-link">Admissions Home Page</a>
+                                        <a href="http://admissions.northsouth.edu/undergraduate_requirement" class="nav-link">Undergraduate Admission Requirements</a>
+                                        <a href="http://admissions.northsouth.edu/graduate_requirement" class="nav-link">Graduate Admission Requirements</a>
+                                        <a href="http://admissions.northsouth.edu/int_student" class="nav-link">Admission of International Applicants</a>
+                                        <a href="https://admissions.northsouth.edu/nondegree" class="nav-link">Non-degree Students</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Financial & FAQs</h6>
+                                        <a href="[[~1175~]]" class="nav-link">Financial Aid</a>
+                                        <a href="[[~158~]]" class="nav-link">Tuition and Other Fees</a>
+                                        <a href="http://admissions.northsouth.edu/tuition" class="nav-link">Tuition Fee Calculator</a>
+                                        <a href="http://admissions.northsouth.edu/faq" class="nav-link">Frequently Ask Questions</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Transfer & Sample</h6>
+                                        <a href="http://admissions.northsouth.edu/transfer" class="nav-link">Transfer of Students</a>
+                                        <a href="http://admissions.northsouth.edu/transfer" class="nav-link">Credit Transfer</a>
+                                        <a href="https://admissions.northsouth.edu/download/sample_question" class="nav-link" target="_blank">Sample Question (UG Admission Test)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- NSU Online -->
+                        <li class="nav-item dropdown position-static">
+                            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#nsuOnlineMegaMenu" aria-expanded="false"> NSU Online <i class="fa fa-chevron-down ms-2 arrow-icon"></i> </a>
+                            <div class="collapse mega-menu" id="nsuOnlineMegaMenu" data-bs-parent="#menuAccordion">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">NSU Online Systems</h6>
+                                        <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank">Faculty Portal (RDS)</a>
+                                        <a href="http://portal.northsouth.edu/" class="nav-link" target="_blank">Student Portal (RDS)</a>
+                                        <a href="https://rds3.northsouth.edu/index.php/welcome/parent_login" class="nav-link" target="_blank">Parent Portal (RDS)</a>
+                                        <a href="http://apply.northsouth.edu:8080/admissionWeb/login.view" class="nav-link" target="_blank">Online Admission</a>
+                                        <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank">Online Job Portal</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Learning Management System</h6>
+                                        <a href="http://www.northsouth.edu/canvas/" class="nav-link" target="_blank">Canvas LMS</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Student Guidelines</h6>
+                                        <a href="/newassets/images/IT/PasswordRecoveryProcess.pdf" class="nav-link" target="_blank">Password Recovery Process</a>
+                                        <a href="https://drive.google.com/file/d/0B8X_hvl8uyoIRF9Ud1RRdjNWNjg/view" class="nav-link" target="_blank">Online Course Registration</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://alumni.northsouth.edu/landingPage" class="nav-link text-white">Alumni</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="[[~8062~]]" class="nav-link text-white">Research</a>
+                        </li>
+                        <!-- Useful Links -->
+                        <li class="nav-item dropdown position-static">
+                            <a href="#" class="nav-link d-flex justify-content-between align-items-center text-white" data-bs-toggle="collapse" data-bs-target="#usefulLinksMegaMenu" aria-expanded="false"> Useful Links <i class="fa fa-chevron-down ms-2 arrow-icon"></i> </a>
+                            <div class="collapse mega-menu" id="usefulLinksMegaMenu" data-bs-parent="#menuAccordion">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">NSU Inquiry</h6>
+                                        <a href="[[~249~]]" class="nav-link">Inquiry & Feedback</a>
+                                        <a href="[[~7716~]]" class="nav-link">Administrative Directory</a>
+                                        <a href="https://jobs.northsouth.edu/" class="nav-link" target="_blank">Jobs at NSU</a>
+                                        <a href="[[~477~]]" class="nav-link">Tender Notice</a>
+                                        <a href="https://rds3.northsouth.edu/index.php/verification/verification" class="nav-link" target="_blank">Degree Verification</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">NSU Services</h6>
+                                        <a href="[[~3258~]]" class="nav-link">Service Request Forms</a>
+                                        <a href="[[~85~]]" class="nav-link">NSU Facilities</a>
+                                        <a href="[[~4199~]]" class="nav-link">NSU Student Clubs</a>
+                                        <a href="http://www.northsouth.edu/archive.html" class="nav-link" target="_blank">NSU Archive</a>
+                                        <a href="[[~1188~]]" class="nav-link">Bank List for Tuition Fees</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="submenu">Offices</h6>
+                                        <a href="http://institutions.northsouth.edu/oea/" class="nav-link" target="_blank">Office of the External Affairs</a>
+                                        <a href="[[~3179~]]" class="nav-link">Office of the Graduate Studies</a>
+                                        <a href="[[~3148~]]" class="nav-link">Proctor's Office</a>
+                                        <a href="[[~1175~]]" class="nav-link">Financial Aid Office</a>
+                                        <a href="[[~8041~]]" class="nav-link">Office of the Student Affairs</a>
+                                        <a href="[[~8836~]]" class="nav-link">Registrar's Office</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- NGHI Department Sub-Nav -->
+        <div id="nghi-nav" class="department-nav-section">
+            <div class="container">
+                <nav class="department-navbar">
+                    <button class="department-nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+                    <ul class="department-nav-links">
+                        <li><a href="#" class="nav-link-item active">Home</a></li>
+                        <li><a href="#about" class="nav-link-item">About</a></li>
+                        <li><a href="#professionals" class="nav-link-item">Professionals</a></li>
+                        <li><a href="#research" class="nav-link-item">Research</a></li>
+                        <li><a href="#publications" class="nav-link-item">Publications</a></li>
+                        <li><a href="#trainings" class="nav-link-item">Trainings</a></li>
+                        <li><a href="#opportunities" class="nav-link-item">Opportunities</a></li>
+                        <li><a href="#gallery" class="nav-link-item">Gallery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <header class="page-header nghi-page-header position-relative d-flex align-items-center" style="height: 340px">
+            <div class="container text-center position-relative nghi-page-header-content">
+                <div class="nghi-brand-panel">
+                    <img src="img/nghi-logo.jpg" alt="NSU Global Health Institute Logo" class="nghi-header-logo" />
+                    <div class="nghi-brand-copy">
+                        <p class="nghi-eyebrow">North South University</p>
+                        <h1 class="display-4 fw-bold text-white mb-2" style="text-shadow: 0 2px 8px #06174280">NSU Global Health Institute (NGHI)</h1>
+                        <p class="lead text-white-50 mb-0" style="text-shadow: 0 1px 6px #06174280">School of Health & Life Sciences (SHLS) | North South University</p>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(6, 23, 66, 0.25); z-index: 1"></div>
+        </header>
+
+        <!-- ============================================================ -->
+        <!-- Main Content                                                  -->
+        <!-- ============================================================ -->
+        <div class="container pb-5">
+            <!-- HERO CAROUSEL + ANNOUNCEMENTS -->
+            <section id="home" class="py-5">
+                <div class="row g-4 align-items-stretch">
+                    <!-- Carousel -->
+                    <div class="col-lg-12">
+                        <div id="nghiCarousel" class="carousel slide nghi-carousel" data-bs-ride="carousel" style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(6, 23, 66, 0.12)">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#nghiCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                <button type="button" data-bs-target="#nghiCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#nghiCarousel" data-bs-slide-to="2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/academic/nsu.webp" class="d-block w-100" alt="North South University campus" />
+                                    <div class="carousel-caption d-none d-md-block text-start" style="background: rgba(6, 23, 66, 0.6); border-radius: 10px; padding: 1rem 1.5rem; bottom: 1.5rem; left: 2rem; right: 2rem; top: auto">
+                                        <h5 class="fw-bold mb-1 text-white">A Strong University Base</h5>
+                                        <p class="mb-0 small">NGHI builds on North South University's academic and research environment</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/academic/shls/pbh/slider-1.jpg" class="d-block w-100" alt="Community health outreach" />
+                                    <div class="carousel-caption d-none d-md-block text-start" style="background: rgba(6, 23, 66, 0.6); border-radius: 10px; padding: 1rem 1.5rem; bottom: 1.5rem; left: 2rem; right: 2rem; top: auto">
+                                        <h5 class="fw-bold mb-1 text-white">Community Health Outreach</h5>
+                                        <p class="mb-0 small">Field engagement and public health support in action</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/events1.jpg" class="d-block w-100" alt="North South University main building" />
+                                    <div class="carousel-caption d-none d-md-block text-start" style="background: rgba(6, 23, 66, 0.6); border-radius: 10px; padding: 1rem 1.5rem; bottom: 1.5rem; left: 2rem; right: 2rem; top: auto">
+                                        <h5 class="fw-bold mb-1 text-white">North South University</h5>
+                                        <p class="mb-0 small">A campus setting that supports research, teaching, and service</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#nghiCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#nghiCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATS SECTION -->
+            <section id="stats" class="pb-5">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm text-center p-4 h-100 nghi-stat-card" style="background: linear-gradient(135deg, #061742 0%, #183f78 100%); color: white">
+                            <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: rgba(255, 255, 255, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center">
+                                <i class="fas fa-chalkboard-teacher" style="font-size: 1.8rem; color: white"></i>
+                            </div>
+                            <h3 class="fw-bold mb-1" style="font-size: 2.5rem; color: white">25+</h3>
+                            <h6 class="mb-1" style="color: white">Trainings Conducted</h6>
+                            <p class="mb-0 small" style="opacity: 0.85; color: white">Capacity building workshops since 2022</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm text-center p-4 h-100 nghi-stat-card" style="background: linear-gradient(135deg, #1e6f5c 0%, #27ae60 100%); color: white">
+                            <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: rgba(255, 255, 255, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center">
+                                <i class="fas fa-hand-holding-usd" style="font-size: 1.8rem; color: white"></i>
+                            </div>
+                            <h3 class="fw-bold mb-1" style="font-size: 2.5rem; color: white">20+</h3>
+                            <h6 class="mb-1" style="color: white">Research Grants</h6>
+                            <p class="mb-0 small" style="opacity: 0.85; color: white">Funded research projects & initiatives</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm text-center p-4 h-100 nghi-stat-card" style="background: linear-gradient(135deg, #a27035 0%, #d4a055 100%); color: white">
+                            <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: rgba(255, 255, 255, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center">
+                                <i class="fas fa-file-alt" style="font-size: 1.8rem; color: white"></i>
+                            </div>
+                            <h3 class="fw-bold mb-1" style="font-size: 2.5rem; color: white">100+</h3>
+                            <h6 class="mb-1" style="color: white">Publications</h6>
+                            <p class="mb-0 small" style="opacity: 0.85; color: white">Peer-reviewed articles in top journals</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT NGHI -->
+            <section id="about" class="py-5">
+                <div class="row g-5 align-items-start mb-4">
+                    <div class="col-12">
+                        <div class="modern-underline mb-4">
+                            <h2 class="display-5 fw-bold text-primary position-relative pb-3">
+                                About NGHI
+                                <span class="underline-accent" style="width: 40%"></span>
+                            </h2>
+                        </div>
+                        <p class="lead text-muted mb-4">NSU Global Health Institute (NGHI) is a premier center dedicated to interdisciplinary research, training, and policy engagement in global health.</p>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold text-secondary mb-2"><i class="fas fa-eye text-primary me-2"></i>Vision</h5>
+                            <p class="text-muted">To achieve equitable health outcomes through innovative research and cross-sectoral collaborations across low- and middle-income countries.</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5 class="fw-bold text-secondary mb-2"><i class="fas fa-bullseye text-primary me-2"></i>Mission</h5>
+                            <p class="text-muted">Foster cutting-edge research, provide high-impact training, and advocate for evidence-based policies to address local and global health challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VOLUNTARY WORKS -->
+            <section id="voluntary-works" class="py-4 pb-5">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="modern-underline mb-4">
+                            <h3 class="display-5 fw-bold text-primary position-relative pb-3">
+                                Voluntary Works
+                                <span class="underline-accent" style="width: 28%"></span>
+                            </h3>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="voluntary-work-card">
+                                    <img src="img/about-2.jpg" class="voluntary-img" alt="Community Health Camps" />
+                                    <div class="voluntary-content">
+                                        <h6 class="fw-bold text-primary mb-2">Community Health Camps</h6>
+                                        <p class="text-muted small mb-0">Free checkups, screenings, and referrals in underserved communities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="voluntary-work-card">
+                                    <img src="img/events1.jpg" class="voluntary-img" alt="Health Awareness Drives" />
+                                    <div class="voluntary-content">
+                                        <h6 class="fw-bold text-primary mb-2">Health Awareness Drives</h6>
+                                        <p class="text-muted small mb-0">Behavior change campaigns on nutrition, hygiene, and NCD prevention.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="voluntary-work-card">
+                                    <img src="img/events2.jpg" class="voluntary-img" alt="Emergency Response Support" />
+                                    <div class="voluntary-content">
+                                        <h6 class="fw-bold text-primary mb-2">Emergency Response Support</h6>
+                                        <p class="text-muted small mb-0">Rapid mobilization of volunteers during floods, heatwaves, and outbreaks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="voluntary-work-card">
+                                    <img src="img/news-image-1.jpg" class="voluntary-img" alt="Youth Volunteer Programs" />
+                                    <div class="voluntary-content">
+                                        <h6 class="fw-bold text-primary mb-2">Youth Volunteer Programs</h6>
+                                        <p class="text-muted small mb-0">Student-led outreach and peer education initiatives across local communities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEADERSHIP & PROFESSIONALS -->
+            <section id="professionals" class="py-5">
+                <div class="modern-underline mb-5 text-center">
+                    <h2 class="display-5 fw-bold text-primary position-relative pb-3 d-inline-block">
+                        Leadership & Experts
+                        <span class="underline-accent" style="width: 40%; left: 50%; transform: translateX(-50%)"></span>
+                    </h2>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4 text-center">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+                            <img src="https://placehold.co/200x200/061742/white?text=VC" class="rounded-circle mx-auto mb-3" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid var(--secondary-light); display: block" alt="Vice-Chancellor" />
+                            <h6 class="fw-bold text-primary mb-1">Professor Dr. Abdul Hannan Chowdhury</h6>
+                            <p class="text-muted small mb-0">Vice-Chancellor, North South University</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+                            <img src="https://placehold.co/200x200/183f78/white?text=Dean" class="rounded-circle mx-auto mb-3" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid var(--secondary-light); display: block" alt="Dean SHLS" />
+                            <h6 class="fw-bold text-primary mb-1">Professor Dr. Dipak Kumar Mitra</h6>
+                            <p class="text-muted small mb-0">Dean, School of Health & Life Sciences (SHLS)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+                            <img src="https://placehold.co/200x200/2a5caa/white?text=Director" class="rounded-circle mx-auto mb-3" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid var(--secondary-light); display: block" alt="NGHI Director" />
+                            <h6 class="fw-bold text-primary mb-1">Dr. Mohammad Delwer Hossain Hawlader</h6>
+                            <p class="text-muted small mb-0">Director, NSU Global Health Institute (NGHI)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="people-subsection fellow-subsection mb-5">
+                    <h3 class="fw-bold text-secondary people-subsection-title"><i class="fas fa-microscope"></i>Research Fellows</h3>
+                    <div class="row g-3">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="people-rich-item">
+                                <img src="img/faculty/AKM.jpg" class="people-rich-img" alt="Dr. Rishad Choudury Robin" />
+                                <div class="people-rich-content">
+                                    <h5>Dr. Rishad Choudury Robin</h5>
+                                    <p>Research Fellow & Assistant Professor, NSU</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="people-subsection staff-subsection">
+                    <h3 class="fw-bold text-secondary people-subsection-title"><i class="fas fa-id-badge"></i>Staff</h3>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="people-rich-item">
+                                <img src="img/team-1.jpg" class="people-rich-img" alt="Research Associates" />
+                                <div class="people-rich-content">
+                                    <h5>Research Associates</h5>
+                                    <p>Public health, epidemiology & biostatistics</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="people-rich-item">
+                                <img src="img/team-2.jpg" class="people-rich-img" alt="Guest Fellows" />
+                                <div class="people-rich-content">
+                                    <h5>Guest Fellows</h5>
+                                    <p>International visiting scholars & practitioners</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="people-rich-item">
+                                <img src="img/team-3.jpg" class="people-rich-img" alt="Program Coordinators" />
+                                <div class="people-rich-content">
+                                    <h5>Program Coordinators</h5>
+                                    <p>Training logistics, stakeholder communications & field operations support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="fw-bold text-secondary mb-3">Interns</h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4" style="border-left: 4px solid var(--secondary) !important">
+                            <h6 class="fw-bold text-primary mb-3"><i class="fas fa-user-check me-2"></i>Current Interns</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>Nafisa Tabassum – Data Analysis</li>
+                                <li class="mb-2 text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>Raihan Kabir – Communications</li>
+                                <li class="text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>Sumaiya Akter – Research Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4" style="border-left: 4px solid #a27035 !important">
+                            <h6 class="fw-bold text-primary mb-3"><i class="fas fa-graduation-cap me-2"></i>Former Interns</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>Tanvir Hasan - Epidemiology Support</li>
+                                <li class="mb-2 text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>Farhana Rahman - Program Documentation</li>
+                                <li class="text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>Nabil Ahmed - Community Outreach Coordination</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESEARCH & PROJECTS -->
+            <!-- <section id="research" class="py-5">
+                <div class="modern-underline mb-5 text-center">
+                    <h2 class="display-5 fw-bold text-primary position-relative pb-3 d-inline-block">
+                        Projects & Collaborations
+                        <span class="underline-accent" style="width: 40%; left: 50%; transform: translateX(-50%)"></span>
+                    </h2>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+                            <h5 class="fw-bold text-primary mb-3"><i class="fas fa-chart-line me-2"></i>Ongoing Projects</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Strengthening Health Systems for Universal Coverage</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Elimination of Neglected Tropical Diseases (NTDs)</li>
+                                <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Adolescent Mental Health in Urban Slums</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Digital Health for Maternal & Child Health</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+                            <h5 class="fw-bold text-secondary mb-3"><i class="fas fa-check-circle me-2"></i>Completed Projects</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3 text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>Maternal & Newborn Health in Rural Bangladesh</li>
+                                <li class="mb-3 text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>mHealth Intervention for Diabetes Management</li>
+                                <li class="mb-3 text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>COVID-19 Behavioral Insights Dashboard</li>
+                                <li class="text-muted"><i class="fas fa-dot-circle text-secondary me-2"></i>WASH Interventions in Urban Slums</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm rounded-4 p-4">
+                    <h5 class="fw-bold text-primary mb-2"><i class="fas fa-handshake me-2"></i>Memorandums of Understanding (MoUs)</h5>
+                    <p class="text-muted mb-0">Strategic partnerships with icddr,b, BRAC JPGSPH, University of Melbourne, WHO Bangladesh, and the Global Fund for joint research and capacity building.</p>
+                </div>
+            </section> -->
+
+            <!-- PUBLICATIONS -->
+            <!-- <section id="publications" class="py-5">
+                <div class="modern-underline mb-4">
+                    <h2 class="display-5 fw-bold text-primary position-relative pb-3">
+                        Recent Publications
+                        <span class="underline-accent" style="width: 40%"></span>
+                    </h2>
+                </div>
+                <div class="mb-4">
+                    <button class="btn btn-primary rounded-pill me-2 filter-btn active" data-year="all">All</button>
+                    <button class="btn btn-outline-primary rounded-pill me-2 filter-btn" data-year="2024">2024</button>
+                    <button class="btn btn-outline-primary rounded-pill me-2 filter-btn" data-year="2023">2023</button>
+                    <button class="btn btn-outline-primary rounded-pill filter-btn" data-year="2022">2022</button>
+                </div>
+                <div id="publications-list">
+                    <div class="pub-item" data-year="2024">
+                        <i class="fas fa-file-pdf text-danger me-2"></i>
+                        <strong>Hawlader et al. (2024)</strong> – Climate resilience and health systems in South Asia. <em>Lancet Regional Health</em>
+                    </div>
+                    <div class="pub-item" data-year="2024">
+                        <i class="fas fa-file-pdf text-danger me-2"></i>
+                        <strong>Mitra DK, Chowdhury AH (2024)</strong> – Digital innovations for NCDs. <em>BMJ Global Health</em>
+                    </div>
+                    <div class="pub-item" data-year="2023">
+                        <i class="fas fa-file-pdf text-danger me-2"></i>
+                        <strong>Rishad R, et al. (2023)</strong> – Mental health among university students post-pandemic. <em>PLOS ONE</em>
+                    </div>
+                    <div class="pub-item" data-year="2023">
+                        <i class="fas fa-file-pdf text-danger me-2"></i>
+                        <strong>Hawlader MDH (2023)</strong> – Maternal health care utilization patterns. <em>J Glob Health</em>
+                    </div>
+                    <div class="pub-item" data-year="2022">
+                        <i class="fas fa-file-pdf text-danger me-2"></i>
+                        <strong>2022</strong> – Community health worker performance in urban Bangladesh. <em>Health Policy Plan</em>
+                    </div>
+                    <div class="pub-item" data-year="2022">
+                        <i class="fas fa-file-pdf text-danger me-2"></i>
+                        <strong>2022</strong> – COVID-19 vaccine acceptance: a systematic review. <em>Vaccine</em>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- TRAININGS -->
+            <!-- <section id="trainings" class="py-5">
+                <div class="modern-underline mb-5">
+                    <h2 class="display-5 fw-bold text-primary position-relative pb-3">
+                        Upcoming Trainings
+                        <span class="underline-accent" style="width: 40%"></span>
+                    </h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm training-card p-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem">
+                                    <i class="fas fa-chart-bar text-white"></i>
+                                </div>
+                                <h5 class="mb-0 fw-bold text-primary">Advanced Data Analysis for Health Research</h5>
+                            </div>
+                            <ul class="list-unstyled mb-3 text-muted">
+                                <li class="mb-1"><i class="fas fa-calendar-alt text-secondary me-2"></i><strong>Date:</strong> 15–17 December 2025</li>
+                                <li class="mb-1"><i class="fas fa-map-marker-alt text-secondary me-2"></i><strong>Venue:</strong> NSU Global Health Institute, Dhaka</li>
+                                <li class="mb-1"><i class="fas fa-clock text-secondary me-2"></i><strong>Time:</strong> 9:00 AM – 4:00 PM</li>
+                                <li><i class="fas fa-tag text-secondary me-2"></i><strong>Fees:</strong> BDT 8,500 (student discount available)</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary rounded-pill btn-sm">Apply Now →</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm training-card p-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #1e6f5c 0%, #27ae60 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 1rem">
+                                    <i class="fas fa-flask text-white"></i>
+                                </div>
+                                <h5 class="mb-0 fw-bold text-primary">Implementation Science Workshop</h5>
+                            </div>
+                            <ul class="list-unstyled mb-3 text-muted">
+                                <li class="mb-1"><i class="fas fa-calendar-alt text-secondary me-2"></i><strong>Date:</strong> 5–6 January 2026</li>
+                                <li class="mb-1"><i class="fas fa-map-marker-alt text-secondary me-2"></i><strong>Venue:</strong> Hybrid (Zoom + NSU Campus)</li>
+                                <li class="mb-1"><i class="fas fa-clock text-secondary me-2"></i><strong>Time:</strong> 10:00 AM – 3:00 PM</li>
+                                <li><i class="fas fa-tag text-secondary me-2"></i><strong>Fees:</strong> Free for NGHI partners</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary rounded-pill btn-sm">Register Interest →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 p-4 rounded-4" style="background: #f0f4ff; border-left: 4px solid var(--secondary)">
+                    <h6 class="fw-bold text-primary mb-1"><i class="fas fa-history me-2"></i>Past Training Highlights</h6>
+                    <p class="text-muted mb-0">Epidemiology Bootcamp, GIS for Health, R for Public Health, Grant Writing Workshop. <strong>25+ capacity building events</strong> organized since 2022.</p>
+                </div>
+            </section> -->
+
+            <!-- MEDIA COVERAGE -->
+            <!-- <section id="media" class="py-5">
+                <div class="modern-underline mb-4">
+                    <h2 class="display-5 fw-bold text-primary position-relative pb-3">
+                        Media Coverage
+                        <span class="underline-accent" style="width: 40%"></span>
+                    </h2>
+                </div>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-7">
+                        <h5 class="fw-bold text-secondary mb-3">Global Health Symposium 2024: NGHI leads discussion on Climate & Health</h5>
+                        <p class="text-muted">The institute organized South Asia's largest global health dialogue with 15+ international experts, attracting media attention from Dhaka Tribune, Daily Star, and Reuters. Key outcomes included new partnerships and policy briefs submitted to the Ministry of Health.</p>
+                        <p class="text-muted"><i class="fas fa-tv text-secondary me-2"></i>Featured on Channel i & ATN News for community health outreach programs.</p>
+                        <div class="d-flex gap-2 flex-wrap mt-3">
+                            <span class="badge rounded-pill" style="background: var(--secondary); padding: 0.4rem 0.9rem">Dhaka Tribune</span>
+                            <span class="badge rounded-pill" style="background: var(--secondary); padding: 0.4rem 0.9rem">Daily Star</span>
+                            <span class="badge rounded-pill" style="background: var(--secondary); padding: 0.4rem 0.9rem">Reuters</span>
+                            <span class="badge rounded-pill" style="background: var(--secondary); padding: 0.4rem 0.9rem">Channel i</span>
+                            <span class="badge rounded-pill" style="background: var(--secondary); padding: 0.4rem 0.9rem">ATN News</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="NGHI Impact Story" allowfullscreen></iframe>
+                        </div>
+                        <p class="mt-2 text-muted small text-center"><i class="fas fa-play-circle me-1"></i>NGHI Impact Story</p>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- OPPORTUNITIES -->
+            <!-- <section id="opportunities" class="py-5">
+                <div class="modern-underline mb-5 text-center">
+                    <h2 class="display-5 fw-bold text-primary position-relative pb-3 d-inline-block">
+                        Careers & Internship
+                        <span class="underline-accent" style="width: 40%; left: 50%; transform: translateX(-50%)"></span>
+                    </h2>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm p-4 h-100 opp-card d-flex flex-column">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem">
+                                <i class="fas fa-briefcase text-white fa-lg"></i>
+                            </div>
+                            <h3 class="fw-bold text-primary mb-2">Careers</h3>
+                            <p class="text-muted">Open Positions: Research Officer, Monitoring & Evaluation Specialist, Communication Manager. Apply with CV and cover letter.</p>
+                            <a href="#" class="btn btn-primary rounded-pill mt-auto align-self-start">Explore Openings →</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm p-4 h-100 opp-card d-flex flex-column">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e6f5c 0%, #27ae60 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem">
+                                <i class="fas fa-graduation-cap text-white fa-lg"></i>
+                            </div>
+                            <h3 class="fw-bold text-primary mb-2">Internship</h3>
+                            <p class="text-muted">Paid & credit-based internships for undergraduate/graduate students in public health, data science, and communications.</p>
+                            <a href="#" class="btn btn-outline-success rounded-pill mt-auto align-self-start">Apply Now →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-4 p-4 text-center" style="background: linear-gradient(135deg, #eef4ff 0%, #dbeafe 100%); border: 1px solid #bfdbfe">
+                    <i class="fas fa-quote-left text-secondary me-2 fa-lg"></i>
+                    <span class="text-secondary fst-italic">"We are committed to nurturing next-gen global health leaders — join our mission!"</span>
+                    <strong class="text-primary d-block mt-2">— Dr. Mohammad Delwer Hossain Hawlader, Director, NGHI</strong>
+                </div>
+            </section> -->
+
+            <!-- PHOTO GALLERY -->
+            <!-- <section id="gallery" class="py-5">
+                <div class="modern-underline mb-4">
+                    <h2 class="display-5 fw-bold text-primary position-relative pb-3">
+                        Photo Gallery
+                        <span class="underline-accent" style="width: 40%"></span>
+                    </h2>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-3 col-6">
+                        <a href="https://placehold.co/600x400/061742/white?text=Conference+2024" data-lightbox="nghi-gallery" data-title="Global Health Conference 2024">
+                            <img src="https://placehold.co/600x400/061742/white?text=Conference+2024" class="nghi-gallery-img" alt="Conference 2024" />
+                        </a>
+                        <p class="mt-2 small text-muted">Global Health Conference 2024</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <a href="https://placehold.co/600x400/183f78/white?text=Training+Session" data-lightbox="nghi-gallery" data-title="Data Analysis Training Workshop">
+                            <img src="https://placehold.co/600x400/183f78/white?text=Training+Session" class="nghi-gallery-img" alt="Training Session" />
+                        </a>
+                        <p class="mt-2 small text-muted">Data Analysis Training</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <a href="https://placehold.co/600x400/1e6f5c/white?text=Community+Outreach" data-lightbox="nghi-gallery" data-title="Community Health Outreach">
+                            <img src="https://placehold.co/600x400/1e6f5c/white?text=Community+Outreach" class="nghi-gallery-img" alt="Community Outreach" />
+                        </a>
+                        <p class="mt-2 small text-muted">Voluntary Health Camp</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <a href="https://placehold.co/600x400/a27035/white?text=MoU+Signing" data-lightbox="nghi-gallery" data-title="MoU Signing Ceremony">
+                            <img src="https://placehold.co/600x400/a27035/white?text=MoU+Signing" class="nghi-gallery-img" alt="MoU Signing" />
+                        </a>
+                        <p class="mt-2 small text-muted">International Partnership</p>
+                    </div>
+                </div>
+            </section> -->
+        </div>
+        <!-- End Main Content -->
+
+        <!-- Footer -->
+        <div class="container-fluid bg-primary text-light footer pt-4 pb-0 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="text-light mb-2 ftr-title">NSU Global Health Institute (NGHI)</h5>
+                        <a href="#" class="d-inline-block mb-3">
+                            <img src="slogan.png" alt="NSU Slogan" class="img-fluid w-75" />
+                        </a>
+                        <p class="text-light mb-1"><i class="fa fa-map-marker-alt me-2"></i>Level 8, South Academic Building, Bashundhara R/A, Dhaka-1229</p>
+                        <p class="text-light mb-1"><i class="fa fa-phone-alt me-2"></i>+88 02 55668200, ext.: 6292</p>
+                        <p class="text-light mb-1"><i class="fa fa-fax me-2"></i>+88 02 55668202</p>
+                        <p class="text-light"><i class="fa fa-envelope me-2"></i>nghi.nsu@northsouth.edu</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-start justify-content-md-end pt-2 mb-4">
+                            <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-sm rounded-25 me-2 social-btn" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-sm rounded-25 social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="text-start text-md-end">Developed & Maintained By IT Office, NSU</div>
+                        <div class="text-start text-md-end">&copy; 1993-2025 NSU, All Right Reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            // Mobile nav body lock
+            document.addEventListener("DOMContentLoaded", function () {
+                const collapseEl = document.getElementById("navbarNav");
+                collapseEl.addEventListener("show.bs.collapse", function () {
+                    document.body.classList.add("menu-open");
+                });
+                collapseEl.addEventListener("hidden.bs.collapse", function () {
+                    document.body.classList.remove("menu-open");
+                });
+            });
+
+            // Department sub-nav toggle (mobile)
+            const deptToggle = document.querySelector(".department-nav-toggle");
+            const deptLinks = document.querySelector(".department-nav-links");
+            if (deptToggle && deptLinks) {
+                deptToggle.addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    deptLinks.classList.toggle("open");
+                });
+            }
+
+            // Department sub-nav active on scroll
+            const sections = document.querySelectorAll("section[id]");
+            const navItems = document.querySelectorAll(".nav-link-item");
+            window.addEventListener("scroll", function () {
+                let current = "";
+                sections.forEach(function (section) {
+                    if (window.scrollY >= section.offsetTop - 140) current = section.getAttribute("id");
+                });
+                navItems.forEach(function (link) {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === "#" + current) link.classList.add("active");
+                });
+            });
+
+            // Publications filter
+            const filterBtns = document.querySelectorAll(".filter-btn");
+            const pubItems = document.querySelectorAll(".pub-item");
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    filterBtns.forEach(function (b) {
+                        b.classList.remove("active", "btn-primary");
+                        b.classList.add("btn-outline-primary");
+                    });
+                    this.classList.add("active", "btn-primary");
+                    this.classList.remove("btn-outline-primary");
+                    const year = this.getAttribute("data-year");
+                    pubItems.forEach(function (item) {
+                        item.style.display = year === "all" || item.getAttribute("data-year") === year ? "block" : "none";
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
